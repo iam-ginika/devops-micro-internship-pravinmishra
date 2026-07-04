@@ -181,7 +181,7 @@ Full solution walkthrough → (LINK)
 Create a LinkedIn post including:
 - Screenshot 5 or 6 — Claude recalling information in a brand new session
 - Caption: "My AI agent just remembered a project decision from a previous session — without me repeating it. This is what professional agentic DevOps looks like."
-- Tag: #DMIProgram #AgenticAI #ClaudeCode #DevOps
+- Tag: #DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps
 
 **Submit:**
 - LinkedIn post URL
