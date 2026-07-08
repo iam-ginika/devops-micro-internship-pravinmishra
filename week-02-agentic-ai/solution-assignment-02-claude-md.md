@@ -20,8 +20,8 @@ Capture Claude’s response before `CLAUDE.md` exists in the project to establis
 
 #### Screenshot 1 — Claude’s generic response before CLAUDE.md exists (project contains only `index.html`, `style.css`, `images/`, `README.MD`, `privacy.html`, `terms.html`)
 
-Add your screenshot here.
-
+![image](screenshots\Assignment2_task1.png)
+![image](screenshots\Assignment2_task1.1.png)
 ---
 
 # Task 2 — Generate the First Draft with /init
@@ -34,8 +34,10 @@ Generate an initial `CLAUDE.md` file using the `/init` command and review the au
 
 #### Screenshot 2 — The auto-generated CLAUDE.md open in VS Code showing its content
 
-Add your screenshot here.
-
+![image](screenshots\Assignment2_task2.png)
+![image](screenshots\Assignment2_task2.1.png)
+![image](screenshots\Assignment2_task2.2.png)
+![image](screenshots\Assignment2_task2.3.png)
 ---
 
 # Task 3 — Customize the CLAUDE.md
@@ -48,7 +50,7 @@ Update the generated `CLAUDE.md` file by adding project-specific instructions ac
 
 #### Screenshot 3 — Your customized CLAUDE.md in VS Code showing all 5 sections (scroll to show the full file)
 
-Add your screenshot here.
+![image](screenshots\Assignment2_task3.png)
 
 ---
 
@@ -62,13 +64,13 @@ Verify that Claude’s behavior changes after adding `CLAUDE.md` by running a ne
 
 #### Screenshot 4 — Claude's specific, detailed answer after reading CLAUDE.md (Claude mentioning S3, CloudFront and Terraform)
 
-Add your screenshot here.
+![image](screenshots\Assignment2_task4.1.png)
 
 ---
 
 #### Screenshot 5 — Claude refusing or warning against adding React because of the "No JavaScript" convention defined in CLAUDE.md
 
-Add your screenshot here.
+![image](screenshots\Assignment2_task4.2.png)
 
 ---
 
