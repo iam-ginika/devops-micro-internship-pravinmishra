@@ -98,7 +98,7 @@ Paste your forked repository URL here:
 
 Paste your LinkedIn URL here:
 
-`__________________________`
+`https://www.linkedin.com/posts/ginikandubuisi_its-week-2-of-the-devops-micro-internship-share-7480640276756291585-ArZr/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo`
 ---
 
 # Completion Checklist
