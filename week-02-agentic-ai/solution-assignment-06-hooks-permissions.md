@@ -20,8 +20,7 @@ Create the `.claude` directory structure required for team-level Claude Code con
 
 #### Screenshot 1 — `.claude` folder structure visible in VS Code Explorer
 
-![image](screenshots\Settings-json.1.png)
-![image](screenshots\Settings-json.1.1.png)
+![image](screenshots\Claude-folder.png)
 ---
 
 # Task 2 — Create the UserPromptSubmit Hook Script
@@ -62,7 +61,8 @@ Create a hook that runs after Claude executes a Bash command and logs selected T
 
 #### Screenshot 4 — `post-tool-logger.sh` open in VS Code showing the hook script
 
-![image](screenshots\UserPromptSubmit-Hook.png)
+![image](screenshots\Post-tool-logger.png)
+
 
 ---
 
@@ -76,8 +76,9 @@ Configure Claude Code permissions and connect the hook scripts created in the pr
 
 #### Screenshot 5 — `settings.json` open in VS Code showing permissions and hooks configuration
 
-![image](screenshots\PreToolUse-Hook.png)
-![image](screenshots\PreToolUse-Hook.1.png)
+![image](screenshots\Settings-json.1.png)
+![image](screenshots\Settings-json.1.1.png)
+
 
 ---
 
@@ -91,6 +92,7 @@ Prove the prompt-level hook works by typing a destructive prompt and verifying i
 
 #### Screenshot 6 — UserPromptSubmit hook blocking the destructive prompt
 
+![image](screenshots\UserPromptSubmit-Hook.png)
 ---
 
 # Task 7 — Test the PreToolUse Hook
@@ -103,6 +105,8 @@ Prove the tool-level hook works by asking Claude to execute a dangerous Bash com
 
 #### Screenshot 7 — PreToolUse hook blocking terraform destroy
 
+![image](screenshots\PreToolUse-Hook.png)
+![image](screenshots\PreToolUse-Hook.1.png)
 ---
 
 # Task 8 — Test the PostToolUse Logging Hook
@@ -115,8 +119,11 @@ Prove the logging hook runs after a successful command execution and records Ter
 
 #### Screenshot 8 — Claude running terraform validate successfully
 
+![image](screenshots\PostToolUse-Hook.png)
+
 #### Screenshot 9 — `.claude/deploy.log` showing the logged command
 
+![image](screenshots\Deploy-log.png)
 ---
 
 # Submission Instructions

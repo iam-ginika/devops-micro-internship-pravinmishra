@@ -46,7 +46,7 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-Add your screenshot here.
+![image](screenshots\Blog-post.png)
 
 ---
 
@@ -54,7 +54,7 @@ Add your screenshot here.
 
 Blog Link:
 
-`__________________________________________`
+`https://medium.com/@ginika_n/prompts-vs-systems-the-biggest-lesson-i-learned-in-week-2-of-my-devops-micro-internship-3e9df5c5c020`
 
 ---
 
@@ -92,7 +92,7 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 #### Screenshot 2 — LinkedIn post published
 
-Add your screenshot here.
+![image](screenshots\LinkedIn-post.png)
 
 ---
 
@@ -101,14 +101,30 @@ Add your screenshot here.
 LinkedIn Post Content (copy-paste here):
 
 ```
-Paste your LinkedIn post content here
-```
+This week completely changed how I think about building with AI.
+I used to believe that getting better results from AI meant writing better prompts.
+
+After completing Week 2 of my DevOps Micro Internship with Pravin Mishra, I realized that's only part of the picture.
+
+Throughout the week's assignments, I learned how to build systems around AI instead of relying on longer and more detailed prompts.
+
+I explored how CLAUDE.md gives AI project-specific context, how Skills turn repeatable workflows into reusable commands, how Subagents specialize tasks, how MCP connects AI to live GitHub data, how Hooks and Permissions add safety guardrails, and how Memory allows project decisions to persist across sessions.
+
+The biggest takeaway for me wasn't any single feature. It was understanding that reliable AI workflows come from good engineering practices.
+
+Documentation, reusable workflows, clear guardrails, and persistent memory make a much bigger difference than constantly rewriting prompts.
+
+Going forward, I'll spend more time designing the system around AI first before asking it to generate code.
+It's a mindset shift I'm excited to keep building on as I continue learning DevOps and Agentic AI.
+
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this [Discord community](https://lnkd.in/evfe86y5)
+
 
 ---
 
 ### LinkedIn Post Link:
 
-`__________________________________________`
+`https://www.linkedin.com/posts/ginikandubuisi_this-week-completely-changed-how-i-think-share-7481438629396008960-PpoY/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo`
 
 ---
 
