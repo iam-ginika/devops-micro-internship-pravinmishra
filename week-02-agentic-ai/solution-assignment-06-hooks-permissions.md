@@ -20,8 +20,8 @@ Create a team-level `settings.json` file with allow and deny rules for safe comm
 
 #### Screenshot 1 — Screenshot 1 — `settings.json` open in VS Code showing the full permissions configuration
 
-Add your screenshot here.
-
+![image](screenshots\Settings-json.1.png)
+![image](screenshots\Settings-json.1.1.png)
 ---
 
 # Task 2 — Add the UserPromptSubmit Hook
@@ -34,7 +34,7 @@ Add a hook that intercepts user prompts before Claude starts execution and block
 
 #### Screenshot 2 — settings.json showing UserPromptSubmit hook
 
-Add your screenshot here.
+![image](screenshots\User-prompt.png)
 
 ---
 
@@ -48,7 +48,7 @@ Extend `settings.json` with a PreToolUse hook that blocks dangerous Bash command
 
 #### Screenshot 3 — full settings.json with permissions and hooks
 
-Add your screenshot here.
+![image](screenshots\Pre-tool-guard.png)
 
 ---
 
@@ -62,7 +62,7 @@ Verify that destructive prompts are blocked before Claude begins execution.
 
 #### Screenshot 4 — blocked prompt due to UserPromptSubmit hook
 
-Add your screenshot here.
+![image](screenshots\UserPromptSubmit-Hook.png)
 
 ---
 
@@ -76,7 +76,8 @@ Verify that dangerous commands are intercepted before execution by the PreToolUs
 
 #### Screenshot 5 — PreToolUse hook blocking terraform destroy
 
-Add your screenshot here.
+![image](screenshots\PreToolUse-Hook.png)
+![image](screenshots\PreToolUse-Hook.1.png)
 
 ---
 
@@ -92,7 +93,7 @@ Add your screenshot here.
 
 Paste your forked repository URL here:
 
-`__________________________`
+`https://github.com/iam-ginika/devops-micro-internship-pravinmishra.git`
 
 ---
 
