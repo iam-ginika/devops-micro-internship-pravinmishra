@@ -118,7 +118,7 @@ Going forward, I'll spend more time designing the system around AI first before 
 It's a mindset shift I'm excited to keep building on as I continue learning DevOps and Agentic AI.
 
 P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this [Discord community](https://lnkd.in/evfe86y5)
-
+```
 
 ---
 
