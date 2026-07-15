@@ -20,19 +20,25 @@ Demonstrate understanding of AWS basics and Free Tier usage by answering the fol
 
 #### Question 1 — What is an AWS account, and why do you need it at this stage?
 
-Write your answer here.
+An AWS account is the front door to Amazon's cloud. It gives me access to Amazon Web Services, where I can create and manage cloud resources. At this stage, I need it so I can use the Free Tier services, explore the AWS Console, and start building the cloud environment for the EpicReads project.
 
 ---
 
 #### Question 2 — What is AWS Free Tier, and how long does it last?
 
-Write your answer here.
+AWS Free Tier is Amazon's offer that allows new users to explore and practice with AWS services without paying upfront. It provides credits and free usage options to help users build, test, and learn how cloud resources work. The Free Tier lasts for up to 6 months, or until the available credits are used, whichever comes first.
 
 ---
 
 #### Question 3 — Name three AWS Free Tier services and their free usage limits.
 
-Write your answer here.
+AWS Lambda – A serverless compute service that allows users run code without managing servers. The Always Free limit includes 1 million requests per month and 400,000 GB-seconds of compute time, which is useful for running small backend tasks for EpicReads.
+
+Amazon S3 – A storage service used for storing files and objects. The Always Free limit includes 5 GB of Standard storage, 20,000 GET requests, and 2,000 PUT requests per month, which can support storing book images and website assets.
+
+Amazon DynamoDB – A serverless NoSQL database service. The Always Free tier includes 25 GB of storage and 25 provisioned read/write capacity units, which support up to roughly 200 million requests per month, suitable for managing structured data like book inventory for a small application.
+
+
 
 ---
 
@@ -56,7 +62,7 @@ Confirm that your AWS account setup is complete by navigating to the Account sec
 
 #### Screenshot 1 — AWS Account page showing account name (email may be blurred)
 
-Add your screenshot here.
+![image](screenshots/AWS-Account.png)
 
 ---
 
