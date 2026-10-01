@@ -1,6 +1,6 @@
 # Assignment 6 — Safety Rails for Your AI Agent
 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
@@ -126,12 +126,31 @@ Prove the logging hook runs after a successful command execution and records Ter
 ![image](screenshots\Deploy-log.png)
 ---
 
+# Task 9 — Share Your AI Safety Achievement
+
+## Goal
+
+Share how you built safety controls that prevent an AI agent from performing destructive actions.
+
+### Evidence
+
+#### Screenshot 10 — Published post on X or LinkedIn showing your AI safety achievement message and leaderboard progress link visible
+
+Add your screenshot here.
+
+---
+
 # Submission Instructions
 
 Complete all tasks in sequence.
 
+<<<<<<< HEAD
 ---
 
+=======
+Your submission must include:
+- All 10 required screenshots
+>>>>>>> upstream/main
 
 ---
 
@@ -149,6 +168,8 @@ Complete all tasks in sequence.
 - [ ] Destructive prompt test shows UserPromptSubmit blocked the request
 - [ ] Terraform destroy command test shows PreToolUse intercepted the command
 - [ ] Terraform validate test shows PostToolUse created the log entry
+- [ ] AI safety achievement shared on X or LinkedIn
+- [ ] Screenshot of published post with leaderboard progress link visible
 - [ ] All required screenshots are captured
 
 ---
@@ -163,14 +184,14 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 DMI Official Website: https://pravinmishra.com/dmi  
-- 🎓 DevOps for Beginners (Udemy): https://www.udemy.com/course/devops-for-beginners-docker-k8s-cloud-cicd-4-projects/  
-- 🎓 Agentic AI DevOps with Claude Code: https://www.udemy.com/course/ultimate-agentic-ai-devops-with-claude-code/  
-- 🎓 DevOps with Claude Code: Terraform, EKS, ArgoCD & Helm: https://www.udemy.com/course/devops-with-claude-code-terraform-eks-argocd-helm/  
+- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
+- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
+- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
+- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
 - ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
 - 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
 - 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
 
 ---
 
-*This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track.*
+*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track.*

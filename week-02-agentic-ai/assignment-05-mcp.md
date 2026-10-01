@@ -1,6 +1,6 @@
 # Assignment 5 — Connecting Claude to the Outside World
 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
@@ -80,6 +80,20 @@ Verify MCP functionality by retrieving real-time data from your GitHub account u
 ![image](screenshots\Mcp-output.1.1.png)
 ---
 
+# Task 6 — Share Your MCP Achievement
+
+## Goal
+
+Share your MCP achievement on Facebook or WhatsApp Status and provide evidence of the published post/status.
+
+### Evidence
+
+#### Screenshot 6 — Published Facebook post or WhatsApp Status showing your MCP achievement message and leaderboard progress link visible
+
+Add your screenshot here.
+
+---
+
 # Submission Instructions
 
 - Ensure `.mcp.json` is committed to your GitHub repository
@@ -94,7 +108,11 @@ Verify MCP functionality by retrieving real-time data from your GitHub account u
 
 Paste your forked repository URL here:
 
+<<<<<<< HEAD
 `https://github.com/iam-ginika/devops-micro-internship-pravinmishra.git`
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
@@ -117,6 +135,8 @@ Confirm below:
 - [ ] Live GitHub query returns real repository data
 - [ ] All required screenshots added
 - [ ] GitHub repository URL included
+- [ ] MCP achievement shared on Facebook or WhatsApp Status
+- [ ] Screenshot 6 added showing the published post/status
 
 ---
 
@@ -130,14 +150,14 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 DMI Official Website: https://pravinmishra.com/dmi  
-- 🎓 DevOps for Beginners (Udemy): https://www.udemy.com/course/devops-for-beginners-docker-k8s-cloud-cicd-4-projects/  
-- 🎓 Agentic AI DevOps with Claude Code: https://www.udemy.com/course/ultimate-agentic-ai-devops-with-claude-code/  
-- 🎓 DevOps with Claude Code: Terraform, EKS, ArgoCD & Helm: https://www.udemy.com/course/devops-with-claude-code-terraform-eks-argocd-helm/  
+- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
+- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
+- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
+- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
 - ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
 - 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
 - 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
 
 ---
 
-*This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track.*
+*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track.*

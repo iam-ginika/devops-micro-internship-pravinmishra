@@ -1,6 +1,6 @@
 # Assignment 8 — Week 2 Reflection Blog
 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
@@ -54,7 +54,11 @@ You can publish your blog on:
 
 Blog Link:
 
+<<<<<<< HEAD
 `https://medium.com/@ginika_n/prompts-vs-systems-the-biggest-lesson-i-learned-in-week-2-of-my-devops-micro-internship-3e9df5c5c020`
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
@@ -63,28 +67,6 @@ Blog Link:
 ## Goal
 
 Share your Week 2 learning publicly on LinkedIn.
-
----
-
-### LinkedIn Post Requirements
-
-Your post must include:
-
-* One screenshot from any Week 2 assignment
-* Short reflection (what you learned or built)
-* Required P.S. line exactly as given below
-
----
-
-### Required P.S. Line (Must Include Exactly)
-
-> **P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). You can start your DevOps journey by joining [DMI waiting list](https://forms.gle/3hvrWJBDzsDeJoPs6) (https://forms.gle/3hvrWJBDzsDeJoPs6).**
-
----
-
-### Suggested Hashtags
-
-#DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps #LearningInPublic
 
 ---
 
@@ -124,7 +106,11 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 ### LinkedIn Post Link:
 
+<<<<<<< HEAD
 `https://www.linkedin.com/posts/ginikandubuisi_this-week-completely-changed-how-i-think-share-7481438629396008960-PpoY/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo`
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
@@ -162,11 +148,13 @@ It helps learners build strong DevOps foundations through hands-on experience.
 
 # Resources
 
-* 🌐 DMI Official Website: [https://pravinmishra.com/dmi](https://pravinmishra.com/dmi)
-* 🎓 DevOps for Beginners (Udemy): [https://www.udemy.com/course/devops-for-beginners-docker-k8s-cloud-cicd-4-projects/](https://www.udemy.com/course/devops-for-beginners-docker-k8s-cloud-cicd-4-projects/)
-* 🎓 Agentic AI DevOps with Claude Code: [https://www.udemy.com/course/ultimate-agentic-ai-devops-with-claude-code/](https://www.udemy.com/course/ultimate-agentic-ai-devops-with-claude-code/)
-* 🎓 DevOps with Claude Code: Terraform, EKS, ArgoCD & Helm: [https://www.udemy.com/course/devops-with-claude-code-terraform-eks-argocd-helm/](https://www.udemy.com/course/devops-with-claude-code-terraform-eks-argocd-helm/)
+* 🌐 DMI Official Website: [https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme](https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme)
+* 🎓 University: [https://university.pravinmishra.com?utm_source=github&utm_medium=readme](https://university.pravinmishra.com?utm_source=github&utm_medium=readme)
+* 💬 Discord Community: [https://discord.pravinmishra.com?utm_source=github&utm_medium=readme](https://discord.pravinmishra.com?utm_source=github&utm_medium=readme)
+* 📝 Blog: [https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme](https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme)
 * ▶️ YouTube Playlist: [https://www.youtube.com/playlist?list=PLFeSNDtI4Cho](https://www.youtube.com/playlist?list=PLFeSNDtI4Cho)
 * 🔗 Pravin Mishra (LinkedIn): [https://www.linkedin.com/in/pravin-mishra-aws-trainer/](https://www.linkedin.com/in/pravin-mishra-aws-trainer/)
 * 🏢 CloudAdvisory (LinkedIn): [https://www.linkedin.com/company/thecloudadvisory/](https://www.linkedin.com/company/thecloudadvisory/)
+---
 
+*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track.*
