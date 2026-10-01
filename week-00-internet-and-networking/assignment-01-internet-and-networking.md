@@ -25,7 +25,7 @@ Take a screenshot of your interaction showing:
 
 Save your screenshot in the `screenshots` folder and update the file name below.
 
-![Task 1 Screenshot](screenshots/task-1-chatgpt.png)
+![Task 1 Screenshot](screenshots/Chatgpt-response.png)
 
 
 Replace `task-1-chatgpt.png` with your actual screenshot file name.
@@ -34,7 +34,8 @@ Replace `task-1-chatgpt.png` with your actual screenshot file name.
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+I learned that networking protocols are the basic rules devices use to communicate with each other. I also learned that using simple real-life examples makes technical concepts much easier for beginners to understand. 
+
 
 ---
 
@@ -59,7 +60,11 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+When a user anywhere in the world wants to access EpicReads, they open their browser and type the website address. The browser then sends a request using HTTP or HTTPS. HTTP is the basic rule for communication between a browser and a website, while HTTPS is the secure version that protects the data from being seen or changed by others.
+This request travels over the internet using TCP/IP, which is the main system that allows computers to connect and exchange information reliably.
+The request is sent to the EpicReads server in Finland, which is identified by a unique IP address. This IP address works like a digital home address, telling the internet exactly where to deliver the request.
+Before sending, the data is broken into small parts called packets through packet switching. These packets may travel through different routes, but they all reach the same server, where they are reassembled and processed. The response is then sent back to the user’s browser, which displays the website.
+
 
 ---
 
@@ -91,7 +96,8 @@ EpicReads bookstore has two application versions:
 
 Save your diagram image in the `screenshots` folder and update the file name below.
 
-![Application Architecture Diagram](screenshots/task-3-diagram.png)
+![Application Architecture Diagram](screenshots/Application-Architecture.png)
+![Application Architecture Diagram](screenshots/3-tier-Architecture.png)
 
 
 Replace `task-3-diagram.png` with your actual diagram file name.
@@ -102,18 +108,18 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* HTML
+* React 
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* Node.js
+* Python
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
+* MySQL / PostgreSQL
+* MongoDB
 
 ---
 
@@ -142,7 +148,10 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+DNS is like a contacts app on your phone. Instead of memorizing a friend's number, you just search their name. Similarly, DNS lets you type epicreads.com instead of 52.172.142.222. It looks up the address for you behind the scenes. A DNS record is just one contact saved in that app. 
+
+The A Record is used. It is the contact type that saves an IP address. So when the IP is a number like that, the A Record is the right fit because it is the only record type built specifically to store that kind of address. 
+
 
 ---
 
@@ -178,7 +187,7 @@ ls
 
 Save your screenshot in the `screenshots` folder and update the file name below.
 
-![VS Code Setup Screenshot](screenshots/task-5-vscode.png)
+![VS Code Setup Screenshot](screenshots/VS-Code-setup.png)
 
 
 Replace `task-5-vscode.png` with your actual screenshot file name.
@@ -215,7 +224,7 @@ Add the following credit note at the end of your post:
 
 ## LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+https://www.linkedin.com/posts/ginikandubuisi_week-0-of-my-devops-micro-internship-with-activity-7458076845335474176-7gDF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ```text
 Add your URL here...
@@ -227,7 +236,21 @@ Add your URL here...
 
 Paste the full text of your LinkedIn post here:
 
-Add your post content here...
+Week 0 of my DevOps Micro Internship with Pravin Mishra and I already feel like a different person. 🔥
+
+Here's what I covered:
+✅ Used ChatGPT to simplify protocol in networking with real-life examples
+✅ Learned how data travels the internet via TCP/IP, HTTP/HTTPS & packet switching
+✅ Explored 2-tier & 3-tier app architecture using draw.io
+✅ Understood DNS - basically a contacts app for the internet
+✅ Set up VS Code and practiced basic terminal commands
+
+Week 0 done. Let's go! 💪
+
+P.S. This post is part of the FREE DevOps Micro Internship (DMI) Cohort 3 run by Pravin Mishra. You can be part of this learning community too.
+
+JOIN HERE (https://lnkd.in/evfe86y5 ) DMI Cohort 3: https://lnkd.in/ebcsiA_K
+Pravin Mishra Profile: https://lnkd.in/e77aZW_i
 
 ---
 
@@ -235,19 +258,21 @@ Add your post content here...
 
 ### What did you find easy?
 
-Add your answer here...
+What I found easy was understanding the basic concepts when they were explained with simple real-life examples. Using ChatGPT also made it easier to break down technical ideas like networking protocols, DNS, and application architecture into something more understandable. 
+
 
 ---
 
 ### What was difficult?
 
-Add your answer here...
+What I found difficult was understanding the A Record in DNS at first. It took me a bit of time to fully grasp how it connects a domain name to an IP address. After reviewing it again and breaking it down, I eventually understood it clearly.
 
 ---
 
 ### What will you improve next week?
 
-Add your answer here...
+Next week, I want to focus on strengthening my understanding by practicing more and revisiting areas that felt confusing. I also want to improve how I connect different concepts together so I can better understand how everything works in a real-world system. 
+
 
 ---
 
