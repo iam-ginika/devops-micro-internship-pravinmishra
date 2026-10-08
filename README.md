@@ -47,7 +47,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 ### Leaderboard
 
-<!-- Add your cohort leaderboard rank here as you progress -->
+https://dmi.pravinmishra.com/s/iam-ginika.html
 
 > 🥇 Cohort 3 Rank: **#__** <!-- Update this each week -->
 

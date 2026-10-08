@@ -429,11 +429,7 @@ The script brings together several Bash features to complete a single task. Vari
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD
 `https://www.linkedin.com/posts/ginikandubuisi_devops-linux-bash-share-7483940001433579521-43el/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo`
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 

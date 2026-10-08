@@ -118,11 +118,7 @@ Verify the deployed website and Nginx service are healthy.
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD
 `https://www.linkedin.com/posts/ginikandubuisi_devops-aws-amazonec2-share-7483460102319005696-WArb/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo`
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 
