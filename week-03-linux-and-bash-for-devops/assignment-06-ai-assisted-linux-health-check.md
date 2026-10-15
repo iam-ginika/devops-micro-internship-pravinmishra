@@ -524,13 +524,13 @@ Verify: I confirmed Nginx was active, got an HTTP 200 back from the app, and ran
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://lnkd.in/p/dM8CBWi9
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+[Output](screenshots/Linkedin-ai-post.png)
 
 ---
 
