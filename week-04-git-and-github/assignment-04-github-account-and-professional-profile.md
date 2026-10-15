@@ -20,13 +20,13 @@ Confirm that you have a working GitHub account and can access your GitHub dashbo
 
 #### Screenshot 1 — GitHub dashboard or Home page showing you're signed in, with your username visible
 
-Add your screenshot here.
+[Output](screenshots/Dashboard.png)
 
 ---
 
 #### Screenshot 2 (Optional but Recommended) — Your GitHub profile with `https://github.com/<username>` visible in the browser address bar
 
-Add your screenshot here.
+[Output](screenshots/Overview.png)
 
 ---
 
@@ -40,19 +40,19 @@ Browse Trending, search for a public project, star at least one repository, and 
 
 #### Screenshot 3 — GitHub Trending page visible in the browser
 
-Add your screenshot here.
+[Output](screenshots/Trending.png)
 
 ---
 
 #### Screenshot 4 — A repository page showing the Star button in the Starred state
 
-Add your screenshot here.
+[Output](screenshots/Starred-repo.png)
 
 ---
 
 #### Screenshot 5 — Your forked repository page with your username and repository name visible in the URL
 
-Add your screenshot here.
+[Output](screenshots/Forked-repo.png)
 
 ---
 
@@ -66,7 +66,7 @@ Add a professional bio to your GitHub profile — and optionally your location, 
 
 #### Screenshot 6 — Your public GitHub profile showing your username and professional bio
 
-Add your screenshot here.
+[Output](screenshots/Profile.png)
 
 ---
 
@@ -80,7 +80,7 @@ Share your GitHub learning progress on WhatsApp Status, including your generated
 
 #### Screenshot 7 — Published WhatsApp Status showing your GitHub setup message and generated DMI leaderboard progress link
 
-Add your screenshot here.
+[Output](screenshots/Whatsapp.png)
 
 ---
 
@@ -96,7 +96,7 @@ Add your screenshot here.
 
 Paste your GitHub profile URL here:
 
-`Add your URL here`
+https://github.com/iam-ginika
 
 ---
 
