@@ -20,13 +20,13 @@ Create a `CodeTrack` project folder and initialize it as a Git repository.
 
 #### Screenshot 1 — Output of `git init` inside `CodeTrack` showing "Initialized empty Git repository"
 
-Add your screenshot here.
+![output](screenshots/git-init-Output.png)
 
 ---
 
 #### Screenshot 2 — Output of `ls -a` showing the `.git` folder
 
-Add your screenshot here.
+![output](screenshots/git-folder.png)
 
 ---
 
@@ -34,7 +34,12 @@ Add your screenshot here.
 
 **1. What is the `.git` folder, and why does it matter?**
 
-Add your answer here.
+The .git folder is a hidden folder created by Git inside a repository. It stores the project's Git history, commits, branches, configuration, and tracking information.
+
+It matters because Git uses it to manage and track changes to the project.
+
+In simple terms:
+.git = the memory of the Git repository.
 
 ---
 
@@ -48,7 +53,7 @@ Set your Git username and email for the `CodeTrack` repository only, using `git 
 
 #### Screenshot 3 — Output of `git config --local --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
+[Output](screenshots/git-config-list.png)
 
 ---
 
@@ -62,7 +67,7 @@ Set a global Git username and email for this machine using `git config --global`
 
 #### Screenshot 4 — Output of `git config --global --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
+[Output](screenshots/global-list.png)
 
 ---
 
@@ -76,7 +81,7 @@ Share your Git setup progress on WhatsApp Status, including your generated DMI l
 
 #### Screenshot 5 — Published WhatsApp Status showing your Git setup message and leaderboard progress link
 
-Add your screenshot here.
+[Output](screenshots/git-setup-whatsapp-status.png)
 
 ---
 
