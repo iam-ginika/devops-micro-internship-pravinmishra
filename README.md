@@ -134,7 +134,7 @@ Week 04 → Git & GitHub
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_what-if-a-journalist-wrote-about-your-career-share-7478426620396032000-cY87/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/what-would-a-journalist-write-about-your-career-three-years-from-now-91a56ae4e49a |
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_1a1a2e-16213e-dmibypravinmishra-share-7481426516644519937-SA0p/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/prompts-vs-systems-the-biggest-lesson-i-learned-in-week-2-of-my-devops-micro-internship-3e9df5c5c020
 | 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_with-the-react-application-i-deployed-in-share-7483409593642119170-QNun/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/from-deploying-a-react-app-to-troubleshooting-linux-my-week-3-in-devops-f6ecddae9b41 | 
-| 04 | Git & GitHub | ✅ Completed | ✅ Solved | — | — |
+| 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://lnkd.in/p/dYtEhAkK | https://medium.com/@ginika_n/week-4-of-my-devops-micro-internship-learning-git-beyond-the-basics-b62b93013e3e |
 | 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
