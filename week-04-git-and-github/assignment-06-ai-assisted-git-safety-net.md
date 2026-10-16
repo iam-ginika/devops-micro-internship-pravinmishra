@@ -27,7 +27,7 @@ Confirm you are working in your own fork, then create a dedicated branch for thi
 
 #### Screenshot 1 — Output of git remote -v and git branch showing the new branch
 
-Add your screenshot here.
+[Output](screenshots/New-branch.png)
 
 ---
 
@@ -35,7 +35,7 @@ Add your screenshot here.
 
 **1. Why create a dedicated branch instead of doing this work on main?**
 
-Add your answer here.
+Creating a dedicated branch helps to keep the `main` branch stable and avoid making changes directly to the main codebase. It allows work to be reviewed through a pull request before being merged. It also makes it easier to track changes, identify issues, and collaborate safely with other team members.
 
 ---
 
@@ -49,7 +49,7 @@ On your own fork of this repository (the one you've been submitting your DMI wor
 
 #### Screenshot 1 — Output of  `git status` showing the staged file on feature/ai-pr-ready
 
-Add your screenshot here.
+[Output](screenshots/New-file.png)
 
 ---
 
@@ -57,7 +57,7 @@ Add your screenshot here.
 
 **1. Why does this assignment use an obviously fake key instead of a real one?**
 
-Add your answer here.
+The assignment uses an obviously fake key to prevent the exposure of real credentials and protect sensitive information. It allows students to practise identifying and handling secrets safely without risking unauthorized access to real systems. In real projects, API keys and other credentials should be stored securely as environment variables or in a secrets manager, rather than hardcoded in the code or shared publicly.
 
 ---
 
@@ -71,13 +71,13 @@ Create a tracked, shareable pre-commit hook that blocks a commit containing secr
 
 #### Screenshot 2 — `hooks/pre-commit` open in VS Code showing the full script
 
-Add your screenshot here.
+[Output](screenshots/Hook.png)
 
 ---
 
 #### Screenshot 3 — Output of `git config core.hooksPath` confirming it points to `hooks`
 
-Add your screenshot here.
+[Output](screenshots/Hookspath.png)
 
 ---
 
@@ -85,13 +85,15 @@ Add your screenshot here.
 
 **1. Why is `hooks/pre-commit` tracked in the repo instead of living only in `.git/hooks/`?**
 
-Add your answer here.
+Tracking hooks/pre-commit in the repository allows the team to share, review, and maintain the hook through version control. Files inside .git/hooks/ are local to one person's machine and are not included when others clone the repository. Keeping the hook in the repo ensures that everyone can access the same checks and follow the same rules.
 
 ---
 
 **2. Compare this to `PreToolUse` from Week 2 Assignment 6. What does each one intercept, and what do they have in common?**
 
-Add your answer here.
+The Git pre-commit hook intercepts a commit attempt before Git creates the commit, allowing checks to run before changes are saved in the repository's history. The PreToolUse hook intercepts a tool call in Claude Code before the tool executes, allowing the action to be checked or blocked.
+
+Both act as checkpoints before an action takes place. They help enforce rules, prevent unwanted actions, and improve safety by checking whether an action should be allowed to proceed.
 
 ---
 
@@ -105,7 +107,7 @@ Attempt to commit the staged file from Task 1 and show the hook rejecting it.
 
 #### Screenshot 4 — Terminal showing `git commit` rejected with the hook's "BLOCKED" message naming the exact file
 
-Add your screenshot here.
+[Output](screenshots/Commit-rejected.png)
 
 ---
 
@@ -113,13 +115,17 @@ Add your screenshot here.
 
 **1. Which line in `hooks/pre-commit` matched your fake key, and why did it match?**
 
-Add your answer here.
+Line 7 matched the fake key:
+
+if git diff --cached -- "$file" | grep -qE 'AKIA[0-9A-Z]{16}|-----BEGIN (RSA|OPENSSH|PRIVATE) KEY-----'; then
+
+It matched because the fake key starts with AKIA followed by 16 uppercase letters or numbers, which matches the regular expression of AWS access key IDs. The hook therefore identified it as a possible secret and blocked the commit.
 
 ---
 
 **2. Could this hook have caught a poorly-named variable that stores a secret without the `AKIA` prefix? What does that tell you about the limits of a fixed rule like this?**
 
-Add your answer here.
+No, the hook would not necessarily catch a secret stored in a poorly named variable if its value did not match any of the patterns in the regular expression. This shows that fixed rules can only detect specific patterns they are designed to recognize. Some secrets may go undetected, so additional security checks and secret-scanning tools are important.
 
 ---
 
@@ -133,7 +139,7 @@ Create a manually invoked Claude Code skill that reads your staged changes and p
 
 #### Screenshot 5 — `SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no `Write`) and `disable-model-invocation: true`
 
-Add your screenshot here.
+[Output](screenshots/Skill.png)
 
 ---
 

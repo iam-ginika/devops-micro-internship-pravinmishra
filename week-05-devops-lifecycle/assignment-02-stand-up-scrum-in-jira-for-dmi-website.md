@@ -143,7 +143,7 @@ Locate the Burndown Chart for Sprint 1 so it is ready for later progress trackin
 
 #### Screenshot 12 — Burndown Chart page opened for Sprint 1
 
-Add your screenshot here.
+[Output](screenshots/Burndown-chart.png)
 
 ---
 
@@ -155,11 +155,11 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-Add your URL here...
+https://lnkd.in/p/dTG6MWHK
 
 #### Screenshot 13 — LinkedIn Post Showing Your Scrum Project Setup and DMI Leaderboard Progress Link
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn.png)
 
 ---
 
