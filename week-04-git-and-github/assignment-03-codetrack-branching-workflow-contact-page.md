@@ -131,7 +131,7 @@ Merge `feature/contact-page` into your default branch and confirm the Contact pa
 
 #### Screenshot 13 — Browser showing the Contact page opened from the homepage link on the default branch
 
-[Output](screenshots/Contact-page.png)
+[Output](screenshots/ContactPage.png)
 
 ---
 
