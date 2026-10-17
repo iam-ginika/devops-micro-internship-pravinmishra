@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-Add your screenshot here.
+[Output](screenshots/Solo.png)
 
 ---
 
@@ -28,7 +28,13 @@ Add your screenshot here.
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+Product Owner (PO): Prioritized the footer and homepage improvements.
+
+Scrum Master (SM): Organized Jira tasks and tracked daily progress.
+
+Development Lead (Dev Lead): Built the footer and DMI website link using HTML, CSS, and JavaScript.
+
+DevOps Lead: Used Git and GitHub to track changes and deployed the updates to AWS EC2.
 
 ---
 
@@ -42,7 +48,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-Add your screenshot here.
+[Output](screenshots/Solo-key.png)
 
 ---
 
@@ -56,7 +62,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-Add your screenshot here.
+[Output](screenshots/Epic.png)
 
 ---
 
@@ -70,13 +76,13 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-Add your screenshot here.
+[Output](screenshots/Stories.png)
 
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-Add your screenshot here.
+[Output](screenshots/Hero-tagline-clarity.png)
 
 ---
 
@@ -90,7 +96,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-Add your screenshot here.
+[Output](screenshots/Stories.png)
 
 ---
 
@@ -98,7 +104,21 @@ Add your screenshot here.
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+Hero tagline (1 point): I gave it 1 point because it only involves changing one heading.
+
+Button colour (1 point): I gave it 1 point because changing the button colour is a simple CSS update, even though it affects multiple buttons.
+
+Job card typography (2 points): I gave it 2 points because I need to adjust the font size and weight and check the layout on different screen sizes.
+
+REMOTE badge (2 points): I gave it 2 points because adding the badge and showing it only for remote jobs requires extra work.
+
+Posted on date (1 point): I gave it 1 point because it only requires adding a date text.
+
+Search labels (2 points): I gave it 2 points because several labels and placeholders need updating and testing.
+
+Job Detail "Apply Now" Button (1 point): I gave it 1 point because adding a button with a link is a simple task that requires no extra logic.
+
+Footer Trust Links (1 point): I gave it 1 point because adding the About and Contact links only requires a small HTML update.
 
 ---
 
@@ -112,13 +132,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-Add your screenshot here.
+[Output](screenshots/Sprint.png)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-Add your screenshot here.
+[Output](screenshots/Subtasks.png)
 
 ---
 
@@ -132,8 +152,7 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-Add your screenshot here.
-
+[Output](screenshots/Chart.png)
 ---
 
 # Task 8 — Ship One Small Increment (Build + Deploy + Proof)
@@ -146,19 +165,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-Add your screenshot here.
+[Output](screenshots/Story-done.png)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-Add your screenshot here.
+[Output](screenshots/Tagline-update.png)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-Add your screenshot here.
+[Output](screenshots/Server.png)
 
 ---
 
@@ -172,7 +191,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-Add your screenshot here.
+[Output](screenshots/Comment-solo.png)
 
 ---
 
@@ -188,13 +207,13 @@ Publish a LinkedIn post about what you delivered, including your live URL, three
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://lnkd.in/p/d49u_3p6
 
 ---
 
 #### Screenshot 14 — Published LinkedIn post
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn3.png)
 
 ---
 
