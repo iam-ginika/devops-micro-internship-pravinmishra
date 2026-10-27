@@ -136,7 +136,7 @@ Week 04 → Git & GitHub
 | 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_with-the-react-application-i-deployed-in-share-7483409593642119170-QNun/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/from-deploying-a-react-app-to-troubleshooting-linux-my-week-3-in-devops-f6ecddae9b41 | 
 | 04 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_another-step-forward-in-my-devops-journey-share-7516138839728594944-nnQO/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/week-4-of-my-devops-micro-internship-learning-git-beyond-the-basics-b62b93013e3e |
 | 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | https://www.linkedin.com/posts/ginikandubuisi_another-hands-on-milestone-in-my-devops-micro-share-7517176211975020544-3sO0/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/week-5-of-my-devops-journey-from-jira-and-scrum-to-ai-assisted-sprint-monitoring-d2535a57a1bd |
-| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
+| 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | https://www.linkedin.com/feed/update/urn:li:activity:7520491571759431680/ | https://medium.com/@ginika_n/from-aws-fundamentals-to-agentic-ai-my-hands-on-journey-through-the-devops-micro-internship-a40239b0d4ee |
 | 07 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
