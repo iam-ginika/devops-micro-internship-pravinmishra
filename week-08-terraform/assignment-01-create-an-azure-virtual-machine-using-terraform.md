@@ -20,7 +20,7 @@ Prepare your local environment for Terraform deployment by installing Terraform,
 
 #### Screenshot 1 — Terminal showing successful `terraform version` output
 
-Add your screenshot here.
+[Output](screenshots/terraform-version.png)
 
 ---
 

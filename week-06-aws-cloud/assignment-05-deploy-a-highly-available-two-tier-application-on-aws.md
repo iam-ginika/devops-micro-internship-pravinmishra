@@ -221,7 +221,7 @@ Summarize the VPC/subnet layout, the ALB and Auto Scaling Group setup, the priva
 
 #### Screenshot 23 — A simple architecture diagram, which may be hand-drawn, or an AWS console overview showing the components
 
-[Output](screenshots)
+[Output](screenshots/Two-tier.png)
 
 ---
 
@@ -259,13 +259,13 @@ Publish a LinkedIn post about the high-availability build, including the ALB URL
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://lnkd.in/p/dHW3JvBe
 
 ---
 
 #### Screenshot of LinkedIn post
 
-[Output](screenshots)
+[Output](screenshots/Linkedin4.png)
 
 ---
 
