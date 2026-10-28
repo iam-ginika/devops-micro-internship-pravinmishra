@@ -145,7 +145,7 @@ Create a manually invoked Claude Code skill that reads your staged changes and p
 
 #### Screenshot 6 — `/pr-ready` output while the risky file is still staged, showing it flagged the secret and/or debug statement
 
-Add your screenshot here.
+[Output](screenshots/pr-review.png)
 
 ---
 
@@ -153,13 +153,13 @@ Add your screenshot here.
 
 **1. Why does `/pr-ready` have `Bash` and `Read` but not `Write`?**
 
-Add your answer here.
+`Bash` allows the skill to run read-only Git commands like `git diff --cached` and `git status` to see what is staged. `Read` lets it open files for more context. It does not have `Write` so it cannot change, fix, or create any files. It can only review and suggest. This keeps me in control of the code and follows the principle of least privilege, where a tool only gets the access it needs to do its job.
 
 ---
 
 **2. The pre-commit hook and `/pr-ready` both looked at the same staged diff. Did they flag the same things? What did one catch that the other didn't?**
 
-Add your answer here.
+No, they did not flag the same things. The pre-commit hook only caught the fake AWS key because it matched the `AKIA` pattern in the regular expression. `/pr-ready` caught the fake key, but it also flagged the debug `echo` statement that printed the key and pointed out that the script had no usage notes explaining its purpose. The hook missed the debug statement because it has no rule for it. However, the hook can actually block the commit every time, while `/pr-ready` can only give advice.
 
 ---
 
@@ -173,13 +173,13 @@ Remove the secret and debug statement, then prove both gates now pass clean.
 
 #### Screenshot 7 — `git commit` succeeding after the fix (no BLOCKED message)
 
-Add your screenshot here.
+[Output](screenshots/Commit-success.png)
 
 ---
 
 #### Screenshot 8 — Second `/pr-ready` run showing a clean risk report and a drafted PR title + description
 
-Add your screenshot here.
+[Output](screenshots/pr-review2.png)
 
 ---
 
@@ -187,7 +187,7 @@ Add your screenshot here.
 
 **1. What exactly did you change to satisfy the pre-commit hook?**
 
-Add your answer here.
+I removed the hardcoded fake AWS key from `scripts/notify.sh` and replaced it with a line that reads the value from an environment variable instead. I also removed the `echo` line that printed the key. After staging the fixed file, the commit went through with no BLOCKED message. I did not use the placeholder key `/pr-ready` suggested because it still starts with `AKIA` followed by 16 characters, so my hook would have blocked it too.
 
 ---
 
@@ -203,13 +203,13 @@ Push your branch and open a real Pull Request, using `/pr-ready`'s drafted title
 
 #### Screenshot 9 — Your Pull Request showing the base repository is your own fork, plus the title and description, with the `/pr-ready` draft visible for comparison (paste it in the PR conversation or your notes below)
 
-Add your screenshot here.
+[Output](screenshots/pull-request2.png)
 
 ---
 
 #### PR Link
 
-Add your PR URL here...
+https://github.com/iam-ginika/devops-micro-internship-pravinmishra/pull/1
 
 ---
 
@@ -217,19 +217,19 @@ Add your PR URL here...
 
 **1. What, if anything, did you edit in the AI's drafted PR description before using it? Why?**
 
-Add your answer here.
+I did not edit the drafted description. Before using it, I read it and compared it with the actual change in the "Files changed" tab. It correctly described what the PR does: it adds one standalone file, `scripts/notify.sh`, with no credentials, and the fake AWS key and debug output have been removed. 
 
 ---
 
 **2. If you had blindly copy-pasted the AI's draft without reading it, what could go wrong?**
 
-Add your answer here.
+The PR description could have described changes that were not true, which would mislead reviewers. A reviewer might approve a change thinking a security issue was fixed when it was not. Also, if I had followed its suggestion, my own hook would have blocked the commit. 
 
 ---
 
 **3. Why does this PR need to target your own fork instead of the shared upstream repository?**
 
-Add your answer here.
+The hook, skill, and demo script are my own practice work and are not meant to be added to the class repository. The upstream repository is shared by everyone in the program, so opening a PR there would add unnecessary noise for the maintainer and other students. It could also lead to my practice files being merged into the shared materials by mistake. Targeting my own fork keeps the shared repository clean.
 
 ---
 
@@ -243,31 +243,31 @@ Explain this assignment's workflow using the same Gather → Analyze → Human A
 
 **1. Which step(s) represent Gather?**
 
-Add your answer here.
+Gather is when the staged changes are collected. The pre-commit hook reads the staged files with `git diff --cached`, and `/pr-ready` runs Git commands through `Bash` to read the staged diff.
 
 ---
 
 **2. Which step(s) represent Analyze?**
 
-Add your answer here.
+Analyze is when the changes are checked. The hook compares the staged content against its secret patterns and checks file sizes. `/pr-ready` reviews the diff, writes a risk report of things that need a second look, and drafts a PR title and description.
 
 ---
 
 **3. Which step is Human Act, and why must a human — not Claude — run `git commit`, `git push`, and open the PR?**
 
-Add your answer here.
+Human Act is when I fixed the file, ran `git commit` and `git push`, and opened the Pull Request myself. A human must do these steps because they change the project history and make the code public, which is hard to undo. The AI can make mistakes, so a person needs to review the work and take responsibility for what gets committed and shared.
 
 ---
 
 **4. Which step is Verify?**
 
-Add your answer here.
+Verify is Task 5, where I committed again after the fix and the hook allowed it, and I ran `/pr-ready` a second time and got a clean report. Checking the PR's base repository and the "Files changed" tab before merging was also part of verifying.
 
 ---
 
 **5. In one or two sentences: why do you need *both* the fixed-rule pre-commit hook and the AI skill? Isn't one enough?**
 
-Add your answer here.
+The hook gives the same result every time and can actually block a commit, but it only catches patterns it was written for. The AI skill can catch things a fixed rule cannot, like debug statements and missing context, but it can make mistakes and cannot enforce anything, so using both gives stronger protection.
 
 ---
 
@@ -281,7 +281,7 @@ Publish a LinkedIn post summarizing what you built and what you learned about co
 
 #### LinkedIn Post URL
 
-Add your LinkedIn post URL here...
+https://www.linkedin.com/posts/ginikandubuisi_this-devops-assignment-was-about-building-share-7520925874884591617-B-uw/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
@@ -289,9 +289,9 @@ Add your LinkedIn post URL here...
 
 Add 3-5 bullet points on what you learned this week.
 
--
--
--
+- Giving an AI skill only read access (no `Write`) lets it review my work without changing anything.
+- Working on a feature branch keeps `main` stable, and a Pull Request should target the right base repository.
+- Fixed rules are consistent and enforceable, but they only catch the patterns they are written for.
 
 ---
 
@@ -311,7 +311,7 @@ Add 3-5 bullet points on what you learned this week.
 
 Paste your forked repository URL here:
 
-`Add your URL here`
+https://github.com/iam-ginika/devops-micro-internship-pravinmishra
 
 ---
 
