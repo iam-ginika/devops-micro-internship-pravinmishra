@@ -24,19 +24,24 @@ This project will use the Git repository and Ansible controller prepared in Assi
 
 #### Screenshot 1 — Terminal showing the complete `ansible-adhoc-lab` project structure
 
-Add your screenshot here.
+[Output](screenshots/lab.png)
 
 ---
 
 #### Screenshot 2 — Terminal showing `git status --short` with the new project files and updated `.gitignore`
 
-Add your screenshot here.
+[Output](screenshots/git-status.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+For this lab I set up a new project folder, ansible-adhoc-lab, inside my Ansible workspace. I organized it by tool:
+
+- terraform/ holds the files that define and provision the infrastructure: providers, variables, main resources, and outputs.
+- ansible/ holds inventory.ini, which lists the hosts Ansible will manage.
+
+ I updated .gitignore to include Terraform state, plans and crash logs while excluding lock artifacts, the Python virtual environment, SSH private keys, and other generated or sensitive files. That keeps credentials and machine-specific data out of the repository.
 
 ---
 
@@ -57,25 +62,33 @@ Do not configure both providers for this assignment.
 
 #### Screenshot 3 — Terraform configuration showing the three or four server roles and the `for_each` or `count` implementation
 
-Add your screenshot here.
+[Output](screenshots/variable.png)
 
 ---
 
 #### Screenshot 4 — Terraform configuration showing SSH restricted to the controller IP and HTTP allowed only for web hosts
 
-Add your screenshot here.
+[Output](screenshots/main.png)
 
 ---
 
 #### Screenshot 5 — Terraform output configuration showing how public IP addresses are associated with the server roles
 
-Add your screenshot here.
+[Output](screenshots/output.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+I used Amazon Web Services (AWS) in the eu-north-1 (Stockholm) region and chose the three-VM option, with the server roles web1, app1, and db1. I defined these roles in a vm_roles variable and used Terraform for_each to create one Ubuntu 24.04 LTS EC2 instance (t3.micro) per role from a single resource block, so I didn’t need a separate block for each server.
+
+The configuration creates a dedicated VPC (vpc-ansible-adhoc-lab), a public subnet, an Internet Gateway, and a route table with a default route to the internet. It also creates an AWS key pair (ansible-adhoc-key) from my existing SSH public key. I never referenced the private key in Terraform.
+
+For security, I used two security groups. The common group, attached to every server, allows SSH on port 22 only from my Ansible controller’s public IP as a /32 CIDR, never from 0.0.0.0/0. A second group allows HTTP on port 80 and is attached only to the web host. I also added a validation rule so Terraform rejects any SSH source that isn’t a single /32 address.
+
+Each instance is tagged with its role name, and cloud-init sets the Linux hostname to match (web1, app1, db1). Finally, I set up a public_ips output that maps each server role to its public IP address, which I’ll use for SSH testing and the Ansible inventory.
+
+Challenge: AWS rejected my first security group names because a group name can’t start with sg-. I renamed the groups internally and kept the required sg-ansible-adhoc-lab name as the Name tag shown in the AWS console.
 
 ---
 
@@ -89,25 +102,29 @@ Initialize and validate the Terraform configuration, review the execution plan, 
 
 #### Screenshot 6 — Final `terraform apply` output showing `Apply complete`
 
-Add your screenshot here.
+[Output](screenshots/apply.png)
 
 ---
 
 #### Screenshot 7 — `terraform output public_ips` showing the role-to-IP mapping for all three or four VMs
 
-Add your screenshot here.
+[Output](screenshots/ip-output.png)
 
 ---
 
 #### Screenshot 8 — Azure Portal or AWS Management Console showing all three or four VMs in the `Running` state, with their role-based names visible
 
-Add your screenshot here.
+[Output](screenshots/instances.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+I went to the Terraform working directory, ran terraform fmt and terraform fmt -check to format the configuration, and then ran terraform init to download the AWS provider. terraform validate confirmed the configuration was valid.
+
+Next I ran terraform plan and checked the plan before provisioning anything. It showed three Ubuntu EC2 instances (web1, app1, and db1) in the eu-north-1 region, all using the t3.micro instance type. It also showed SSH restricted to my controller IP (105.112.212.240/32) and HTTP allowed only for the web server. In total it planned 11 resources: the VPC, subnet, Internet Gateway, route table and association, two security groups, the key pair, and the three instances. No existing resources would be changed or destroyed.
+
+Once I’d confirmed the plan, I ran terraform apply, which completed with 11 resources added. I used terraform output public_ips to get the public IP address for each server role. In the AWS Management Console, all three instances showed as Running with their role-based names.
 
 ---
 
@@ -121,13 +138,17 @@ Verify that each managed VM can be accessed from the Ansible controller using SS
 
 #### Screenshot 9 — Terminal showing successful SSH hostname output from all VMs
 
-Add your screenshot here.
+[Output](screenshots/hostname.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+I retrieved the public IP addresses of the three VMs with terraform output public_ips, which maps each address to its server role.
+
+I then tested SSH access from my Ansible controller to each server as the ubuntu user, the default user on AWS Ubuntu images. The connections used my existing SSH key pair (~/.ssh/id_ed25519), whose public key Terraform attached to every instance through the ansible-adhoc-key AWS key pair. No remote password was needed. On the first connection to each server, I accepted the host fingerprint.
+
+On each VM I ran hostname, which returned web1, app1, and db1. That confirms key-based SSH access works for all three servers and that each server’s hostname matches its role, as set through cloud-init in the Terraform configuration. SSH worked because the security group allows port 22 only from my Ansible controller’s public IP, using a /32 CIDR.
 
 ---
 
@@ -143,19 +164,19 @@ The inventory allows Ansible to run commands against all servers, or only specif
 
 #### Screenshot 10 — `inventory.ini` showing the `web`, `app`, and `db` groups
 
-Add your screenshot here.
+[Output](screenshots/inventory.png)
 
 ---
 
 #### Screenshot 11 — Output of `ansible-inventory -i inventory.ini --graph`
 
-Add your screenshot here.
+[Output](screenshots/graph.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+I created inventory.ini and grouped the servers by role: web1 under web, app1 under app, and db1 under db. Each host’s public IP is set with ansible_host. Under [all:vars], Ansible is set to connect as the ubuntu user with my existing SSH key, ~/.ssh/id_ed25519. Running ansible-inventory -i inventory.ini --graph showed each host in its correct group.
 
 ---
 
@@ -171,43 +192,43 @@ This task proves that the inventory is working and that Ansible can control mult
 
 #### Screenshot 12 — Output of `ansible all -i inventory.ini -m ping`
 
-Add your screenshot here.
+[Output](screenshots/ping.png)
 
 ---
 
 #### Screenshot 13 — Output of `ansible all -i inventory.ini -m command -a "uptime"`
 
-Add your screenshot here.
+[Output](screenshots/uptime.png)
 
 ---
 
 #### Screenshot 14 — Output of `ansible web -i inventory.ini -m apt -a "name=nginx state=present update_cache=yes" --become`
 
-Add your screenshot here.
+[Output](screenshots/nginx.png)
 
 ---
 
 #### Screenshot 15 — Output of `ansible web -i inventory.ini -m service -a "name=nginx state=started enabled=yes" --become`
 
-Add your screenshot here.
+[Output](screenshots/service.png)
 
 ---
 
 #### Screenshot 16 — Output of `ansible all -i inventory.ini -m apt -a "name=htop state=present update_cache=yes" --become`
 
-Add your screenshot here.
+[Output](screenshots/update.png)
 
 ---
 
 #### Screenshot 17 — Output of `ansible web -i inventory.ini -m command -a "systemctl is-active nginx"`
 
-Add your screenshot here.
+[Output](screenshots/nginx-status.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+ansible web -i inventory.ini -m command -a "systemctl is-active nginx
 
 ---
 
@@ -219,13 +240,13 @@ Add your task notes here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/ginikandubuisi_devops-terraform-ansible-share-7524193133681664000-CldD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn.png)
 
 ---
 
@@ -235,37 +256,37 @@ Answer the following in your own words:
 
 **1. What is the purpose of an Ansible inventory file?**
 
-Add your answer here.
+The inventory file tells Ansible which servers it manages and how to reach them. It lists each host with its IP address (through ansible_host) and holds shared connection settings, like the SSH user and private key. It also lets you put hosts into groups, so you can run a command on one server, one group, or every server at once without typing IP addresses each time.
 
 ---
 
 **2. What is the difference between the `web`, `app`, and `db` groups in your inventory?**
 
-Add your answer here.
+Each group stands for a server role. web holds web1, the public-facing server that runs Nginx and is the only one with HTTP (port 80) open. app holds app1, which would run the application logic. db holds db1, which would host the database. Grouping by role lets me target a single tier. For example, I installed Nginx only on the web group and installed htop on all.
 
 ---
 
 **3. What does the Ansible `ping` module verify?**
 
-Add your answer here.
+A SUCCESS with “ping”: “pong” means the host is fully ready for Ansible to manage.
 
 ---
 
 **4. Why do package installation commands require `--become`?**
 
-Add your answer here.
+Installing packages with apt and managing system services both need root privileges. I connect as the regular ubuntu user, so --become tells Ansible to escalate with sudo for that command. Without it, the apt and service tasks fail with a permission error.
 
 ---
 
 **5. When would you use an ad-hoc command instead of a playbook?**
 
-Add your answer here.
+I’d use an ad-hoc command for quick, one-off tasks: checking connectivity, checking uptime or disk space, restarting a service, or installing a single package across a group. For anything I need to repeat, keep in version control, or that has several steps that depend on each other, a playbook is the better choice because it is reusable and documented.
 
 ---
 
 **6. What is one challenge you faced while setting up SSH or inventory, and how did you fix it?**
 
-Add your answer here.
+The main challenge was keeping SSH locked down while still being able to reach all three servers. My security group allows port 22 only from my Ansible controller’s public IP as a /32, not from 0.0.0.0/0, so only my machine can connect. The downside is that if my public IP changes, SSH gets blocked and Ansible can’t reach the servers. To fix it, I update the controller IP variable in Terraform and run terraform apply again, which updates the security group rule.
 
 ---
 
