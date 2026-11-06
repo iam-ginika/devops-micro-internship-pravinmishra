@@ -30,7 +30,7 @@ cat .dockerignore
 
 The file must exclude `node_modules`, `build`, and `.env`.
 
-Add your screenshot here.
+[Output](screenshots/Dockerignore.png)
 
 ---
 
@@ -46,7 +46,7 @@ Create a baseline single-stage Docker image and run the application on port 3000
 
 Add a screenshot showing the completed `Dockerfile.single`.
 
-Add your screenshot here.
+[Output](screenshots/Dockerfile-S.png)
 
 ---
 
@@ -60,7 +60,7 @@ http://localhost:3000
 
 Ensure that your full name is visible in the application.
 
-Add your screenshot here.
+[Output](screenshots/Localhost.png)
 
 ---
 
@@ -76,7 +76,7 @@ Create an optimized multi-stage Docker image with separate builder and Nginx run
 
 Add a screenshot showing the completed multi-stage `Dockerfile`.
 
-Add your screenshot here.
+[Output](screenshots/Stages.png)
 
 ---
 
@@ -90,7 +90,7 @@ http://localhost
 
 Ensure that your full name is visible in the application.
 
-Add your screenshot here.
+[Output](screenshots/Browser2.png)
 
 ---
 
@@ -117,7 +117,7 @@ react-single:latest
 react-multistage:latest
 ```
 
-Add your screenshot here.
+[Output](screenshots/Docker-images.png)
 
 ---
 
@@ -126,15 +126,18 @@ Add your screenshot here.
 Record the image sizes and calculate the reduction using the same unit for both images.
 
 ```text
-Single-stage image size: Add size here
+Single-stage image size: 509 MB
 
-Multi-stage image size: Add size here
+Multi-stage image size: 26.6 MB
 
 Percentage reduction =
 ((Single-stage image size − Multi-stage image size)
 ÷ Single-stage image size) × 100
 
-Percentage reduction: Add result here
+Percentage reduction: ((509 − 26.6) ÷ 509) × 100
+= (482.4 ÷ 509) × 100
+= 94.77%
+
 ```
 
 ---
@@ -157,6 +160,14 @@ Write a short analysis of 5–8 lines covering:
 - One Docker build-caching optimization you used
 
 Write your analysis here.
+
+1. My single-stage image (react-single:latest) was 509 MB, while the multi-stage image (react-multistage:latest) was 26.6 MB, both measured by content size.
+2. That is a 94.77% reduction: ((509 − 26.6) ÷ 509) × 100.
+3. The single-stage image keeps Node.js, npm, node_modules, the source code and build tools, while the multi-stage image holds only Nginx and the compiled build/ files.
+4. Security benefit: the production container has no compiler toolchain, package manager or source code that an attacker could use or that could leak.
+5. Attack surface: fewer installed packages means fewer potential vulnerabilities to scan, patch and monitor in the running container.
+6. Pull and deployment speed: a 26.6 MB image transfers to and from a registry far faster than 509 MB, so new servers and scaling events start containers sooner.
+
 
 ---
 
