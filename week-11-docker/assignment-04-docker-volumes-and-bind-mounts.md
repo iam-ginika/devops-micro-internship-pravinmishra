@@ -26,7 +26,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker pull nginx:alpine
 ```
 
-Add your screenshot here.
+[Output](screenshots/Pull2.png)
 
 ---
 
@@ -38,7 +38,7 @@ Add a screenshot of the terminal showing the created host directory:
 $HOME/nginx-logs
 ```
 
-Add your screenshot here.
+[Output](screenshots/Directory.png)
 
 ---
 
@@ -56,7 +56,7 @@ The output must show the `myweb` container with:
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+[Output](screenshots/Myweb2.png)
 
 ---
 
@@ -70,7 +70,7 @@ http://<YOUR-VM-PUBLIC-IP>
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Welcome-page2.png)
 
 ---
 
@@ -84,7 +84,7 @@ $HOME/nginx-logs
 
 The output must show `access.log`, `error.log`, and an access-log entry created when you opened the Nginx page.
 
-Add your screenshot here.
+[Output](screenshots/logs.png)
 
 ---
 
@@ -97,7 +97,7 @@ docker stop myweb
 docker rm myweb
 ```
 
-Add your screenshot here.
+[Output](screenshots/Stop-rm-success.png)
 
 ---
 
@@ -111,7 +111,7 @@ $HOME/nginx-logs
 
 The access log must retain its content after the container has been removed.
 
-Add your screenshot here.
+[Output](screenshots/Logs2.png)
 
 ---
 
@@ -127,7 +127,7 @@ Deploy backend and frontend containers that share data through a named Docker Vo
 
 Add a screenshot of the terminal showing the `two-tier-app` project structure, including separate `backend` and `frontend` directories with a `Dockerfile` and `index.js` file in each.
 
-Add your screenshot here.
+[Output](screenshots/File-structure.png)
 
 ---
 
@@ -139,7 +139,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 docker network ls
 ```
 
-Add your screenshot here.
+[Output](screenshots/Network2.png)
 
 ---
 
@@ -151,7 +151,7 @@ Add a screenshot of the terminal showing `shared-data` in:
 docker volume ls
 ```
 
-Add your screenshot here.
+[Output](screenshots/Volume.png)
 
 ---
 
@@ -159,7 +159,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing the completed backend `Dockerfile`.
 
-Add your screenshot here.
+[Output](screenshots/Backend-DF.png)
 
 ---
 
@@ -167,7 +167,8 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing successful completion of the `backend-app:latest` image build.
 
-Add your screenshot here.
+[Output](screenshots/Build1.png)
+[Output](screenshots/Build2.png)
 
 ---
 
@@ -181,7 +182,7 @@ docker ps
 
 The output must show the running `backend` container.
 
-Add your screenshot here.
+[Output](screenshots/Container2.png)
 
 ---
 
@@ -189,7 +190,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing the completed frontend `Dockerfile`.
 
-Add your screenshot here.
+[Output](screenshots/Frontend-DF.png)
 
 ---
 
@@ -197,7 +198,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing successful completion of the `frontend-app:latest` image build.
 
-Add your screenshot here.
+[Output](screenshots/Frontend-build.png)
 
 ---
 
@@ -215,7 +216,7 @@ The output must show both `backend` and `frontend` containers running. Only `fro
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+[Output](screenshots/Both-containers.png)
 
 ---
 
@@ -229,7 +230,7 @@ The output must include:
 Data written: Hello from Backend!
 ```
 
-Add your screenshot here.
+[Output](screenshots/Backend-hello.png)
 
 ---
 
@@ -243,7 +244,7 @@ Hello from Backend!
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Browser-hello.png)
 
 ---
 
@@ -257,7 +258,7 @@ Test Data 1
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Test1.png)
 
 ---
 
@@ -271,7 +272,7 @@ Test Data 2 - New Update
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Test2.png)
 
 ---
 
@@ -279,7 +280,7 @@ Add your screenshot here.
 
 Add a screenshot of the terminal showing the `frontend` and `backend` containers removed and recreated using the same `shared-data` Docker Volume.
 
-Add your screenshot here.
+[Output](screenshots/Shared-data.png)
 
 ---
 
@@ -295,7 +296,7 @@ This proves that the `shared-data` Docker Volume outlived both application conta
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Browser-sd.png)
 
 ---
 
@@ -309,7 +310,21 @@ Write a short explanation covering:
 - Why Docker Volumes are commonly used for application data
 
 Write your explanation here.
+Difference between a Bind Mount and a Docker Volume
 
+A Bind Mount connects a specific directory on the host to a directory inside a container, and I choose the host path. In Task 1, I mounted $HOME/nginx-logs to /var/log/nginx. A Docker Volume is created and managed by Docker, so I refer to it by name instead of a host path. In Task 2, I created shared-data and mounted it at /data. In both cases, the data is stored outside the container’s writable layer.
+
+How Task 1 proved Bind Mount persistence
+
+I ran an Nginx container with the Bind Mount and opened the site through the VM’s public IP, which added a request to the access log. access.log and error.log appeared in $HOME/nginx-logs on the host. I then stopped and removed the myweb container and checked the directory again. Both files were still there and the access log kept its entries, which proved the logs did not depend on the container.
+
+How Task 2 proved Docker Volume persistence
+
+I ran separate backend and frontend containers with the same shared-data volume mounted at /data. The backend wrote to /data/message.txt, and the frontend displayed the same content in the browser. When I updated the file from the backend, the new text appeared after a browser refresh. I then removed both containers and recreated them from the same images with the same volume. The browser still showed “Test Data 2 - New Update”, which proved the data outlived both containers.
+
+Why Docker Volumes are commonly used for application data
+
+Docker Volumes are managed by Docker, so applications do not depend on a specific host directory structure. A container can be replaced or upgraded while its data stays in the volume, and more than one container can use the same volume. This makes volumes a good fit for databases, uploaded files, reports and other application data.
 ---
 
 # Public Application URL

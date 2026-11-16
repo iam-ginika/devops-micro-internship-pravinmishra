@@ -30,13 +30,13 @@ Confirm successful Azure Portal access and Locate the required services and subs
 
 #### Screenshot 1 — Azure Portal homepage after successful login
 
-Add your screenshot here.
+[Output](screenshots/Azure-welcome-page.png)
 
 ---
 
 #### Screenshot 2 — "Subscriptions" section showing the "Free Trial" subscription
 
-Add your screenshot here.
+[Output](screenshots)
 
 ---
 
@@ -44,7 +44,7 @@ Add your screenshot here.
 
 Write a three-to-four-line paragraph explaining which Azure services you plan to explore first and why.
 
-Write your answer here.
+I’ll start with Azure Virtual Machines and Virtual Networks because compute and networking are the foundation of any cloud setup. Next is Azure DevOps Pipelines, since CI/CD is at the core of DevOps work. After that, I’ll explore Azure Database for MySQL and Azure Container Instances to learn how Azure handles managed databases and containers.
 
 ---
 
@@ -58,7 +58,7 @@ Share your Azure account setup achievement and DMI Leaderboard progress together
 
 #### Screenshot 3 — Published WhatsApp Status showing your Azure account setup update, automatically generated DMI Leaderboard rank, and personal progress link
 
-Add your screenshot here.
+[Output](screenshots/Subscription.png)
 
 > **Privacy Note:** Do not include payment details, subscription IDs, private phone numbers, or other sensitive information.
 

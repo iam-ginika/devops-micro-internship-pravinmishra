@@ -30,7 +30,8 @@ backend/
 docker-compose.yml
 ```
 
-Add your screenshot here.
+[Output](screenshots/Project-tree.png)
+
 
 ---
 
@@ -47,7 +48,8 @@ backend/.dockerignore
 
 Ensure that no real passwords, tokens, or secrets are visible.
 
-Add your screenshot here.
+[Output](screenshots/Contents.png)
+
 
 ---
 
@@ -63,7 +65,8 @@ Prepare Dockerfiles for the frontend and backend services and build both service
 
 Add a screenshot showing the completed `frontend/Dockerfile`.
 
-Add your screenshot here.
+[Output](screenshots/FDF.png)
+
 
 ---
 
@@ -71,7 +74,8 @@ Add your screenshot here.
 
 Add a screenshot showing the completed `backend/Dockerfile`.
 
-Add your screenshot here.
+[Output](screenshots/BDF.png)
+
 
 ---
 
@@ -83,7 +87,9 @@ Add a screenshot of the terminal showing successful completion of:
 docker compose build
 ```
 
-Add your screenshot here.
+[Output](screenshots/Compose-Build1.png)
+[Output](screenshots/Compose-Build2.png)
+
 
 ---
 
@@ -105,7 +111,8 @@ Add a screenshot showing the MySQL service in `docker-compose.yml`, including:
 - `mysql_data` volume mount
 - No published MySQL port
 
-Add your screenshot here.
+[Output](screenshots/My-sql.png)
+
 
 ---
 
@@ -118,7 +125,8 @@ Add a screenshot showing the backend service configuration, including:
 - Browser frontend origin configured for CORS
 - Published backend port
 
-Add your screenshot here.
+[Output](screenshots/backend-service.png)
+
 
 ---
 
@@ -130,7 +138,8 @@ Add a screenshot showing the frontend service configuration, including:
 - `depends_on` for the backend service
 - Browser-facing `NEXT_PUBLIC_API_URL`
 
-Add your screenshot here.
+[Output](screenshots/Frontend-service.png)
+
 
 ---
 
@@ -138,7 +147,8 @@ Add your screenshot here.
 
 Add a screenshot showing the `mysql_data` volume definition in `docker-compose.yml`.
 
-Add your screenshot here.
+[Output](screenshots/Volume2.png)
+
 
 ---
 
@@ -160,7 +170,8 @@ docker compose ps
 
 The output must show the MySQL, backend, and frontend services running. MySQL must show as healthy.
 
-Add your screenshot here.
+[Output](screenshots/Compose-ps.png)
+
 
 ---
 
@@ -174,7 +185,8 @@ docker compose logs mysql backend --tail=50
 
 The logs must show MySQL readiness and successful backend database connection.
 
-Add your screenshot here.
+[Output](screenshots/Compose-logs.png)
+
 
 ---
 
@@ -192,7 +204,8 @@ Add a browser screenshot showing successful user registration or login.
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Registration.png)
+
 
 ---
 
@@ -202,7 +215,8 @@ Add a browser screenshot showing a created book review visible in the applicatio
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Book-review.png)
+
 
 ---
 
@@ -213,7 +227,8 @@ Add a browser developer-tools screenshot with:
 - The Network tab showing a successful API request
 - The Console drawer showing no CORS error after the API interaction
 
-Add your screenshot here.
+[Output](screenshots/devtool.png)
+
 
 ---
 
@@ -231,7 +246,8 @@ Add a browser screenshot showing the registered user or created review before th
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/Data-before.png)
+
 
 ---
 
@@ -247,7 +263,8 @@ docker compose ps
 
 Do not use `docker compose down -v`.
 
-Add your screenshot here.
+[Output](screenshots/Down-up.png)
+
 
 ---
 
@@ -257,7 +274,8 @@ Add a browser screenshot showing the same registered user or review after the st
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/After.png)
+
 
 ---
 
@@ -278,12 +296,31 @@ Write a short explanation of 5–8 lines covering:
 - Why a full reset must not be used before persistence evidence is captured
 
 Write your explanation here.
+What docker compose down removes and preserves
+
+Running docker compose down stops and removes the stack’s containers and its default network, but it keeps named volumes such as mysql_data.
+
+Why named volumes should be kept when preserving MySQL data
+
+Named volumes store the database outside the containers. When the stack starts again, the new MySQL container mounts the same volume and finds the existing users and reviews.
+
+What happens when named volumes are removed
+
+Running docker compose down -v also removes named volumes, which permanently deletes the database and everything stored in it. On the next start, MySQL initializes an empty database and the application seeds its sample data again.
+
+When a full reset is useful
+
+A full reset is useful for resetting a development database, re-running seed data, or recovering from a failed first-time database setup.
+
+Why a full reset must not be used before persistence evidence is captured
+
+It would destroy the user and review data that the test depends on, leaving nothing to prove that the data survived a restart.
 
 ---
 
 # Final Public Frontend URL
 
-**Frontend URL:** `http://<VM_PUBLIC_IP>:<FRONTEND_PORT>`
+**Frontend URL:** http://16.170.218.128:3000/
 
 Replace the placeholder with your working application URL.
 
@@ -291,7 +328,7 @@ Replace the placeholder with your working application URL.
 
 # GitHub Repository URL
 
-**Your Fork or Repository URL:** `Add your GitHub repository URL here`
+**Your Fork or Repository URL:** https://github.com/iam-ginika/devops-micro-internship-pravinmishra
 
 ---
 

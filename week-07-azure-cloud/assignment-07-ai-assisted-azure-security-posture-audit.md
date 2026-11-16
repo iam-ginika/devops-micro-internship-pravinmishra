@@ -20,7 +20,7 @@ Confirm your Azure CLI is authenticated and can see the VM, network, storage acc
 
 #### Screenshot 1 — `az account show` and `az vm list -d -o table` confirming your subscription and running VM (subscription ID partially blurred)
 
-Add your screenshot here.
+[Output](screenshots/Subscription-list-table.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create a `CLAUDE.md` for this workspace that tells Claude what the audit covers 
 
 #### Screenshot 2 — `CLAUDE.md` open in your editor showing the project overview, audit workflow, and safety rules
 
-Add your screenshot here.
+[Output](screenshots/Claude-md.png)
 
 ---
 
@@ -48,7 +48,8 @@ Ask Claude Code to read `CLAUDE.md` and propose a read-only, four-check audit pl
 
 #### Screenshot 3 — Claude Code showing the four-check plan, with no files created or modified
 
-Add your screenshot here.
+[Output](screenshots/Check-1-3.png)
+[Output](screenshots/Check-4.png)
 
 ---
 
@@ -62,13 +63,13 @@ Write a Bash script that runs the four checks from Task 3 using read-only `az` c
 
 #### Screenshot 4 — Your script open in your editor, showing the check functions and the `az` commands they call
 
-Add your screenshot here.
+[Output](screenshots/Script.png)
 
 ---
 
 #### Screenshot 5 — Output of `bash -n` (no syntax errors) and `ls -l` showing the script is executable
 
-Add your screenshot here.
+[Output](screenshots/Executable-scripts.png)
 
 ---
 
@@ -82,7 +83,7 @@ Run the script against your live resources and read the report honestly, even if
 
 #### Screenshot 6 — Script output showing your Full Name and all four checks with a PASS, WARN, or FAIL result
 
-Add your screenshot here.
+[Output](screenshots/Audit.png)
 
 ---
 
@@ -96,13 +97,14 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 
 #### Screenshot 7 — Your skill file's frontmatter showing `allowed-tools` without `Write`
 
-Add your screenshot here.
+[Output](screenshots/Skill.png)
 
 ---
 
 #### Screenshot 8 — `/azure-audit` output showing the baseline findings and Claude's explanation
 
-Add your screenshot here.
+[Output](screenshots/Failed-check.png)
+[Output](screenshots/Failed-check2.png)
 
 ---
 
@@ -116,19 +118,19 @@ Pick one WARN or FAIL finding (or deliberately open an NSG rule to port 22 from 
 
 #### Screenshot 9 — Saved report showing the original finding before the fix
 
-Add your screenshot here.
+[Output](screenshots/Baseline-report.png)
 
 ---
 
 #### Screenshot 10 — Terminal output of the remediation command you ran yourself
 
-Add your screenshot here.
+[Output](screenshots/Remediation-command.png)
 
 ---
 
 #### Screenshot 11 — Second `/azure-audit` run (or report) showing the finding resolved
 
-Add your screenshot here.
+[Output](screenshots/Azure-audit.png)
 
 ---
 
@@ -136,7 +138,11 @@ Add your screenshot here.
 
 Compare this assignment to the AWS audit you built in Week 6: which finding categories map to each other across the two clouds, and what stayed exactly the same about the workflow even though the `az`/`aws` commands are completely different?
 
-Add your answer here
+Each Azure check matches a Week 6 AWS check. Security groups with SSH open to 0.0.0.0/0 map to NSG rules with SSH or RDP open to the internet. S3 Block Public Access maps to the Storage Account allowBlobPublicAccess setting. EBS encryption maps to the managed disk encryption type. RDS PubliclyAccessible maps to MySQL publicNetworkAccess. My AWS audit also checked port 3306 separately, but Azure does not need that check because a private MySQL server has no public endpoint.
+
+My AWS baseline failed on S3 ACL settings, open SSH and unencrypted EBS volumes. My Azure baseline was healthy, because Azure encrypts disks by default and my earlier deployment was already locked down. To practise the fix, I created an open SSH rule on an unattached lab NSG and restricted it to my own IP. On Azure this took one command, while on AWS it took a revoke and an authorize.
+
+The workflow stayed the same. Bash gathers read-only evidence and returns PASS, WARN or FAIL with exit codes. Claude explains the risk and recommends a fix but cannot change anything. I run the fix myself and rerun the audit to confirm it worked. The commands are different, but the Gather, Analyze, Human Act and Verify loop is the same.
 
 ---
 

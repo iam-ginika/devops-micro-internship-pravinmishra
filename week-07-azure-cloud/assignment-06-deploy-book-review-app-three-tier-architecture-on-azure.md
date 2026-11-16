@@ -20,13 +20,91 @@ Create an architecture diagram and implementation plan identifying the presentat
 
 #### Screenshot 1 — Architecture diagram showing the public entry point, three tiers, network boundaries, and traffic flow
 
-Add your screenshot here.
+[Output](screenshots/Diagram.txt)
 
 ---
 
 #### Screenshot 2 — Written architecture assumptions and selected Azure services
 
-Add your screenshot here.
+Region: Sweden Central | Resource Group: Book-Review-RG | VNet: Book-Review-VNet [10.0.0.0/16]
+
+Overview
+
+I built the Book Review App as a three-tier setup on Azure. The Next.js frontend runs on a web VM behind a public load balancer. The Express API runs on a private app VM behind an internal load balancer. The data lives in a MySQL Flexible Server that can’t be reached from the internet. Each tier has its own subnet and its own firewall rules, and a request can only move one tier inward at a time.
+
+Design Decisions and Why I Made Them
+
+Load balancers instead of exposing the VMs directly.
+Users reach the app through a Standard Public Load Balancer on port 80. The app tier sits behind an Internal Load Balancer with a private IP only. Both have health probes, so traffic only goes to a VM that’s responding.
+
+VMs for the web and app tiers.
+I wanted full control over the OS, Nginx and the Node.js runtime, and VMs carry over directly from my earlier assignments. I used one VM per tier to stay within the free-trial budget. More can be added to the backend pools later without redesigning anything.
+
+Private-only database.
+MySQL Flexible Server uses private access (VNet Integration), and public network access is turned off. Only the app subnet can reach it, on port 3306.
+
+Outbound access without inbound exposure.
+The private app tier still needs to download OS updates and npm packages. A NAT Gateway gives it outbound access without opening any inbound path.
+
+Credentials kept off GitHub.
+The database credentials are in a .env file on the App VM, with restricted file permissions, listed in .gitignore. They never appear in the code, the repo or the screenshots.
+
+Services by Tier
+
+Entry: Azure Load Balancer (Standard, public)
+The only public path for app traffic, on port 80.
+
+Web tier: Azure VM (Ubuntu), Book-Review-Web-VM
+Runs Nginx to serve the Next.js frontend.
+
+Web to App: Azure Load Balancer (Standard, internal)
+Routes requests privately from the web tier to the backend.
+
+App tier: Azure VM (Ubuntu)
+Runs the Node.js/Express API, which uses Sequelize to talk to MySQL.
+
+Data tier: Azure Database for MySQL – Flexible Server
+Managed MySQL with private access and automated backups.
+
+Network: Book-Review-VNet with 3 subnets
+Web subnet [10.0.1.0/24], App subnet [10.0.2.0/24] and DB subnet [10.0.3.0/24], with the DB subnet delegated to MySQL.
+
+Firewalls: Network Security Groups
+One NSG per tier, each with least-privilege inbound rules.
+
+Outbound access: NAT Gateway
+Lets the private tier download updates and packages without being reachable from the internet.
+
+Visibility: Azure Monitor
+Collects metrics and diagnostic logs, and sends alerts.
+
+How a Request Moves Through the System
+
+The user sends a request to the Public Load Balancer on port 80.
+The Public Load Balancer forwards it to the Web VM, where Nginx serves the Next.js frontend.
+The frontend’s API calls go to the Internal Load Balancer.
+The Internal Load Balancer sends them to the App VM running the Express API.
+The API reads from and writes to MySQL Flexible Server privately on port 3306.
+The only internet-facing path besides the Public Load Balancer is SSH to the Web VM, and that’s restricted to my own IP.
+
+Firewall Rules at Each Boundary
+NSG	Allows in	Blocks
+Book-Review-Web-NSG	HTTP 80 and HTTPS 443 from Any · SSH 22 from my IP only	All other inbound
+App NSG	API port [8080] from the web subnet only	All inbound from the internet
+DB NSG	MySQL 3306 from the app subnet only	All inbound from the internet
+Keeping It Running and Recoverable
+Health probes on both load balancers take an unhealthy VM out of rotation.
+MySQL Flexible Server runs automated backups with a [7]-day retention period.
+Azure Monitor tracks the VMs, both load balancers and the database, with alerts on key metrics.
+I confirmed healthy targets and ran an availability test before submitting.
+Build Sequence
+Resource group, then the VNet with its web, app and DB subnets
+NSGs for each subnet, plus the NAT Gateway and route table for the private tier
+MySQL Flexible Server with private access, then the schema import
+App VM with the Express API and its .env, then the Internal Load Balancer
+Web VM with Nginx and Next.js, then the Public Load Balancer
+Azure Monitor diagnostics and alerts
+End-to-end test: one read, one write, a check that the private tiers can’t be reached, and an availability test
 
 ---
 
@@ -40,19 +118,21 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 
 #### Screenshot 3 — Resource Group overview showing the assignment resources
 
-Add your screenshot here.
+[Output](screenshots/Resource-group1.png)
+[Output](screenshots/Resource-group2.png)
 
 ---
 
 #### Screenshot 4 — VNet overview showing the address space and all required subnets
 
-Add your screenshot here.
+[Output](screenshots/Book-review-vnet.png)
+[Output](screenshots/Book-review-subnet.png)
 
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
 
-Add your screenshot here.
+[Output](screenshots/Route-table.png)
 
 ---
 
@@ -66,13 +146,15 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 
 #### Screenshot 6 — NSG rules proving least-privilege access between the tiers
 
-Add your screenshot here.
+[Output](screenshots/DB-NSG.png)
+[Output](screenshots/App-NSG.png)
+[Output](screenshots/Web-NSG.png)
 
 ---
 
 #### Screenshot 7 — Key Vault or approved secret-management configuration (without displaying secret values)
 
-Add your screenshot here.
+[Output](screenshots/Secret-config.png)
 
 ---
 
@@ -86,13 +168,14 @@ Deploy the Book Review App presentation layer on the approved web-tier compute s
 
 #### Screenshot 8 — Web-tier compute overview showing subnet and availability configuration
 
-Add your screenshot here.
+[Output](screenshots/Web-VM.png)
+[Output](screenshots/Web-tier-subnet.png)
 
 ---
 
 #### Screenshot 9 — Terminal or service output proving the presentation layer is running
 
-Add your screenshot here.
+[Output](screenshots/Service-output.png)
 
 ---
 
@@ -106,19 +189,20 @@ Deploy the Book Review App backend privately in the application subnet, configur
 
 #### Screenshot 10 — Application-tier compute overview showing private subnet placement
 
-Add your screenshot here.
+[Output](screenshots/App-tier.png)
+[Output](screenshots/App-subnet.png)
 
 ---
 
 #### Screenshot 11 — Backend process, service, or listening-port evidence
 
-Add your screenshot here.
+[Output](screenshots/Listening-port2.png)
 
 ---
 
 #### Screenshot 12 — Internal health-check or API response (without exposing secrets)
 
-Add your screenshot here.
+[Output](screenshots/API-Response.png)
 
 ---
 
@@ -132,19 +216,19 @@ Create a private Azure managed database (public access disabled), with availabil
 
 #### Screenshot 13 — Database overview showing private connectivity and public access disabled
 
-Add your screenshot here.
+[Output](screenshots/Database-network.png)
 
 ---
 
 #### Screenshot 14 — Availability, backup, and retention configuration
 
-Add your screenshot here.
+[Output](screenshots/Database-config.png)
 
 ---
 
 #### Screenshot 15 — Successful schema or connectivity verification (without exposing credentials)
 
-Add your screenshot here.
+[Output](screenshots/Verification.png)
 
 ---
 
@@ -158,19 +242,19 @@ Configure the approved public entry service with health probes and backend pools
 
 #### Screenshot 16 — Public entry service showing listener, frontend endpoint, and healthy web targets
 
-Add your screenshot here.
+[Output](screenshots/Public-LB.png)
 
 ---
 
 #### Screenshot 17 — Internal application-tier load-balancing or routing configuration where applicable
 
-Add your screenshot here.
+[Output](screenshots/Internal-LB.png)
 
 ---
 
 #### Screenshot 18 — Azure Monitor, diagnostic settings, logs, metrics, or alert evidence
 
-Add your screenshot here.
+[Output](screenshots/Monitor.png)
 
 ---
 
@@ -184,25 +268,25 @@ Confirm the Book Review App works end to end through the public endpoint, with a
 
 #### Screenshot 19 — Browser showing the Book Review App through the public endpoint
 
-Add your screenshot here.
+[Output](screenshots/Browser.png)
 
 ---
 
 #### Screenshot 20 — Proof of successful database-backed read and write operations
 
-Add your screenshot here.
+[Output](screenshots/Backend-operation.png)
 
 ---
 
 #### Screenshot 21 — Evidence that private tiers are not publicly accessible
 
-Add your screenshot here.
+[Output](screenshots/App=access.png)
 
 ---
 
 #### Screenshot 22 — Availability-test and healthy-target evidence
 
-Add your screenshot here.
+[Output](screenshots/Health-status.png)
 
 ---
 
@@ -210,7 +294,7 @@ Add your screenshot here.
 
 Paste your public endpoint URL here:
 
-`Add your URL here`
+http://4.225.191.80/
 
 ---
 

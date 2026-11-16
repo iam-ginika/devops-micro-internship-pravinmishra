@@ -26,7 +26,7 @@ Add a screenshot of Docker Hub showing your newly created public repository:
 my-react-app
 ```
 
-Add your screenshot here.
+[Output](screenshots/Repo.png)
 
 ---
 
@@ -40,7 +40,8 @@ Login Succeeded
 
 Ensure that your full name is visible and that no password, Personal Access Token, or device code is exposed.
 
-Add your screenshot here.
+[Output](screenshots/Login.png)
+
 
 ---
 
@@ -54,7 +55,8 @@ docker image ls <YOUR_DOCKERHUB_USERNAME>/my-react-app
 
 The output must show the `latest` tag.
 
-Add your screenshot here.
+[Output](screenshots/React-image.png)
+
 
 ---
 
@@ -68,7 +70,8 @@ docker push <YOUR_DOCKERHUB_USERNAME>/my-react-app:latest
 
 The output must include a pushed status or image digest.
 
-Add your screenshot here.
+[Output](screenshots/Push.png)
+
 
 ---
 
@@ -76,7 +79,8 @@ Add your screenshot here.
 
 Add a screenshot of your Docker Hub repository showing the uploaded `latest` image tag.
 
-Add your screenshot here.
+[Output](screenshots/Tag.png)
+
 
 ---
 
@@ -88,7 +92,8 @@ Add a screenshot of the terminal showing:
 - Successful `docker pull` output
 - `docker image ls` showing the pulled image
 
-Add your screenshot here.
+[Output](screenshots/Pull3.png)
+
 
 ---
 
@@ -106,7 +111,8 @@ The output must show the running `react-container` with:
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+[Output](screenshots/Container3.png)
+
 
 ---
 
@@ -120,13 +126,14 @@ http://<YOUR-VM-PUBLIC-IP>
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+[Output](screenshots/React-browser.png)
+
 
 ---
 
 # Docker Hub Repository URL
 
-**Repository URL:** `Add your Docker Hub repository URL here`
+**Repository URL:** https://hub.docker.com/repository/docker/iamginika/my-react-app/general
 
 ---
 
@@ -139,7 +146,17 @@ Write a short explanation covering:
 - Why production deployments should use versioned image tags instead of relying only on `latest`
 
 Write your explanation here.
+Why image tagging is required before pushing to Docker Hub
 
+Docker uses an image’s name to decide where to push it. My local image was named react-multistage:latest, which doesn’t say which Docker Hub account or repository it belongs to. Tagging it as iamginika/my-react-app:latest gave it the full destination: my username, the repository name and the version tag. The tag only adds a new name to the same image and doesn’t change its contents.
+
+Why a container registry is useful in DevOps workflows
+
+A registry gives teams one central place to store and share container images. An image can be built once, pushed, and then pulled onto any server or environment, so development, testing and production can all run the same image. I verified this by removing the local image from my EC2 instance, pulling it back from Docker Hub and running it successfully. The application loaded through the instance’s public IP using only the copy stored in the registry.
+
+Why production deployments should use versioned image tags instead of relying only on latest
+
+The latest tag is only a label and it can be moved to a different image with each push, so it doesn’t show exactly which build is running. Two servers that pull latest at different times could end up running different versions. Versioned tags such as v1.0.0 or build-125 identify a specific release, which makes deployments repeatable, problems easier to trace and rollbacks simpler because the team can redeploy a known working version.
 ---
 
 # LinkedIn Requirement

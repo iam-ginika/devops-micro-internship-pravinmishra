@@ -28,7 +28,7 @@ docker network ls
 
 The output must include the default `bridge`, `host`, and `none` networks.
 
-[Output](screenshots)
+[Output](screenshots/Network.png)
 
 ---
 
@@ -40,7 +40,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker pull nginx:alpine
 ```
 
-[Output](screenshots)
+[Output](screenshots/Pull.png)
 
 ---
 
@@ -58,7 +58,7 @@ The output must show the running `myweb` container with:
 0.0.0.0:80->80/tcp
 ```
 
-[Output](screenshots)
+[Output](screenshots/Myweb.png)
 
 ---
 
@@ -67,12 +67,12 @@ The output must show the running `myweb` container with:
 Add a browser screenshot showing the Nginx Welcome Page at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.170.218.128/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots)
+[Output](screenshots/Welcome-page.png)
 
 ---
 
@@ -92,7 +92,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 docker network ls
 ```
 
-[Output](screenshots)
+[Output](screenshots/mynetwork.png)
 
 ---
 
@@ -106,7 +106,7 @@ docker ps
 
 The output must show both `web` and `client` containers running without published host ports.
 
-[Output](screenshots)
+[Output](screenshots/PS.png)
 
 ---
 
@@ -120,7 +120,7 @@ docker exec client wget -qO- http://web
 
 The output must display the Nginx Welcome Page HTML.
 
-[Output](screenshots)
+[Output](screenshots/wget.png)
 
 ---
 
@@ -134,7 +134,7 @@ docker network inspect mynetwork
 
 The output must show both `web` and `client` connected to `mynetwork`.
 
-[Output](screenshots)
+[Output](screenshots/Inspect.png)
 
 ---
 
@@ -156,7 +156,7 @@ docker network ls
 
 The output must include both `frontend-network` and `backend-network`.
 
-[Output](screenshots)
+[Output](screenshots/Multi-network.png)
 
 ---
 
@@ -174,7 +174,7 @@ The output must show:
 - `backend` without a published host port
 - `db` without a published host port
 
-[Output](screenshots)
+[Output](screenshots/Frontend-published.png)
 
 ---
 
@@ -188,7 +188,8 @@ docker network inspect frontend-network
 
 The output must show `frontend` and `backend`.
 
-[Output](screenshots)
+[Output](screenshots/Frontend1.png)
+[Output](screenshots/Frontend2.png)
 
 ---
 
@@ -202,7 +203,8 @@ docker network inspect backend-network
 
 The output must show `backend` and `db`.
 
-[Output](screenshots)
+[Output](screenshots/Backend1.png)
+[Output](screenshots/Backend2.png)
 
 ---
 
@@ -216,7 +218,7 @@ docker exec frontend wget -qO- http://backend
 
 The output must display the Nginx Welcome Page HTML.
 
-[Output](screenshots)
+[Output](screenshots/Connection.png)
 
 ---
 
@@ -224,7 +226,7 @@ The output must display the Nginx Welcome Page HTML.
 
 Add a screenshot of the terminal showing a successful connection to `db` on port `27017` from the `backend` container.
 
-[Output](screenshots)
+[Output](screenshots/Connection-Success.png)
 
 ---
 
@@ -238,7 +240,7 @@ The output must include:
 Expected result: frontend cannot reach db
 ```
 
-[Output](screenshots)
+[Output](screenshots/Failed-reach.png)
 
 ---
 
@@ -247,12 +249,12 @@ Expected result: frontend cannot reach db
 Add a browser screenshot showing the Nginx Welcome Page from the `frontend` container at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.170.218.128/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots)
+[Output](screenshots/Frontend.png)
 
 ---
 
@@ -274,7 +276,7 @@ docker ps
 
 The output must show the running `fastapp` container.
 
-[Output](screenshots)
+[Output](screenshots/fastapp.png)
 
 ---
 
@@ -292,7 +294,7 @@ The output must confirm:
 "NetworkMode": "host"
 ```
 
-[Output](screenshots)
+[Output](screenshots/Networkmode.png)
 
 ---
 
@@ -301,12 +303,12 @@ The output must confirm:
 Add a browser screenshot showing the Nginx Welcome Page at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://16.170.218.128/
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots)
+[Output](screenshots/Frontend.png)
 
 ---
 
@@ -319,7 +321,7 @@ docker stop fastapp
 docker rm fastapp
 ```
 
-[Output](screenshots)
+[Output](screenshots/Remove-fastapp.png)
 
 ---
 
@@ -332,7 +334,18 @@ Write a short note explaining:
 - Why the frontend could not access the database in Task 3
 - The difference between bridge mode and host network mode
 
-Write your note here.
+- Default bridge networking
+Default bridge networking
+The default bridge network is the built-in network Docker connects containers to when no network is specified. It’s a private network inside the VM, so each container gets an internal IP address (e.g. 172.17.0.2) that can’t be reached from outside. To make a container accessible, you publish a port. In Task 1, -p 80:80 forwarded traffic from the VM’s public IP on port 80 to the Nginx container, which is why the welcome page loaded in the browser. The default bridge has no built-in DNS, so containers on it can only reach each other by IP address, and that IP can change when a container is recreated. It suits a single standalone container, while multi-container apps work better on a custom bridge network.
+
+- Container-name communication on a custom bridge network
+A custom bridge network (mynetwork) has built-in DNS, so containers can reach each other by name. client reached web with wget http://web, without any IP or published port.
+
+- Why the frontend could not access the database in Task 3
+Frontend was only on frontend-network, and db was only on backend-network. Containers can only talk to containers on a network they share, so frontend couldn’t even resolve db. backend was on both networks, but Docker doesn’t forward traffic between networks.
+
+- Bridge mode vs host network mode
+In bridge mode, each container gets its own isolated network, and you need -p to expose ports. In host mode, the container uses the VM’s network directly, so you don’t need -p, but you lose isolation and can get port conflicts.
 
 ---
 

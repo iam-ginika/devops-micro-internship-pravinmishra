@@ -33,7 +33,7 @@ docker-audit.sh
 SKILL.md
 ```
 
-Add your screenshot here.
+[Output](screenshots/Audit-files.png)
 
 ---
 
@@ -49,7 +49,7 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
 
-Add your screenshot here.
+[Output](screenshots/Claude.png)
 
 ---
 
@@ -70,7 +70,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The usage message displayed when the script runs without a container name
 
-Add your screenshot here.
+[Output](screenshots/Docker-audit.png)
 
 ---
 
@@ -90,7 +90,7 @@ Add a terminal screenshot showing:
 - `docker ps`
 - The audit command using the selected target container name
 
-Add your screenshot here.
+[Output](screenshots/Target-container.png)
 
 ---
 
@@ -98,7 +98,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing the initial Docker audit results.
 
-Add your screenshot here.
+[Output](screenshots/Audit.png)
 
 ---
 
@@ -119,7 +119,8 @@ Add a Claude Code screenshot showing:
 - Recommended manual fix
 - Verification method
 
-Add your screenshot here.
+[Output](screenshots/Claude-audit.png)
+[Output](screenshots/Claude-audit2.png)
 
 ---
 
@@ -135,7 +136,7 @@ Manually fix one WARN or FAIL finding from the initial audit.
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
 
-Add your screenshot here.
+[Output](screenshots/Config.png)
 
 ---
 
@@ -143,7 +144,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
 
-Add your screenshot here.
+[Output](screenshots/Updated-service.png)
 
 ---
 
@@ -163,7 +164,8 @@ Add a terminal screenshot showing:
 - The updated running container
 - The final audit report
 
-Add your screenshot here.
+[Output](screenshots/Final-audit.png)
+[Output](screenshots/Final-audit2.png)
 
 ---
 
@@ -177,6 +179,22 @@ Write a short comparison covering:
 - Security benefit of the improvement
 
 Write your comparison here.
+Initial audit finding
+[WARN] Container user: the container ran as root. docker inspect showed no user configured, and id inside the container returned uid=0(root).
+
+Change applied
+
+frontend/Dockerfile: changed the base image from nginx:1.28-alpine to nginxinc/nginx-unprivileged:1.28-alpine, added USER 101, and changed EXPOSE 80 to EXPOSE 8080.
+docker-compose.yml: updated the frontend health check to port 8080.
+proxy/default.conf: updated the frontend upstream to http://frontend:8080.
+
+I rebuilt and recreated only the frontend with docker compose up -d --build --no-deps frontend, then reloaded the reverse proxy.
+
+Final audit result
+[PASS] Container user: the container now runs as user 101. All six checks pass, the container is healthy, and the site still loads through the reverse proxy.
+
+Security benefit
+If the frontend were compromised while running as root, the attacker would have root inside the container. That makes it easier to tamper with files or attempt a container escape to the host. Running Nginx as an unprivileged user applies least privilege: it limits what a compromised process can do, without changing how the application works.
 
 ---
 
@@ -194,7 +212,7 @@ Create a LinkedIn post about the container security checks you performed, one ha
 
 Add a screenshot of the published LinkedIn post, including the final audit result.
 
-Add your screenshot here.
+[Output](screenshots)
 
 ---
 

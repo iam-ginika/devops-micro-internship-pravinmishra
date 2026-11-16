@@ -20,7 +20,7 @@ Create the Azure Resource Group `react-app-rg` in a region close to you.
 
 #### Screenshot 1 — Resource Group overview showing the name and region
 
-Add your screenshot here.
+[Output](screenshots/Resource-group.png)
 
 ---
 
@@ -34,13 +34,13 @@ Create an Ubuntu 20.04 LTS VM (size B1s) with a Network Security Group allowing 
 
 #### Screenshot 2 — Azure VM overview page showing the VM name, Resource Group, and region
 
-Add your screenshot here.
+[Output](screenshots/Virtual-machine.png)
 
 ---
 
 #### Screenshot 3 — Network Security Group inbound rules showing ports 22 and 80 allowed
 
-Add your screenshot here.
+[Output](screenshots/Network-settings.png)
 
 ---
 
@@ -54,7 +54,7 @@ Connect to the VM over SSH and confirm the Linux prompt is visible.
 
 #### Screenshot 4 — Terminal showing a successful SSH login with the prompt visible
 
-Add your screenshot here.
+[Output](screenshots/Successful-ssh.png)
 
 ---
 
@@ -68,7 +68,7 @@ Update Ubuntu and install Git, Node.js, and npm.
 
 #### Screenshot 5 — Terminal output showing `node -v` and `npm -v`
 
-Add your screenshot here.
+[Output](screenshots/Version.png)
 
 ---
 
@@ -82,7 +82,8 @@ Clone `my-react-app`, install dependencies, and run `npm run build` to produce t
 
 #### Screenshot 6 — Terminal showing successful `npm run build` completion and `ls -la build` output
 
-Add your screenshot here.
+[Output](screenshots/npm-build.png)
+[Output](screenshots/List.png)
 
 ---
 
@@ -96,13 +97,13 @@ Install Nginx and configure it to serve the `build/` directory with `try_files $
 
 #### Screenshot 7 — Successful `sudo nginx -t` output
 
-Add your screenshot here.
+[Output](screenshots/Config-syntax.png)
 
 ---
 
 #### Screenshot 8 — Nginx configuration snippet showing the build root and `try_files` directive
 
-Add your screenshot here.
+[Output](screenshots/Try-files.png)
 
 ---
 
@@ -116,7 +117,7 @@ Confirm the React app loads through the VM's public IP, navigation works, and a 
 
 #### Screenshot 9 — Browser showing the React app with the public IP visible in the address bar
 
-Add your screenshot here.
+[Output](screenshots/React-app.png)
 
 ---
 
@@ -130,7 +131,7 @@ Restrict the SSH Network Security Group rule to your IP if not already restricte
 
 #### Screenshot 10 (optional) — Network Security Group rule showing SSH restricted to your IP
 
-Add your screenshot here.
+[Output](screenshots/ssh-ipaddress.png)
 
 ---
 
@@ -158,13 +159,13 @@ Add the credit note for your track, replace `YOUR-GITHUB-USERNAME` with your Git
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/ginikandubuisi_another-hands-on-project-completed-as-part-share-7528018219983384576-LBkQ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
 #### Screenshot 11 — Published LinkedIn post showing your caption, application URL, and live React application screenshot
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn-post.png)
 
 # Submission Instructions
 
