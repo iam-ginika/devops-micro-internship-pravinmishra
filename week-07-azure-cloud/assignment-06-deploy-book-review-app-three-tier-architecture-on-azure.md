@@ -302,7 +302,43 @@ http://4.225.191.80/
 
 Summarize what worked, issues encountered and how they were fixed, and the availability/security/secrets/monitoring/backup choices made.
 
-Write your answer here.
+What worked
+
+The Book Review App is running end to end as a three-tier deployment in Sweden Central. Users reach it only through the Standard Public Load Balancer at http://4.225.191.80/. The Load Balancer forwards traffic to the Web VM, where Nginx serves the Next.js frontend. The frontend's API calls go privately through the Internal Load Balancer to the Express API on the App VM. The API reads from and writes to MySQL Flexible Server over private access on port 3306. Both load balancers report healthy backend targets. I confirmed at least one database read (loading books and reviews) and one write (submitting a review) through the public endpoint. I also confirmed that the App VM and the database can't be reached from the internet.
+
+Issues encountered and how I fixed them
+
+No issues
+
+Availability
+
+- Health probes on both the public and internal load balancers take any unresponsive VM out of rotation.
+- Each tier runs one VM to stay within the free-trial budget. 
+- I checked availability with the healthy-target status on both load balancers and a test against the public endpoint.
+
+Security
+
+- Each tier has its own subnet and its own NSG with least-privilege inbound rules:
+  - Web NSG: HTTP 80 and HTTPS 443 from the internet, and SSH 22 from my IP only
+  - App NSG: API port 8080 from the web subnet only
+  - DB NSG: MySQL 3306 from the app subnet only
+- The App VM and the database have no public IPs. Public network access is disabled on MySQL Flexible Server.
+- Traffic can only move one tier inward at a time: Internet → Public LB → Web → Internal LB → App → DB.
+
+Secrets
+
+- The database credentials are stored in a `.env` file on the App VM, readable only by the owner (`chmod 600`). The file is listed in `.gitignore`.
+- No passwords, connection strings, keys or subscription IDs appear in the code, the GitHub repo or any screenshot.
+- A planned improvement is to move the credentials into Azure Key Vault and have the App VM read them through a Managed Identity.
+
+Monitoring
+
+- Azure Monitor collects metrics for the VMs, both load balancers and the MySQL server.
+- Diagnostic settings are enabled on the key resources, and alert rules cover key metrics such as VM CPU, load balancer health probe status and database availability.
+
+Backup
+
+- MySQL Flexible Server runs automated backups with a 7-day retention period, which allows point-in-time restore within that window.
 
 ---
 

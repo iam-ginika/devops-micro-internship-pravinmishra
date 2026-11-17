@@ -8,8 +8,8 @@ Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 **Full Name:** GINIKA NDUBUISI
 **Cloud Platform Used:** AWS   
-**Server 1 URL:** `http://<SERVER_1_PUBLIC_IP>`  
-**Server 2 URL:** `http://<SERVER_2_PUBLIC_IP>`
+**Server 1 URL:** http://16.171.47.224
+**Server 2 URL:** http://13.48.67.250
 
 ---
 
@@ -250,7 +250,7 @@ Add both deployed website URLs below:
 
 ```text
 Server 1: http://16.171.47.224
-Server 2: http://13.48.67.250/
+Server 2: http://13.48.67.250
 ```
 
 ---
