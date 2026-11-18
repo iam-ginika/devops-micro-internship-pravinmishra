@@ -299,7 +299,7 @@ Confirm that the Mini Finance website is publicly accessible through the Azure V
 
 #### Screenshot 13 — Mini Finance website successfully loading in the browser, with the Azure VM’s public IP address visible in the address bar
 
-[Output](screenshots/Mini-finance%20App.png)
+[Output](screenshots/Mini-finance-App.png)
 
 ---
 
