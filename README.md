@@ -139,7 +139,7 @@ Week 04 → Git & GitHub
 | 06 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_dmibypravinmishra-aws-claudecode-ugcPost-7521025015614517248-y3jF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/from-aws-fundamentals-to-agentic-ai-my-hands-on-journey-through-the-devops-micro-internship-a40239b0d4ee |
 | 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_my-azure-security-audit-came-back-clean-share-7528357640540901376-DHpz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/from-zero-to-a-three-tier-azure-app-then-auditing-it-with-ai-184e15fefc2d |
 | 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_i-built-an-ai-assisted-terraform-drift-and-share-7522912533444243456-H7Ds/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/six-assignments-two-clouds-one-tool-my-terraform-journey-in-dmi-cohort-3-793733e30c62 |
-| 09 | Ansible | ✅ Completed | ✅ Solved | — | — |
+| 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_the-mini-finance-website-was-deployed-to-share-7528732805426540544-0aIc/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo| — |
 | 10 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 11 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
