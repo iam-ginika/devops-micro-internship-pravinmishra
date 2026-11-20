@@ -36,7 +36,8 @@ Add a screenshot of Azure Repos showing:
 * Project files
 * `index.html`
 
-Add your screenshot here.
+[Output](screenshots/Repo.png)
+[Output](screenshots/Index-file.png)
 
 ---
 
@@ -65,7 +66,7 @@ Add a screenshot of the saved SSH Service Connection **Overview** page showing:
 * Service Connection name
 * SSH connection type
 
-Add your screenshot here.
+[Output](screenshots/SSH-Connection.png)
 
 > Do not expose a password, SSH private key, passphrase, or another credential.
 
@@ -91,7 +92,7 @@ Add a screenshot of `azure-pipelines.yml` open in the Azure Repos editor showing
 * `CopyFilesOverSSH@0` task
 * `SSH@0` verification task
 
-Add your screenshot here.
+[Output](screenshots/Pipelines-yml.png)
 
 > Ensure that no password, SSH private key, PAT, or AWS credential is visible.
 
@@ -115,7 +116,9 @@ Add a screenshot of the successful pipeline run and log summary showing:
 * Remote-verification step completed
 * Your Full Name visible in the pipeline output
 
-Add your screenshot here.
+[Output](screenshots/Pipeline-info.png)
+[Output](screenshots/Copy-website.png)
+[Output](screenshots/Deployment.png)
 
 ---
 
@@ -136,7 +139,7 @@ Add a browser screenshot showing:
 * Your Full Name
 * Updated website content after the automatic deployment
 
-Add your screenshot here.
+[Output](screenshots/Browser.png)
 
 ## Final Website URL
 
@@ -144,7 +147,7 @@ Add your screenshot here.
 
 Replace the placeholder with your actual website URL:
 
-[Paste your final website URL here]
+http://16.171.39.200
 
 ---
 
@@ -152,7 +155,7 @@ Replace the placeholder with your actual website URL:
 
 Write a short summary of the completed CI/CD workflow.
 
-[Write your summary here.]
+I built a CI/CD pipeline that deploys the Azure Static Website to an AWS EC2 instance. Terraform provisioned an Ubuntu 24.04 EC2 instance with a security group allowing SSH from my IP and my self-hosted agent VM, and HTTP from anywhere. Ansible installed Nginx and gave the ubuntu user write access to /var/www/html. In Azure DevOps, I imported the repository, added my name to index.html, and created an SSH service connection using a private key. The pipeline runs on my self-hosted agent pool, triggers on a push to any branch, copies the site to the EC2 with CopyFilesOverSSH@0, and verifies the deployment with SSH@0. A new commit automatically triggered a deployment.
 
 ---
 
@@ -167,11 +170,11 @@ Add a screenshot of your LinkedIn post containing:
 * Three to five lines describing the CI/CD workflow
 * A screenshot of the successful pipeline or deployed website
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn-Post-2.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here]
+https://www.linkedin.com/posts/ginikandubuisi_i-built-a-full-cicd-pipeline-that-deploys-share-7529681188039360513-2OxX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 > Do not expose AWS credentials, SSH private keys, passwords, PATs, or other sensitive information.
 

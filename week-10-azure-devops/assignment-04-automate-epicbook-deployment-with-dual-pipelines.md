@@ -70,7 +70,7 @@ Add a screenshot of the Infrastructure Pipeline run showing:
 * `backend_private_ip`
 * `mysql_fqdn`
 
-Add your screenshot here.
+[Output](screenshots/Terraform-apply.png)
 
 > Do not expose the MySQL password, Client Secret, Terraform state, SSH private key, or another sensitive value.
 
@@ -86,7 +86,9 @@ Add a screenshot of the Azure Portal Resource Group overview showing:
 * Azure Database for MySQL Flexible Server
 * Related EpicBook resources
 
-Add your screenshot here.
+[Output](screenshots/Instances.png)
+[Output](screenshots/VPC.png)
+[Output](screenshots/Database.png)
 
 > Hide sensitive IDs, credentials, and database details.
 
@@ -124,7 +126,7 @@ Run the Application Pipeline to configure the VMs, deploy EpicBook, and verify t
 
 Add a screenshot of the Application Pipeline run summary showing all required stages or jobs succeeded.
 
-Add your screenshot here.
+[Output](screenshots/App-pipeline.png)
 
 ---
 
@@ -137,7 +139,8 @@ Add a screenshot of the Application Pipeline log showing:
 * Zero failed hosts
 * Zero unreachable hosts
 
-Add your screenshot here.
+[Output](screenshots/Play-recap.png)
+[Output](screenshots/Play-recap2.png)
 
 > Do not expose the SSH private key, MySQL password, Client Secret, or complete database connection string.
 
@@ -162,7 +165,7 @@ Add a browser screenshot showing:
 
 The screenshot may show a product, cart, or successful order view.
 
-Add your screenshot here.
+[Output](screenshots/Epicbook.png)
 
 > Do not expose credentials or sensitive information.
 
@@ -172,15 +175,15 @@ Add your screenshot here.
 
 ## Frontend Application URL
 
-[Paste your final EpicBook application URL here.]
+  http://51.20.127.106/
 
 ## Infrastructure Repository URL
 
-[Paste your Infrastructure Repository URL here.]
+https://github.com/iam-ginika/infra-epicbook
 
 ## Application Repository URL
 
-[Paste your Application Repository URL here.]
+https://github.com/iam-ginika/theepicbook
 
 ---
 
@@ -188,7 +191,7 @@ Add your screenshot here.
 
 Write a short explanation of why separate Infrastructure and Application Repositories were used.
 
-[Write your explanation here.]
+Separate repositories keep infrastructure and application changes independent, which is how many teams split responsibility between platform/infra engineers and application developers. The infra-epicbook repository holds only the Terraform code that creates the AWS network, EC2 instances and RDS database. Its pipeline runs only when that code changes, and it requires a manual approval before apply, because infrastructure changes are higher-risk and harder to undo. The theepicbook repository holds the application code and the Ansible automation that configures the servers and deploys the app. Its pipeline runs on every application change without touching the underlying infrastructure. This separation also limits access: only the infrastructure pipeline is given the AWS credentials, while only the application pipeline is given the SSH key and database secrets. The two repositories are connected through a deliberate hand-off. The infrastructure pipeline’s four non-sensitive outputs (frontend IP, backend IP, backend private IP and MySQL endpoint) are copied into the Ansible inventory and variables, and no secrets move between the repositories.
 
 ---
 
@@ -201,7 +204,7 @@ Write a short explanation of how the following non-sensitive Terraform outputs w
 * `backend_private_ip`
 * `mysql_fqdn`
 
-[Write your explanation here.]
+After the Infrastructure Pipeline completed successfully, its Outputs stage printed the four non-sensitive Terraform values in the pipeline log. I copied these values from the log and added them to the Ansible configuration in the theepicbook repository. app_public_ip and backend_ansible_host went into ansible/inventory/hosts.ini as the ansible_host addresses for the frontend and backend servers, so Ansible knows which machines to connect to over SSH. backend_private_ip and mysql_fqdn went into ansible/group_vars/all.yml. The frontend role uses the backend private IP in the Nginx template to proxy traffic to the Node.js application, and the backend and database roles use the MySQL endpoint to connect to Amazon RDS. I then committed and pushed these changes to the main branch of the Application Repository. Only these four non-sensitive values were transferred. The database username and password stayed in the Azure DevOps secret variable group, the SSH private key stayed in Secure Files, and no Terraform state or credentials were copied between the repositories.
 
 ---
 
@@ -216,11 +219,11 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn-Post-4.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here.]
+https://www.linkedin.com/posts/ginikandubuisi_devops-terraform-ansible-share-7529688270356541440-UQki/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 Your post must include:
 

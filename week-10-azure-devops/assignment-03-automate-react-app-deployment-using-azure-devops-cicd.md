@@ -37,7 +37,7 @@ Add a screenshot of Azure Repos showing:
 * `main` branch
 * Project files
 
-Add your screenshot here.
+[Output](screenshots/My-React-App.png)
 
 ---
 
@@ -81,7 +81,9 @@ Add a screenshot of the Azure Pipeline YAML open in the editor showing:
 * Publish stage
 * Deploy stage
 
-Add your screenshot here.
+[Output](screenshots/Multi-stage-pipeline.png)
+[Output](screenshots/Multi-stage-pipeline2.png)
+[Output](screenshots/Multi-stage-pipeline3.png)
 
 > Do not expose passwords, private keys, tokens, or cloud credentials.
 
@@ -104,7 +106,8 @@ Add a screenshot of one Azure DevOps pipeline run showing all four stages succee
 * Publish
 * Deploy
 
-Add your screenshot here.
+[Output](screenshots/Pipeline-run.png)
+[Output](screenshots/Verify-deployment.png)
 
 ---
 
@@ -122,7 +125,7 @@ Add a screenshot of the pipeline SSH verification log or VM terminal showing the
 
 `/var/www/html`
 
-Add your screenshot here.
+[Output](screenshots/SSH-Verifications.png)
 
 ---
 
@@ -143,7 +146,7 @@ Add a browser screenshot showing:
 * Your Full Name
 * Deployment date
 
-Add your screenshot here.
+[Output](screenshots/React-App.png)
 
 ## Final Application URL
 
@@ -151,7 +154,7 @@ Add your screenshot here.
 
 Replace the placeholder and paste your final application URL below:
 
-[Paste your final application URL here.]
+http://16.171.39.200/
 
 ---
 
@@ -159,7 +162,7 @@ Replace the placeholder and paste your final application URL below:
 
 Write a short explanation of the CI/CD workflow you created.
 
-[Write your summary here.]
+I built a four-stage Azure DevOps pipeline that deploys a React app to an AWS EC2 instance whenever a commit is pushed to main. The pipeline runs on my self-hosted agent pool. The Build stage installs Node.js, runs npm ci and npm run build, checks that build/index.html exists, and publishes the build folder as a pipeline artifact. The Test stage runs the unit tests once in CI mode, so a failing test stops the pipeline. The Publish stage downloads the build artifact, verifies that index.html and the static assets are present, and publishes it as the deployment artifact. The Deploy stage downloads that artifact, copies it into /var/www/html over the SSH service connection (replacing the previous release), and then runs remote checks: it lists the deployed files, confirms that Nginx is active, and confirms that the site returns HTTP 200. The EC2 instance was provisioned with Terraform and configured with Ansible.
 
 ---
 
@@ -174,11 +177,11 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
+[Output](screenshots/LinkedIn-Post-3.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here.]
+https://www.linkedin.com/posts/ginikandubuisi_build-test-publish-deploy-my-react-share-7529686312958775296-U9_0/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 > Do not expose VM passwords, tokens, private keys, cloud credentials, or other sensitive information.
 
