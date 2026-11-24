@@ -30,7 +30,7 @@ Create and enter a dedicated directory for the ClusterIP Service lab.
 
 #### Screenshot 1 — Terminal showing that you are working inside `~/k8s-labs/services/clusterip`
 
-Add your screenshot here.
+![Output](screenshots/Clusterip.png)
 
 ---
 
@@ -38,11 +38,11 @@ Add your screenshot here.
 
 **1. Why is it not reliable to communicate with an application using a Pod IP address?**
 
-Add your answer here.
+Pods are temporary. When a Pod is restarted elsewhere, replaced during a rolling update, or deleted and recreated by its ReplicaSet, the new Pod usually gets a different IP address.
 
 **2. What Kubernetes resource provides a stable internal address for a group of Pods?**
 
-Add your answer here.
+A Kubernetes Service. It gives a group of Pods one stable IP address and DNS name, and it uses a label selector (like app=nginx) to find them. As Pods come and go, the Service keeps sending traffic to the current matching Pods, and it only includes Pods that are Ready.
 
 ---
 
@@ -56,13 +56,13 @@ Create an NGINX Deployment with labels, readiness probes, and liveness probes th
 
 #### Screenshot 2 — Completed `00-nginx-deploy.yaml` manifest
 
-Add your screenshot here.
+![Output](screenshots/Cluster-manifest.png)
 
 ---
 
 #### Screenshot 3 — Output showing successful rollout and two ready NGINX Pods
 
-Add your screenshot here.
+![Output](screenshots/Successful-rollout.png)
 
 ---
 
@@ -70,15 +70,15 @@ Add your screenshot here.
 
 **1. Which label will the Service use to find these Pods?**
 
-Add your answer here.
+app=nginx. The Service's selector matches this label, so any Pod with app=nginx becomes one of its backends.
 
 **2. Why is readiness important before connecting Pods to a Service?**
 
-Add your answer here.
+A Service only sends traffic to Pods that are Ready. With a readiness probe, a Pod that is still starting or can't serve requests is kept out of the Service's endpoints until it passes the check, so users don't get errors or timeouts. Without a readiness probe, a Pod counts as Ready as soon as its container starts, and the Service could send traffic to it before NGINX can respond.
 
 **3. What port does the NGINX container listen on?**
 
-Add your answer here.
+The NGINX container listens on port 80.
 
 ---
 
@@ -92,13 +92,13 @@ Create a stable internal Service that routes traffic to the NGINX Pods.
 
 #### Screenshot 4 — Completed `01-nginx-svc-clusterip.yaml` manifest
 
-Add your screenshot here.
+![Output](screenshots/01-nginx-svc-clusterip.png)
 
 ---
 
 #### Screenshot 5 — Output showing the ClusterIP Service, endpoints, or EndpointSlices
 
-Add your screenshot here.
+![Output](screenshots/Endpoint.png)
 
 ---
 
@@ -106,19 +106,19 @@ Add your screenshot here.
 
 **1. What is the purpose of a ClusterIP Service?**
 
-Add your answer here.
+A ClusterIP Service gives a group of Pods one stable internal IP address and DNS name that only works inside the cluster. In my lab, nginx-svc got the ClusterIP 10.96.6.164, and it spreads traffic across both NGINX Pods. Even when Pods are replaced and their IPs change, other applications in the cluster can keep using the same Service address.
 
 **2. What is the difference between `port` and `targetPort`?**
 
-Add your answer here.
+`port` is the port the Service itself listens on, the one clients connect to on the ClusterIP. `targetPort`is the port on the Pod where the Service forwards that traffic, which is the container's port. In this lab both are 80: clients connect to 10.96.6.164:80, and the Service forwards to port 80 on each NGINX Pod.
 
 **3. Why must the Service selector match the Pod labels?**
 
-Add your answer here.
+The selector is how the Service finds its Pods. Kubernetes only adds Pods whose labels match the selector as endpoints. My Service uses app=nginx, which matches the Pod labels, so both Pods showed up as endpoints. If the selector didn't match, the Service would have no endpoints and traffic to it would go nowhere.
 
 **4. What information do EndpointSlices contain?**
 
-Add your answer here.
+EndpointSlices list the backend Pods behind a Service: each Pod's IP address, the port and protocol (here 80/TCP), and each endpoint's condition, such as whether it is Ready. They also record which Pod and node each endpoint belongs to. Kubernetes updates them automatically as Pods are added, removed, or change readiness.
 
 ---
 
@@ -132,19 +132,19 @@ Create a client Pod and access the NGINX Service using DNS and its ClusterIP.
 
 #### Screenshot 6 — Output showing the `tester` Pod running
 
-Add your screenshot here.
+![Output](screenshots/Tester-pod.png)
 
 ---
 
 #### Screenshot 7 — Successful Service request using DNS name and ClusterIP
 
-Add your screenshot here.
+![Output](screenshots/Service-Request.png)
 
 ---
 
 #### Screenshot 8 — Successful DNS lookup for the Service
 
-Add your screenshot here.
+![Output](screenshots/DNS-Lookup.png)
 
 ---
 
@@ -152,15 +152,15 @@ Add your screenshot here.
 
 **1. Why should an application use `nginx-svc` instead of a Pod IP address?**
 
-Add your answer here.
+Pod IPs change whenever Pods are restarted, replaced during a rollout, or recreated by the ReplicaSet, so a hard-coded Pod IP will eventually break. A Pod IP also reaches only one replica. The name nginx-svc stays the same, always points to the current Ready Pods, and spreads traffic across all of them.
 
 **2. What does the DNS name `nginx-svc.default.svc.cluster.local` represent?**
 
-Add your answer here.
+It's the full internal DNS name of the Service. It breaks down as the Service name (nginx-svc), the namespace (default), the type of object (svc, for Service), and the cluster's domain (cluster.local). Cluster DNS resolves it to the Service's ClusterIP, 10.96.6.164. Pods in the same namespace can use just nginx-svc as a shortcut.
 
 **3. Why can the client access the Service even if the backend Pod IPs change?**
 
-Add your answer here.
+The client only talks to the Service's stable name and ClusterIP, never to the Pods directly. Kubernetes watches for Pods matching app=nginx and updates the Service's endpoints automatically as Pods come and go. Traffic is always forwarded to whichever Pods are currently Ready, so the client doesn't need to know or care that the Pod IPs changed.
 
 ---
 
@@ -174,25 +174,25 @@ Break the Service selector, observe that usable endpoints disappear, and then re
 
 #### Screenshot 9 — `02-nginx-svc-selector-broken.yaml` showing the incorrect selector
 
-Add your screenshot here.
+![Output](screenshots/Svc-selector-broken.png)
 
 ---
 
 #### Screenshot 10 — Empty endpoints or EndpointSlice output after applying the broken selector
 
-Add your screenshot here.
+![Output](screenshots/Endpointslice.png)
 
 ---
 
 #### Screenshot 11 — Failed request output from the `tester` Pod
 
-Add your screenshot here.
+![Output](screenshots/Failed-request.png)
 
 ---
 
 #### Screenshot 12 — Restored endpoints and successful Service request
 
-Add your screenshot here.
+![Output](screenshots/Successful-service-request.png)
 
 ---
 
@@ -222,31 +222,31 @@ Observe how a new Pod that fails readiness is excluded from ready Service backen
 
 #### Screenshot 13 — Output showing the Deployment scaled to one ready Pod
 
-Add your screenshot here.
+![Output](screenshots/One-pod.png)
 
 ---
 
 #### Screenshot 14 — Completed `03-readiness-broken.yaml` patch file
 
-Add your screenshot here.
+![Output](screenshots/03-readiness-broken.png)
 
 ---
 
 #### Screenshot 15 — Output showing the expected incomplete rollout or NotReady Pod
 
-Add your screenshot here.
+![Output](screenshots/Readiness-timeout-error.png)
 
 ---
 
 #### Screenshot 16 — EndpointSlice output showing the healthy Pod with `ready: true` and the new NotReady Pod with `ready: false`
 
-Add your screenshot here.
+![Output](screenshots/EndpointSlice-output.png)
 
 ---
 
 #### Screenshot 17 — Service EndpointSlice output showing ready backends after restoring the Deployment
 
-Add your screenshot here.
+![Output](screenshots/Healthy-pods.png)
 
 ---
 
@@ -254,15 +254,15 @@ Add your screenshot here.
 
 **1. Why was the new NotReady Pod excluded from ready Service backends?**
 
-Add your answer here.
+The new Pod's readiness probe was checking /does-not-exist, a page NGINX doesn't have, so every check got a 404. Kubernetes marked the Pod NotReady (ready: false) and left it out of the Service's ready backends. The existing healthy Pod kept serving requests.
 
 **2. What is the relationship between readiness probes and Service routing?**
 
-Add your answer here.
+The readiness probe decides whether a Pod can take traffic, and the Service follows that decision. Kubernetes updates the EndpointSlice based on each Pod's readiness, so the Service only sends traffic to Pods marked ready.
 
 **3. Why does this behavior protect users from unhealthy application instances?**
 
-Add your answer here.
+Users never get sent to a Pod that can't handle their request. The healthy Pods keep serving traffic while the broken or still-starting Pod stays out of the way until it passes its readiness check.
 
 ---
 
@@ -276,7 +276,7 @@ Share what you learned about ClusterIP Services, Kubernetes DNS, selectors, and 
 
 #### Screenshot 18 — Published LinkedIn post
 
-Add your screenshot here.
+![Output](screenshots)
 
 #### Linkedin post link
 

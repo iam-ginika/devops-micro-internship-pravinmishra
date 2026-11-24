@@ -20,7 +20,7 @@ Create an architecture diagram and implementation plan identifying the presentat
 
 #### Screenshot 1 — Architecture diagram showing the public entry point, three tiers, network boundaries, and traffic flow
 
-[Output](screenshots/Diagram.txt)
+![Output](screenshots/Diagram.txt)
 
 ---
 
@@ -118,21 +118,21 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 
 #### Screenshot 3 — Resource Group overview showing the assignment resources
 
-[Output](screenshots/Resource-group1.png)
-[Output](screenshots/Resource-group2.png)
+![Output](screenshots/Resource-group1.png)
+![Output](screenshots/Resource-group2.png)
 
 ---
 
 #### Screenshot 4 — VNet overview showing the address space and all required subnets
 
-[Output](screenshots/Book-review-vnet.png)
-[Output](screenshots/Book-review-subnet.png)
+![Output](screenshots/Book-review-vnet.png)
+![Output](screenshots/Book-review-subnet.png)
 
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
 
-[Output](screenshots/Route-table.png)
+![Output](screenshots/Route-table.png)
 
 ---
 
@@ -146,15 +146,15 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 
 #### Screenshot 6 — NSG rules proving least-privilege access between the tiers
 
-[Output](screenshots/DB-NSG.png)
-[Output](screenshots/App-NSG.png)
-[Output](screenshots/Web-NSG.png)
+![Output](screenshots/DB-NSG.png)
+![Output](screenshots/App-NSG.png)
+![Output](screenshots/Web-NSG.png)
 
 ---
 
 #### Screenshot 7 — Key Vault or approved secret-management configuration (without displaying secret values)
 
-[Output](screenshots/Secret-config.png)
+![Output](screenshots/Secret-config.png)
 
 ---
 
@@ -168,14 +168,14 @@ Deploy the Book Review App presentation layer on the approved web-tier compute s
 
 #### Screenshot 8 — Web-tier compute overview showing subnet and availability configuration
 
-[Output](screenshots/Web-VM.png)
-[Output](screenshots/Web-tier-subnet.png)
+![Output](screenshots/Web-VM.png)
+![Output](screenshots/Web-tier-subnet.png)
 
 ---
 
 #### Screenshot 9 — Terminal or service output proving the presentation layer is running
 
-[Output](screenshots/Service-output.png)
+![Output](screenshots/Service-output.png)
 
 ---
 
@@ -189,20 +189,20 @@ Deploy the Book Review App backend privately in the application subnet, configur
 
 #### Screenshot 10 — Application-tier compute overview showing private subnet placement
 
-[Output](screenshots/App-tier.png)
-[Output](screenshots/App-subnet.png)
+![Output](screenshots/App-tier.png)
+![Output](screenshots/App-subnet.png)
 
 ---
 
 #### Screenshot 11 — Backend process, service, or listening-port evidence
 
-[Output](screenshots/Listening-port2.png)
+![Output](screenshots/Listening-port2.png)
 
 ---
 
 #### Screenshot 12 — Internal health-check or API response (without exposing secrets)
 
-[Output](screenshots/API-Response.png)
+![Output](screenshots/API-Response.png)
 
 ---
 
@@ -216,19 +216,19 @@ Create a private Azure managed database (public access disabled), with availabil
 
 #### Screenshot 13 — Database overview showing private connectivity and public access disabled
 
-[Output](screenshots/Database-network.png)
+![Output](screenshots/Database-network.png)
 
 ---
 
 #### Screenshot 14 — Availability, backup, and retention configuration
 
-[Output](screenshots/Database-config.png)
+![Output](screenshots/Database-config.png)
 
 ---
 
 #### Screenshot 15 — Successful schema or connectivity verification (without exposing credentials)
 
-[Output](screenshots/Verification.png)
+![Output](screenshots/Verification.png)
 
 ---
 
@@ -242,19 +242,19 @@ Configure the approved public entry service with health probes and backend pools
 
 #### Screenshot 16 — Public entry service showing listener, frontend endpoint, and healthy web targets
 
-[Output](screenshots/Public-LB.png)
+![Output](screenshots/Public-LB.png)
 
 ---
 
 #### Screenshot 17 — Internal application-tier load-balancing or routing configuration where applicable
 
-[Output](screenshots/Internal-LB.png)
+![Output](screenshots/Internal-LB.png)
 
 ---
 
 #### Screenshot 18 — Azure Monitor, diagnostic settings, logs, metrics, or alert evidence
 
-[Output](screenshots/Monitor.png)
+![Output](screenshots/Monitor.png)
 
 ---
 
@@ -268,25 +268,25 @@ Confirm the Book Review App works end to end through the public endpoint, with a
 
 #### Screenshot 19 — Browser showing the Book Review App through the public endpoint
 
-[Output](screenshots/Browser.png)
+![Output](screenshots/Browser.png)
 
 ---
 
 #### Screenshot 20 — Proof of successful database-backed read and write operations
 
-[Output](screenshots/Backend-operation.png)
+![Output](screenshots/Backend-operation.png)
 
 ---
 
 #### Screenshot 21 — Evidence that private tiers are not publicly accessible
 
-[Output](screenshots/App=access.png)
+![Output](screenshots/App=access.png)
 
 ---
 
 #### Screenshot 22 — Availability-test and healthy-target evidence
 
-[Output](screenshots/Health-status.png)
+![Output](screenshots/Health-status.png)
 
 ---
 

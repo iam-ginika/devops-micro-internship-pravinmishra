@@ -36,8 +36,8 @@ Add a screenshot of Azure Repos showing:
 * Project files
 * `index.html`
 
-[Output](screenshots/Repo.png)
-[Output](screenshots/Index-file.png)
+![Output](screenshots/Repo.png)
+![Output](screenshots/Index-file.png)
 
 ---
 
@@ -66,7 +66,7 @@ Add a screenshot of the saved SSH Service Connection **Overview** page showing:
 * Service Connection name
 * SSH connection type
 
-[Output](screenshots/SSH-Connection.png)
+![Output](screenshots/SSH-Connection.png)
 
 > Do not expose a password, SSH private key, passphrase, or another credential.
 
@@ -92,7 +92,7 @@ Add a screenshot of `azure-pipelines.yml` open in the Azure Repos editor showing
 * `CopyFilesOverSSH@0` task
 * `SSH@0` verification task
 
-[Output](screenshots/Pipelines-yml.png)
+![Output](screenshots/Pipelines-yml.png)
 
 > Ensure that no password, SSH private key, PAT, or AWS credential is visible.
 
@@ -116,9 +116,9 @@ Add a screenshot of the successful pipeline run and log summary showing:
 * Remote-verification step completed
 * Your Full Name visible in the pipeline output
 
-[Output](screenshots/Pipeline-info.png)
-[Output](screenshots/Copy-website.png)
-[Output](screenshots/Deployment.png)
+![Output](screenshots/Pipeline-info.png)
+![Output](screenshots/Copy-website.png)
+![Output](screenshots/Deployment.png)
 
 ---
 
@@ -139,7 +139,7 @@ Add a browser screenshot showing:
 * Your Full Name
 * Updated website content after the automatic deployment
 
-[Output](screenshots/Browser.png)
+![Output](screenshots/Browser.png)
 
 ## Final Website URL
 
@@ -170,7 +170,7 @@ Add a screenshot of your LinkedIn post containing:
 * Three to five lines describing the CI/CD workflow
 * A screenshot of the successful pipeline or deployed website
 
-[Output](screenshots/LinkedIn-Post-2.png)
+![Output](screenshots/LinkedIn-Post-2.png)
 
 ## LinkedIn Post URL
 

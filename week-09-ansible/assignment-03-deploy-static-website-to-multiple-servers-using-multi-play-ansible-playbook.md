@@ -31,7 +31,7 @@ Create the required folders and files for the Ansible project.
 
 ### Screenshot 1 — Terminal or VS Code showing the complete `static-web` project structure
 
-[Output](screenshots/web-files.png)
+![Output](screenshots/web-files.png)
 
 ---
 
@@ -45,7 +45,7 @@ Add both Ubuntu servers to the Ansible inventory.
 
 ### Screenshot 2 — Output of `ansible-inventory -i inventory.ini --graph` showing `web1` and `web2`
 
-[Output](screenshots/webs.png)
+![Output](screenshots/webs.png)
 
 ---
 
@@ -77,7 +77,7 @@ Confirm that the Ansible controller can connect to both servers.
 
 ### Screenshot 3 — Ansible ping output showing `SUCCESS` and `pong` for both servers
 
-[Output](screenshots/success.png)
+![Output](screenshots/success.png)
 
 ---
 
@@ -91,7 +91,7 @@ Download `index.html` to the Ansible controller and personalize the website with
 
 ### Screenshot 4 — Edited `files/index.html` showing the footer line with your full name
 
-[Output](screenshots/INDEX.png)
+![Output](screenshots/INDEX.png)
 
 ---
 
@@ -180,7 +180,7 @@ Check the playbook for YAML or Ansible syntax errors before running it.
 
 ### Screenshot 5 — Successful syntax-check output showing `playbook: site.yml`
 
-[Output](screenshots/check.png)
+![Output](screenshots/check.png)
 
 ---
 
@@ -194,13 +194,13 @@ Install Nginx, deploy the website, and verify both servers in one playbook run.
 
 ### Screenshot 6 — Play 3 verification showing HTTP `200` for both servers
 
-[Output](screenshots/Verification.png)
+![Output](screenshots/Verification.png)
 
 ---
 
 ### Screenshot 7 — Final play recap showing `unreachable=0` and `failed=0` for `web1`, `web2`, and `localhost`
 
-[Output](screenshots/recap.png)
+![Output](screenshots/recap.png)
 
 ---
 
@@ -214,7 +214,7 @@ Run the playbook again and confirm that it does not make unnecessary changes.
 
 ### Screenshot 8 — Second playbook run showing the play recap with `changed=0`, `unreachable=0`, and `failed=0` for both web servers
 
-[Output](screenshots/2nd-verification.png)
+![Output](screenshots/2nd-verification.png)
 
 ---
 
@@ -228,19 +228,19 @@ Confirm that the static website is accessible from both public IP addresses.
 
 ### Screenshot 9 — `curl -I` output showing HTTP `200 OK` from both servers
 
-[Output](screenshots/Head-request.png)
+![Output](screenshots/Head-request.png)
 
 ---
 
 ### Screenshot 10 — Browser showing the website from Server 1 with the public IP and your full name visible
 
-[Output](screenshots/Browser1.png)
+![Output](screenshots/Browser1.png)
 
 ---
 
 ### Screenshot 11 — Browser showing the website from Server 2 with the public IP and your full name visible
 
-[Output](screenshots/Browser2.png)
+![Output](screenshots/Browser2.png)
 
 ---
 
@@ -326,7 +326,7 @@ https://www.linkedin.com/posts/ginikandubuisi_this-week-i-wrote-a-multi-play-ans
 
 ### Screenshot — Published LinkedIn post
 
-[Output](screenshots/LinkedIn2.png)
+![Output](screenshots/LinkedIn2.png)
 
 ---
 

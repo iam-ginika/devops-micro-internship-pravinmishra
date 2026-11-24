@@ -20,7 +20,7 @@ Fork `pravinmishraaws/devops-micro-internship-interviews` into your own GitHub a
 
 #### Screenshot 1 — Your fork page with your username and `devops-micro-internship-interviews` visible in the browser URL
 
-[Output](screenshots/Forked-repo2.png)
+![Output](screenshots/Forked-repo2.png)
 
 ---
 
@@ -34,7 +34,7 @@ Configure one authentication method — HTTPS with a Personal Access Token, or S
 
 #### Screenshot 2 — Output of `git config --global --get credential.helper` (HTTPS) or `ssh -T git@github.com` (SSH) showing successful authentication — never show your token or private key
 
-[Output](screenshots/Credential.png)
+![Output](screenshots/Credential.png)
 
 ---
 
@@ -48,7 +48,7 @@ Clone your fork locally, then add the original repository as `upstream`.
 
 #### Screenshot 3 — Output of `git remote -v` showing `origin` pointing to your fork and `upstream` pointing to `pravinmishraaws/devops-micro-internship-interviews`
 
-[Output](screenshots/git-remote.png.png)
+![Output](screenshots/git-remote.png.png)
 
 ---
 
@@ -62,13 +62,13 @@ Create the branch `feature-readme-update`, add only your own entry (`Full Name �
 
 #### Screenshot 4 — Output of `git status` showing `pull_request.md` modified before staging
 
-[Output](screenshots/Modified-file2.png.png)
+![Output](screenshots/Modified-file2.png.png)
 
 ---
 
 #### Screenshot 5 — Output of `git commit`
 
-[Output](screenshots/Commit.png.png)
+![Output](screenshots/Commit.png.png)
 
 ---
 
@@ -82,13 +82,13 @@ Fetch and merge `upstream/main` into your local default branch, rebase your feat
 
 #### Screenshot 6 — Output of `git push -u origin feature-readme-update` showing a successful push
 
-[Output](screenshots/Successful-push.png)
+![Output](screenshots/Successful-push.png)
 
 ---
 
 #### Screenshot 7 — Your fork on GitHub showing `feature-readme-update` in the branch selector or a "Compare & pull request" banner
 
-[Output](screenshots/Branch-selector.png)
+![Output](screenshots/Branch-selector.png)
 
 ---
 
@@ -102,13 +102,13 @@ Open a Pull Request from `feature-readme-update` on your fork to `main` on the u
 
 #### Screenshot 8 — Pull Request creation page showing the correct base repository, base branch, head repository, compare branch, and title
 
-[Output](screenshots/Compare-changes.png)
+![Output](screenshots/Compare-changes.png)
 
 ---
 
 #### Screenshot 9 — Successfully created Pull Request page with the PR number visible
 
-[Output](screenshots/PR-Number.png)
+![Output](screenshots/PR-Number.png)
 
 ---
 
@@ -134,7 +134,7 @@ https://lnkd.in/p/dYtEhAkK
 
 #### Screenshot — LinkedIn post showing your successfully created Pull Request
 
-[Output](screenshots/Linkedin-assignment5.png)
+![Output](screenshots/Linkedin-assignment5.png)
 
 ---
 

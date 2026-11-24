@@ -20,7 +20,7 @@ Create an architecture diagram showing the custom VPC (10.0.0.0/16), the six sub
 
 #### Diagram image or link
 
-[Output](screenshots/Three%20tier.png)
+![Output](screenshots/Three%20tier.png)
 
 ---
 
@@ -78,37 +78,37 @@ Capture visual proof of every tier and load balancer.
 
 #### Web EC2
 
-[Output](screenshots/web.png)
+![Output](screenshots/web.png)
 
 ---
 
 #### App EC2
 
-[Output](screenshots/App.png)
+![Output](screenshots/App.png)
 
 ---
 
 #### Public ALB
 
-[Output](screenshots/web-alb.png)
+![Output](screenshots/web-alb.png)
 
 ---
 
 #### Internal ALB
 
-[Output](screenshots/app-alb.png)
+![Output](screenshots/app-alb.png)
 
 ---
 
 #### RDS + Replica
 
-[Output](screenshots/Databases.png)
+![Output](screenshots/Databases.png)
 
 ---
 
 #### App UI proof
 
-[Output](screenshots/App-ui.png)
+![Output](screenshots/App-ui.png)
 
 ---
 
@@ -172,7 +172,7 @@ https://www.linkedin.com/feed/update/urn:li:activity:7520491571759431680/
 
 #### Screenshot of LinkedIn post
 
-[Output](screenshots/Linkedin5.png)
+![Output](screenshots/Linkedin5.png)
 
 ---
 

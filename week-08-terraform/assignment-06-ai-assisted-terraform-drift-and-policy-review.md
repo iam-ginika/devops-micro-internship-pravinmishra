@@ -40,7 +40,7 @@ Confirm that your Terraform configuration and deployed infrastructure are curren
 
 Add a screenshot of `terraform plan` showing no pending changes.
 
-[Output](screenshots/t-plan2.png)
+![Output](screenshots/t-plan2.png)
 
 ---
 
@@ -48,7 +48,7 @@ Add a screenshot of `terraform plan` showing no pending changes.
 
 Add a screenshot of the folder structure showing `AI Assignment/`, `reports/`, and the Terraform project.
 
-[Output](screenshots/path.png)
+![Output](screenshots/path.png)
 
 ## Questions
 
@@ -74,7 +74,7 @@ Provide Claude Code with clear project context, evidence requirements, and safet
 
 Add a screenshot of `CLAUDE.md` open in VS Code showing the Project Overview, Review Workflow, Safety Rules, and Output Rules.
 
-[Output](screenshots/claude-md3.png)
+![Output](screenshots/claude-md3.png)
 
 ## Questions
 
@@ -106,7 +106,7 @@ Create a Bash script that gathers Terraform plan evidence and checks it for dest
 
 Add a screenshot of the top section of `tf-drift-check.sh` showing the variables and `checks` array.
 
-[Output](screenshots/tf-drift.png)
+![Output](screenshots/tf-drift.png)
 
 ---
 
@@ -114,8 +114,8 @@ Add a screenshot of the top section of `tf-drift-check.sh` showing the variables
 
 Add a screenshot showing `check_destructive_actions` and `check_open_ingress`, including the `jq` checks.
 
-[Output](screenshots/destructive-action.png)
-[Output](screenshots/open-ingress.png)
+![Output](screenshots/destructive-action.png)
+![Output](screenshots/open-ingress.png)
 
 ---
 
@@ -123,7 +123,7 @@ Add a screenshot showing `check_destructive_actions` and `check_open_ingress`, i
 
 Add a screenshot showing successful `bash -n` and `ls -l` output.
 
-[Output](screenshots/bash-n.png)
+![Output](screenshots/bash-n.png)
 
 ## Questions
 
@@ -165,7 +165,7 @@ Verify that the review workflow reports a healthy result against your clean Terr
 
 Add a screenshot of the drift script output showing your full name and a `HEALTHY` result.
 
-[Output](screenshots/report.png)
+![Output](screenshots/report.png)
 
 ---
 
@@ -173,7 +173,7 @@ Add a screenshot of the drift script output showing your full name and a `HEALTH
 
 Add a screenshot showing the captured script exit code `0`.
 
-[Output](screenshots/exit-code.png)
+![Output](screenshots/exit-code.png)
 
 ## Questions
 
@@ -204,7 +204,7 @@ Turn the Bash evidence-gathering workflow into a reusable Agentic AI review proc
 
 Add a screenshot of `SKILL.md` showing the frontmatter, allowed tools, and safety rules.
 
-[Output](screenshots/skill.png)
+![Output](screenshots/skill.png)
 
 ---
 
@@ -212,7 +212,7 @@ Add a screenshot of `SKILL.md` showing the frontmatter, allowed tools, and safet
 
 Add a screenshot of `/tf-drift-review` showing the clean `HEALTHY` result.
 
-[Output](screenshots/claude-review.png)
+![Output](screenshots/claude-review.png)
 
 ## Questions
 
@@ -250,7 +250,7 @@ Create a safe, intentional difference and confirm that Terraform and Claude dete
 
 Add a screenshot of the controlled change you introduced, with sensitive details hidden.
 
-[Output](screenshots/manual-change.png)
+![Output](screenshots/manual-change.png)
 
 ---
 
@@ -258,8 +258,8 @@ Add a screenshot of the controlled change you introduced, with sensitive details
 
 Add a screenshot of `/tf-drift-review` showing the detected difference and risk assessment.
 
-[Output](screenshots/tf-drift2.png)
-[Output](screenshots/assessment.png)
+![Output](screenshots/tf-drift2.png)
+![Output](screenshots/assessment.png)
 
 ---
 
@@ -267,7 +267,7 @@ Add a screenshot of `/tf-drift-review` showing the detected difference and risk 
 
 Add a screenshot of `drift-detected-report.txt` showing your full name and the `WARN` or `FAIL` result.
 
-[Output](screenshots/failure.png)
+![Output](screenshots/failure.png)
 
 ## Questions
 
@@ -313,7 +313,7 @@ Overall Status: FAIL
 
 Add a screenshot of `.claude/settings.json` showing the `PreToolUse` safety hook.
 
-[Output](screenshots/pretool.png)
+![Output](screenshots/pretool.png)
 
 ---
 
@@ -321,7 +321,7 @@ Add a screenshot of `.claude/settings.json` showing the `PreToolUse` safety hook
 
 Add a screenshot of Claude Code showing the blocked `terraform apply` attempt.
 
-[Output](screenshots/hook2.png)
+![Output](screenshots/hook2.png)
 
 ## Questions
 
@@ -359,7 +359,7 @@ Resolve the detected difference intentionally, verify the infrastructure returns
 
 Add a screenshot of the human-reviewed resolution or `terraform apply` output where applicable.
 
-[Output](screenshots/apply3.png)
+![Output](screenshots/apply3.png)
 
 ---
 
@@ -367,7 +367,7 @@ Add a screenshot of the human-reviewed resolution or `terraform apply` output wh
 
 Add a screenshot of the final `/tf-drift-review` showing `HEALTHY`.
 
-[Output](screenshots/status.png)
+![Output](screenshots/status.png)
 
 ---
 
@@ -378,7 +378,7 @@ Add a screenshot of `ls -lah reports` showing both:
 - `drift-detected-report.txt`
 - `resolved-report.txt`
 
-[Output](screenshots/report2.png)
+![Output](screenshots/report2.png)
 
 ---
 
@@ -386,7 +386,7 @@ Add a screenshot of `ls -lah reports` showing both:
 
 Add a screenshot of `drift-review-summary.md` showing all required sections and your full name.
 
-[Output](screenshots/report2.png)
+![Output](screenshots/report2.png)
 
 ## Terraform Drift Review Summary
 
@@ -513,7 +513,7 @@ https://www.linkedin.com/posts/ginikandubuisi_i-built-an-ai-assisted-terraform-d
 
 ### Published LinkedIn Post Screenshot — Mandatory
 
-[Output](screenshots/linkedin2.png)
+![Output](screenshots/linkedin2.png)
 
 ---
 

@@ -20,33 +20,33 @@ Build a VPC (10.0.0.0/16) with two public and two private subnets across two Ava
 
 #### Screenshot 1 — VPC details showing CIDR 10.0.0.0/16
 
-[Output](screenshots/ha-vpc.png)
+![Output](screenshots/ha-vpc.png)
 
 ---
 
 #### Screenshot 2 — Subnets list showing four subnets and their Availability Zones
 
-[Output](screenshots/subnets.png)
+![Output](screenshots/subnets.png)
 
 ---
 
 #### Screenshot 3 — Public route table showing the Internet Gateway route and both public-subnet associations
 
-[Output](screenshots/public-rt1.png)
-[Output](screenshots/public-rt2.png)
+![Output](screenshots/public-rt1.png)
+![Output](screenshots/public-rt2.png)
 
 ---
 
 #### Screenshot 4 — Private route table showing the NAT Gateway route and both private-subnet associations
 
-[Output](screenshots/private-rt1.png)
-[Output](screenshots/private-rt2.png)
+![Output](screenshots/private-rt1.png)
+![Output](screenshots/private-rt2.png)
 
 ---
 
 #### Screenshot 5 — NAT Gateway status showing Available and the Elastic IP
 
-[Output](screenshots/nat.png)
+![Output](screenshots/nat.png)
 
 ---
 
@@ -60,19 +60,19 @@ Create `ha-alb-sg` (HTTP public), `ha-web-sg` (HTTP only from `ha-alb-sg`, SSH f
 
 #### Screenshot 6 — ALB Security Group inbound rules
 
-[Output](screenshots/sg.png)
+![Output](screenshots/sg.png)
 
 ---
 
 #### Screenshot 7 — EC2 Security Group inbound rules showing the ALB Security Group reference and SSH from your IP
 
-[Output](screenshots/ec2-sg.png)
+![Output](screenshots/ec2-sg.png)
 
 ---
 
 #### Screenshot 8 — RDS Security Group inbound rule showing the database port allowed only from the EC2 Security Group
 
-[Output](screenshots/rds-sg.png)
+![Output](screenshots/rds-sg.png)
 
 ---
 
@@ -86,13 +86,13 @@ Launch a private, Multi-AZ RDS database (MySQL) using the private DB Subnet Grou
 
 #### Screenshot 9 — RDS summary showing Multi-AZ = Yes and Publicly accessible = No
 
-[Output](screenshots/db.png)
+![Output](screenshots/db.png)
 
 ---
 
 #### Screenshot 10 — RDS connectivity section showing the DB Subnet Group and Security Group
 
-[Output](screenshots/cn-sg.png)
+![Output](screenshots/cn-sg.png)
 
 ---
 
@@ -106,13 +106,13 @@ Create a Launch Template whose user data installs the web-server runtime, deploy
 
 #### Screenshot 11 — Launch Template details showing that user data exists, including a visible snippet
 
-[Output](screenshots/User-data.png)
+![Output](screenshots/User-data.png)
 
 ---
 
 #### Screenshot 12 — A running instance created from the template showing that the application responds on port 80 through a local test or browser using its public IP
 
-[Output](screenshots/wp-admin.png)
+![Output](screenshots/wp-admin.png)
 
 ---
 
@@ -126,13 +126,13 @@ Create an internet-facing ALB across both public subnets with an HTTP listener a
 
 #### Screenshot 13 — ALB details showing two public subnets in two Availability Zones
 
-[Output](screenshots/AZ.png)
+![Output](screenshots/AZ.png)
 
 ---
 
 #### Screenshot 14 — Target group showing at least one healthy target
 
-[Output](screenshots/healthy-tg.png)
+![Output](screenshots/healthy-tg.png)
 
 ---
 
@@ -146,14 +146,14 @@ Create an Auto Scaling Group from the Launch Template across both public subnets
 
 #### Screenshot 15 — Auto Scaling Group showing desired, minimum, and maximum capacity and the selected subnet Availability Zones
 
-[Output](screenshots/Autoscaling-group.png)
-[Output](screenshots/AZ-Subnet.png)
+![Output](screenshots/Autoscaling-group.png)
+![Output](screenshots/AZ-Subnet.png)
 
 ---
 
 #### Screenshot 16 — EC2 instances list showing two running instances in different Availability Zones
 
-[Output](screenshots/Instances.png)
+![Output](screenshots/Instances.png)
 
 ---
 
@@ -167,13 +167,13 @@ Confirm the application communicates with the RDS database through the ALB DNS n
 
 #### Screenshot 17 — Browser showing the application loaded through the ALB DNS name with the URL visible
 
-[Output](screenshots/success.png)
+![Output](screenshots/success.png)
 
 ---
 
 #### Screenshot 18 — Proof of a database write through a UI message or database query output
 
-[Output](screenshots/Database.png)
+![Output](screenshots/Database.png)
 
 ---
 
@@ -189,25 +189,25 @@ Test B: simulate an Availability Zone impact (stop, detach, or reduce desired ca
 
 #### Screenshot 19 — EC2 showing the terminated instance and the newly launched instance; timestamps are helpful
 
-[Output](screenshots/Ins.png)
+![Output](screenshots/Ins.png)
 
 ---
 
 #### Screenshot 20 — Target group showing healthy targets after replacement
 
-[Output](screenshots/targets.png)
+![Output](screenshots/targets.png)
 
 ---
 
 #### Screenshot 21 — Evidence that an instance was removed, detached, placed in Standby, or stopped in one Availability Zone
 
-[Output](screenshots/proof.png)
+![Output](screenshots/proof.png)
 
 ---
 
 #### Screenshot 22 — Browser showing that the ALB DNS endpoint still works during the change
 
-[Output](screenshots/ed.png)
+![Output](screenshots/ed.png)
 
 ---
 
@@ -221,7 +221,7 @@ Summarize the VPC/subnet layout, the ALB and Auto Scaling Group setup, the priva
 
 #### Screenshot 23 — A simple architecture diagram, which may be hand-drawn, or an AWS console overview showing the components
 
-[Output](screenshots/Two-tier.png)
+![Output](screenshots/Two-tier.png)
 
 ---
 
@@ -265,7 +265,7 @@ https://lnkd.in/p/dHW3JvBe
 
 #### Screenshot of LinkedIn post
 
-[Output](screenshots/Linkedin4.png)
+![Output](screenshots/Linkedin4.png)
 
 ---
 

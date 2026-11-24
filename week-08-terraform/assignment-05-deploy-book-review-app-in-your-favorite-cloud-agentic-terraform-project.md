@@ -32,8 +32,8 @@ Prepare the Book Review App project and configure the provided Claude Code Agent
 
 Add a screenshot of the project `CLAUDE.md` showing the three-tier architecture, security boundaries, Terraform requirements, and human-approval rules.
 
-[Output](screenshots/claude-md.png)
-[Output](screenshots/claude-md2.png)
+![Output](screenshots/claude-md.png)
+![Output](screenshots/claude-md2.png)
 
 ---
 
@@ -41,7 +41,7 @@ Add a screenshot of the project `CLAUDE.md` showing the three-tier architecture,
 
 Add a screenshot showing the Terraform Engineer subagent configuration.
 
-[Output](screenshots/engineer.png)
+![Output](screenshots/engineer.png)
 
 ---
 
@@ -49,7 +49,7 @@ Add a screenshot showing the Terraform Engineer subagent configuration.
 
 Add a screenshot showing the Architecture and Security Reviewer subagent configuration.
 
-[Output](screenshots/architecture.png)
+![Output](screenshots/architecture.png)
 
 ---
 
@@ -57,7 +57,7 @@ Add a screenshot showing the Architecture and Security Reviewer subagent configu
 
 Add a screenshot showing Terraform MCP connected and available.
 
-[Output](screenshots/mcp.png)
+![Output](screenshots/mcp.png)
 
 ---
 
@@ -65,7 +65,7 @@ Add a screenshot showing Terraform MCP connected and available.
 
 Add a screenshot showing the configured Claude Code validation hooks.
 
-[Output](screenshots/hook.png)
+![Output](screenshots/hook.png)
 
 
 ---
@@ -93,7 +93,7 @@ The diagram must show:
 
 ## Architecture Diagram
 
-[Output](screenshots/3-tier-diagram.png)
+![Output](screenshots/3-tier-diagram.png)
 
 ---
 
@@ -109,7 +109,7 @@ Create the modular Terraform project and implement the network and security laye
 
 Add a screenshot showing the modular Terraform project structure.
 
-[Output](screenshots/structure.png)
+![Output](screenshots/structure.png)
 
 ---
 
@@ -117,7 +117,7 @@ Add a screenshot showing the modular Terraform project structure.
 
 Add a screenshot showing the six-subnet architecture across two availability locations.
 
-[Output](screenshots/Subnets.png)
+![Output](screenshots/Subnets.png)
 
 
 ---
@@ -126,7 +126,7 @@ Add a screenshot showing the six-subnet architecture across two availability loc
 
 Add a screenshot showing the public and private tier separation, including routing and security boundaries.
 
-[Output](screenshots/route-tabls.png)
+![Output](screenshots/route-tabls.png)
 
 ---
 
@@ -142,7 +142,7 @@ Deploy the public and internal load balancers and the Web and Application comput
 
 Add a screenshot showing the Web and Application compute resources in their required subnets.
 
-[Output](screenshots/instances.png)
+![Output](screenshots/instances.png)
 
 ---
 
@@ -150,7 +150,7 @@ Add a screenshot showing the Web and Application compute resources in their requ
 
 Add a screenshot showing the internet-facing public load balancer.
 
-[Output](screenshots/public-alb.png)
+![Output](screenshots/public-alb.png)
 
 ---
 
@@ -158,7 +158,7 @@ Add a screenshot showing the internet-facing public load balancer.
 
 Add a screenshot showing the private internal load balancer.
 
-[Output](screenshots/private-alb.png)
+![Output](screenshots/private-alb.png)
 
 ---
 
@@ -166,7 +166,7 @@ Add a screenshot showing the private internal load balancer.
 
 Add a screenshot showing healthy target groups or backend pools.
 
-[Output](screenshots/targets.png)
+![Output](screenshots/targets.png)
 
 ---
 
@@ -182,7 +182,7 @@ Deploy a private, highly available managed MySQL database with a read replica an
 
 Add a screenshot showing the managed MySQL database deployment.
 
-[Output](screenshots/database.png)
+![Output](screenshots/database.png)
 
 ---
 
@@ -190,7 +190,7 @@ Add a screenshot showing the managed MySQL database deployment.
 
 Add a screenshot showing the Multi-AZ or high-availability configuration.
 
-[Output](screenshots/multi-az.png)
+![Output](screenshots/multi-az.png)
 
 ---
 
@@ -198,7 +198,7 @@ Add a screenshot showing the Multi-AZ or high-availability configuration.
 
 Add a screenshot showing the read replica configuration.
 
-[Output](screenshots/replica.png)
+![Output](screenshots/replica.png)
 
 ---
 
@@ -206,7 +206,7 @@ Add a screenshot showing the read replica configuration.
 
 Add a screenshot showing that the database is private and accepts MySQL traffic only from the Application Tier.
 
-[Output](screenshots/access.png)
+![Output](screenshots/access.png)
 
 ---
 
@@ -222,7 +222,7 @@ Validate the Terraform configuration, review the execution plan using both Agent
 
 Add a screenshot showing successful `terraform validate` output.
 
-[Output](screenshots/t-validate.png)
+![Output](screenshots/t-validate.png)
 
 ---
 
@@ -230,7 +230,7 @@ Add a screenshot showing successful `terraform validate` output.
 
 Add a screenshot showing the Terraform plan output.
 
-[Output](screenshots/t-plan.png)
+![Output](screenshots/t-plan.png)
 
 ---
 
@@ -238,7 +238,7 @@ Add a screenshot showing the Terraform plan output.
 
 Add a screenshot showing successful `terraform apply` completion.
 
-[Output](screenshots/t-apply.png)
+![Output](screenshots/t-apply.png)
 
 ---
 
@@ -254,7 +254,7 @@ Deploy and configure the Book Review App across the Web, Application, and Databa
 
 Add a screenshot showing the Book Review App homepage through the public endpoint.
 
-[Output](screenshots/browser3.png)
+![Output](screenshots/browser3.png)
 
 ---
 
@@ -262,7 +262,7 @@ Add a screenshot showing the Book Review App homepage through the public endpoin
 
 Add a screenshot showing successful login or authentication.
 
-[Output](screenshots/login.png)
+![Output](screenshots/login.png)
 
 ---
 
@@ -270,7 +270,7 @@ Add a screenshot showing successful login or authentication.
 
 Add a screenshot showing the book listing or book details.
 
-[Output](screenshots/book-r.png)
+![Output](screenshots/book-r.png)
 
 ---
 
@@ -278,7 +278,7 @@ Add a screenshot showing the book listing or book details.
 
 Add a screenshot showing the review functionality working successfully.
 
-[Output](screenshots/review.png)
+![Output](screenshots/review.png)
 
 ---
 
@@ -286,7 +286,7 @@ Add a screenshot showing the review functionality working successfully.
 
 Add a screenshot showing that the backend or API is working successfully.
 
-[Output](screenshots/bankend.png)
+![Output](screenshots/bankend.png)
 
 ---
 
@@ -294,7 +294,7 @@ Add a screenshot showing that the backend or API is working successfully.
 
 Add a screenshot showing successful database reads and writes.
 
-[Output](screenshots/database2.png)
+![Output](screenshots/database2.png)
 
 ## Public Application URL
 
@@ -316,7 +316,7 @@ You do not need to submit your complete Claude Code conversation history. Includ
 
 Add a screenshot showing one useful example of AI-assisted Terraform generation or improvement.
 
-[Output](screenshots/AI.png)
+![Output](screenshots/AI.png)
 
 ---
 
@@ -324,7 +324,7 @@ Add a screenshot showing one useful example of AI-assisted Terraform generation 
 
 Add a screenshot showing one structured architecture or security review result.
 
-[Output](screenshots/proposed-sg.png)
+![Output](screenshots/proposed-sg.png)
 
 ---
 
@@ -332,7 +332,7 @@ Add a screenshot showing one structured architecture or security review result.
 
 Add a screenshot showing one AI-assisted troubleshooting interaction based on collected evidence.
 
-[Output](screenshots/troubleshooting.png)
+![Output](screenshots/troubleshooting.png)
 
 ---
 

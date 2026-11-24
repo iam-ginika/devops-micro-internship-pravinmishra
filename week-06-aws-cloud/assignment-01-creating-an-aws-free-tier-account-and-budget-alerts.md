@@ -80,8 +80,8 @@ Review your budget and notification settings, then create the budget.
 
 #### Screenshot 1 — AWS Budget setup page showing the budget name, budget amount, and alert thresholds
 
-[Output](screenshots/Budget.png)
-[Output](screenshots/Alerts.png)
+![Output](screenshots/Budget.png)
+![Output](screenshots/Alerts.png)
 
 ### Notes
 
@@ -107,7 +107,7 @@ Go to the DMI Leaderboard, find your name, select **Share your progress**, and c
 
 #### Screenshot 2 — Published WhatsApp Status showing the automatically generated DMI Leaderboard rank and personal progress link
 
-[Output](screenshots/Rank.jpeg)
+![Output](screenshots/Rank.jpeg)
 
 > **Privacy Note:** Make sure no private phone numbers, personal messages, or sensitive information are visible in the screenshot.
 

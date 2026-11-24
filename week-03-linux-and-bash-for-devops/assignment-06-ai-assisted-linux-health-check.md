@@ -315,20 +315,20 @@ Create a controlled service failure, gather evidence through Bash, and let Claud
 
 #### Screenshot 13 — Output showing Nginx is inactive and the HTTP request fails
 
-![output](screenshots/Service-failure1.png)
+![Output](screenshots/Service-failure1.png)
 
 ---
 
 #### Screenshot 14 — `/linux-triage` output showing failed evidence, most likely cause, and a suggested recovery command
 
-![output](screenshots/Linux-triage-Failure.png)
-![output](screenshots/Linux-triage-Failure.1.png)
+![Output](screenshots/Linux-triage-Failure.png)
+![Output](screenshots/Linux-triage-Failure.1.png)
 
 ---
 
 #### Screenshot 15 — `incident-failure-report.txt` showing the failed checks and your Full Name
 
-![output](screenshots/Incident-failure-report.png)
+![Output](screenshots/Incident-failure-report.png)
 ---
 
 ### Notes
@@ -375,26 +375,26 @@ Recover the service as the human operator and prove that the system is healthy a
 
 #### Screenshot 16 — Output showing Nginx is active and `curl -I http://localhost` returns 200 OK
 
-![output](screenshots/System-status.png)
+![Output](screenshots/System-status.png)
 
 ---
 
 #### Screenshot 17 — Second `/linux-triage` output showing successful recovery with no FAIL results
 
-![output](screenshots/Linux-triage-Report.png)
+![Output](screenshots/Linux-triage-Report.png)
 
 ---
 
 #### Screenshot 18 — Output of `ls -lah reports` showing both `incident-failure-report.txt` and `recovery-report.txt`
 
-![output](screenshots/Report.png)
+![Output](screenshots/Report.png)
 
 ---
 
 #### Screenshot 19 — `incident-summary.md` showing all required sections and your Full Name
 
-![output](screenshots/Incident-summary1.png)
-![output](screenshots/Incident-summary2.png)
+![Output](screenshots/Incident-summary1.png)
+![Output](screenshots/Incident-summary2.png)
 ---
 
 ### Notes
@@ -530,7 +530,7 @@ https://lnkd.in/p/dM8CBWi9
 
 #### Screenshot — Published LinkedIn post
 
-[Output](screenshots/Linkedin-ai-post.png)
+![Output](screenshots/Linkedin-ai-post.png)
 
 ---
 

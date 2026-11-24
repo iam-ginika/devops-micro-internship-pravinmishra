@@ -42,7 +42,7 @@ Confirm that both EpicBook pipelines are healthy and place the supplied assignme
 
 Terminal output showing the latest completed Infrastructure and Application Pipeline runs with successful results.
 
-[Output](screenshots/Successful-pipeline-runs.png)
+![Output](screenshots/Successful-pipeline-runs.png)
 
 ## Notes
 
@@ -68,7 +68,7 @@ Configure the supplied project context and verify the safety boundaries Claude m
 
 `CLAUDE.md` open in the editor with the Project Overview, Incident Workflow, Safety Rules, and Output Rules visible.
 
-[Output](screenshots/C-MD.png)
+![Output](screenshots/C-MD.png)
 
 ## Notes
 
@@ -98,8 +98,8 @@ Configure the supplied Bash script and verify that it retrieves and classifies e
 
 Editor showing the script configuration variables, report filenames, check-function array, and read-only log-retrieval functions. Ensure that no token is visible.
 
-[Output](screenshots/Pipeline-triage.png)
-[Output](screenshots/Read-only-log-retrieval-functions.png)
+![Output](screenshots/Pipeline-triage.png)
+![Output](screenshots/Read-only-log-retrieval-functions.png)
 
 ---
 
@@ -107,7 +107,7 @@ Editor showing the script configuration variables, report filenames, check-funct
 
 Terminal showing successful Bash syntax validation and executable file permission.
 
-[Output](screenshots/Syntax-check.png)
+![Output](screenshots/Syntax-check.png)
 
 ## Notes
 
@@ -145,7 +145,7 @@ Run the supplied script against the healthy baseline and verify the initial pipe
 
 Healthy pipeline report showing your Full Name, both successful pipelines, Overall Status `HEALTHY`, and captured exit code `0`.
 
-[Output](screenshots/Triage-Report.png)
+![Output](screenshots/Triage-Report.png)
 
 ## Notes
 
@@ -171,7 +171,7 @@ Configure the supplied Claude Code skill and verify that it runs the Bash tool a
 
 `SKILL.md` showing the frontmatter, manual-invocation setting, narrowly scoped tools, safety rules, and required output structure.
 
-[Output](screenshots/Skill-md.png)
+![Output](screenshots/Skill-md.png)
 
 ---
 
@@ -179,7 +179,7 @@ Configure the supplied Claude Code skill and verify that it runs the Bash tool a
 
 Healthy `/pipeline-triage` result showing that both pipelines are healthy and no fix is required.
 
-[Output](screenshots/Healthy-result.png)
+![Output](screenshots/Healthy-result.png)
 
 ## Notes
 
@@ -213,8 +213,8 @@ Create a controlled Application Pipeline failure that can be diagnosed without c
 
 Failed Application Pipeline run showing the temporary branch, failed status, failed step, and relevant non-sensitive error evidence.
 
-[Output](screenshots/Failed-run.png)
-[Output](screenshots/Failed-Playbook-recap.png)
+![Output](screenshots/Failed-run.png)
+![Output](screenshots/Failed-Playbook-recap.png)
 
 ## Notes
 
@@ -248,8 +248,8 @@ Use `/pipeline-triage` to classify the failed Application Pipeline without allow
 
 `/pipeline-triage` output and saved incident report showing the affected pipeline, failure category, sanitized evidence, recommendation, and your Full Name.
 
-[Output](screenshots/Failed-State-Diagnosis.png)
-[Output](screenshots/Failed-State-Diagnosis2.png)
+![Output](screenshots/Failed-State-Diagnosis.png)
+![Output](screenshots/Failed-State-Diagnosis2.png)
 
 ## Notes
 
@@ -289,7 +289,7 @@ Apply the recommended fix manually and verify that the Application Pipeline and 
 
 Corrected Application Pipeline run showing the temporary branch and successful status.
 
-[Output](screenshots/Updated-run.png)
+![Output](screenshots/Updated-run.png)
 
 ---
 
@@ -297,7 +297,7 @@ Corrected Application Pipeline run showing the temporary branch and successful s
 
 Recovery `/pipeline-triage` output showing Overall Status `HEALTHY`, exit code `0`, your Full Name, and both saved report filenames.
 
-[Output](screenshots/Recovery-pipeline-triage.png)
+![Output](screenshots/Recovery-pipeline-triage.png)
 
 ## Notes
 
@@ -335,7 +335,7 @@ https://www.linkedin.com/posts/ginikandubuisi_devops-agenticai-claudecode-share-
 
 Published LinkedIn post showing its text and at least one image or link.
 
-[Output](screenshots/LinkedIn-Post-5.png)
+![Output](screenshots/LinkedIn-Post-5.png)
 
 ---
 

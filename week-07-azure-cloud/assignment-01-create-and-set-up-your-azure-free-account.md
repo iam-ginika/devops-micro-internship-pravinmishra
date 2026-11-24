@@ -30,13 +30,13 @@ Confirm successful Azure Portal access and Locate the required services and subs
 
 #### Screenshot 1 — Azure Portal homepage after successful login
 
-[Output](screenshots/Azure-welcome-page.png)
+![Output](screenshots/Azure-welcome-page.png)
 
 ---
 
 #### Screenshot 2 — "Subscriptions" section showing the "Free Trial" subscription
 
-[Output](screenshots/Subscription.png)
+![Output](screenshots/Subscription.png)
 
 ---
 
@@ -58,7 +58,7 @@ Share your Azure account setup achievement and DMI Leaderboard progress together
 
 #### Screenshot 3 — Published WhatsApp Status showing your Azure account setup update, automatically generated DMI Leaderboard rank, and personal progress link
 
-[Output](screenshots/Subscription.png)
+![Output](screenshots/Subscription.png)
 
 > **Privacy Note:** Do not include payment details, subscription IDs, private phone numbers, or other sensitive information.
 

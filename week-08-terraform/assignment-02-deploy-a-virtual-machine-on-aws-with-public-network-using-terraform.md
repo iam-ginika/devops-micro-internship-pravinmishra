@@ -24,7 +24,7 @@ Prepare your local environment for Terraform deployment by installing Terraform,
 
 Ensure that your full name is visible and that no AWS credentials, account IDs, or other sensitive information are exposed.
 
-[Output](screenshots/AWS-Version.png)
+![Output](screenshots/AWS-Version.png)
 
 ---
 
@@ -54,7 +54,7 @@ The configuration must include:
 
 #### Screenshot 2 — VS Code showing the AWS provider configuration and VPC configuration in `main.tf`
 
-[Output](screenshots/Main.png)
+![Output](screenshots/Main.png)
 
 ---
 
@@ -62,7 +62,7 @@ The configuration must include:
 
 Ensure that no AWS credentials, private keys, account IDs, or other sensitive information are visible.
 
-[Output](screenshots/ec2-config.png)
+![Output](screenshots/ec2-config.png)
 
 ---
 
@@ -76,7 +76,7 @@ Initialize the Terraform working directory and download the required provider co
 
 #### Screenshot 4 — Terminal showing the successful `terraform init` output
 
-[Output](screenshots/terraform.png)
+![Output](screenshots/terraform.png)
 
 ---
 
@@ -90,19 +90,19 @@ Review the Terraform execution plan, provision the AWS resources, and record the
 
 #### Screenshot 5 — Terraform plan summary showing the proposed resources
 
-[Output](screenshots/Plan.png)
+![Output](screenshots/Plan.png)
 
 ---
 
 #### Screenshot 6 — Terraform apply output showing successful completion
 
-[Output](screenshots/Apply.png)
+![Output](screenshots/Apply.png)
 
 ---
 
 #### Screenshot 7 — Terraform output showing the public IP address of the EC2 instance
 
-[Output](screenshots/Output.png)
+![Output](screenshots/Output.png)
 
 ---
 
@@ -132,13 +132,13 @@ Confirm that:
 
 #### Screenshot 8 — AWS CLI output showing the EC2 instance ID, `running` state, and public IP address
 
-[Output](screenshots/Instance.png)
+![Output](screenshots/Instance.png)
 
 ---
 
 #### Screenshot 9 — Browser showing the Nginx page successfully loaded using the EC2 instance public IP
 
-[Output](screenshots/Browser.png)
+![Output](screenshots/Browser.png)
 
 ---
 
@@ -152,7 +152,7 @@ Remove all AWS resources created by Terraform after completing the deployment an
 
 #### Screenshot 10 — Terminal showing successful `terraform destroy` completion
 
-[Output](screenshots/destroy.png)
+![Output](screenshots/destroy.png)
 
 ---
 
@@ -166,7 +166,7 @@ Share your AWS Terraform deployment progress by using either Facebook or WhatsAp
 
 #### Screenshot 11 — Published Facebook post/Story or WhatsApp Status showing Terraform deployment progress and DMI Leaderboard progress link
 
-[Output](screenshots/whatsapp-update.jpeg)
+![Output](screenshots/whatsapp-update.jpeg)
 
 > Use Screenshot 6 — successful `terraform apply` output — as the assignment image for your post or Status. Ensure that no AWS credentials, private keys, account IDs, private phone numbers, or personal messages are visible.
 

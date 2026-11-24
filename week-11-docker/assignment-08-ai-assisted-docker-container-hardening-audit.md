@@ -33,7 +33,7 @@ docker-audit.sh
 SKILL.md
 ```
 
-[Output](screenshots/Audit-files.png)
+![Output](screenshots/Audit-files.png)
 
 ---
 
@@ -49,7 +49,7 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
 
-[Output](screenshots/Claude.png)
+![Output](screenshots/Claude.png)
 
 ---
 
@@ -70,7 +70,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The usage message displayed when the script runs without a container name
 
-[Output](screenshots/Docker-audit.png)
+![Output](screenshots/Docker-audit.png)
 
 ---
 
@@ -90,7 +90,7 @@ Add a terminal screenshot showing:
 - `docker ps`
 - The audit command using the selected target container name
 
-[Output](screenshots/Target-container.png)
+![Output](screenshots/Target-container.png)
 
 ---
 
@@ -98,7 +98,7 @@ Add a terminal screenshot showing:
 
 Add a terminal screenshot showing the initial Docker audit results.
 
-[Output](screenshots/Audit.png)
+![Output](screenshots/Audit.png)
 
 ---
 
@@ -119,8 +119,8 @@ Add a Claude Code screenshot showing:
 - Recommended manual fix
 - Verification method
 
-[Output](screenshots/Claude-audit.png)
-[Output](screenshots/Claude-audit2.png)
+![Output](screenshots/Claude-audit.png)
+![Output](screenshots/Claude-audit2.png)
 
 ---
 
@@ -136,7 +136,7 @@ Manually fix one WARN or FAIL finding from the initial audit.
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
 
-[Output](screenshots/Config.png)
+![Output](screenshots/Config.png)
 
 ---
 
@@ -144,7 +144,7 @@ Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the s
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
 
-[Output](screenshots/Updated-service.png)
+![Output](screenshots/Updated-service.png)
 
 ---
 
@@ -164,8 +164,8 @@ Add a terminal screenshot showing:
 - The updated running container
 - The final audit report
 
-[Output](screenshots/Final-audit.png)
-[Output](screenshots/Final-audit2.png)
+![Output](screenshots/Final-audit.png)
+![Output](screenshots/Final-audit2.png)
 
 ---
 
@@ -212,7 +212,7 @@ Create a LinkedIn post about the container security checks you performed, one ha
 
 Add a screenshot of the published LinkedIn post, including the final audit result.
 
-[Output](screenshots)
+![Output](screenshots)
 
 ---
 

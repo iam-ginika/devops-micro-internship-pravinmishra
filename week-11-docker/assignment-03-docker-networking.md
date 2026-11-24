@@ -28,7 +28,7 @@ docker network ls
 
 The output must include the default `bridge`, `host`, and `none` networks.
 
-[Output](screenshots/Network.png)
+![Output](screenshots/Network.png)
 
 ---
 
@@ -40,7 +40,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker pull nginx:alpine
 ```
 
-[Output](screenshots/Pull.png)
+![Output](screenshots/Pull.png)
 
 ---
 
@@ -58,7 +58,7 @@ The output must show the running `myweb` container with:
 0.0.0.0:80->80/tcp
 ```
 
-[Output](screenshots/Myweb.png)
+![Output](screenshots/Myweb.png)
 
 ---
 
@@ -72,7 +72,7 @@ http://16.170.218.128/
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Welcome-page.png)
+![Output](screenshots/Welcome-page.png)
 
 ---
 
@@ -92,7 +92,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 docker network ls
 ```
 
-[Output](screenshots/mynetwork.png)
+![Output](screenshots/mynetwork.png)
 
 ---
 
@@ -106,7 +106,7 @@ docker ps
 
 The output must show both `web` and `client` containers running without published host ports.
 
-[Output](screenshots/PS.png)
+![Output](screenshots/PS.png)
 
 ---
 
@@ -120,7 +120,7 @@ docker exec client wget -qO- http://web
 
 The output must display the Nginx Welcome Page HTML.
 
-[Output](screenshots/wget.png)
+![Output](screenshots/wget.png)
 
 ---
 
@@ -134,7 +134,7 @@ docker network inspect mynetwork
 
 The output must show both `web` and `client` connected to `mynetwork`.
 
-[Output](screenshots/Inspect.png)
+![Output](screenshots/Inspect.png)
 
 ---
 
@@ -156,7 +156,7 @@ docker network ls
 
 The output must include both `frontend-network` and `backend-network`.
 
-[Output](screenshots/Multi-network.png)
+![Output](screenshots/Multi-network.png)
 
 ---
 
@@ -174,7 +174,7 @@ The output must show:
 - `backend` without a published host port
 - `db` without a published host port
 
-[Output](screenshots/Frontend-published.png)
+![Output](screenshots/Frontend-published.png)
 
 ---
 
@@ -188,8 +188,8 @@ docker network inspect frontend-network
 
 The output must show `frontend` and `backend`.
 
-[Output](screenshots/Frontend1.png)
-[Output](screenshots/Frontend2.png)
+![Output](screenshots/Frontend1.png)
+![Output](screenshots/Frontend2.png)
 
 ---
 
@@ -203,8 +203,8 @@ docker network inspect backend-network
 
 The output must show `backend` and `db`.
 
-[Output](screenshots/Backend1.png)
-[Output](screenshots/Backend2.png)
+![Output](screenshots/Backend1.png)
+![Output](screenshots/Backend2.png)
 
 ---
 
@@ -218,7 +218,7 @@ docker exec frontend wget -qO- http://backend
 
 The output must display the Nginx Welcome Page HTML.
 
-[Output](screenshots/Connection.png)
+![Output](screenshots/Connection.png)
 
 ---
 
@@ -226,7 +226,7 @@ The output must display the Nginx Welcome Page HTML.
 
 Add a screenshot of the terminal showing a successful connection to `db` on port `27017` from the `backend` container.
 
-[Output](screenshots/Connection-Success.png)
+![Output](screenshots/Connection-Success.png)
 
 ---
 
@@ -240,7 +240,7 @@ The output must include:
 Expected result: frontend cannot reach db
 ```
 
-[Output](screenshots/Failed-reach.png)
+![Output](screenshots/Failed-reach.png)
 
 ---
 
@@ -254,7 +254,7 @@ http://16.170.218.128/
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Frontend.png)
+![Output](screenshots/Frontend.png)
 
 ---
 
@@ -276,7 +276,7 @@ docker ps
 
 The output must show the running `fastapp` container.
 
-[Output](screenshots/fastapp.png)
+![Output](screenshots/fastapp.png)
 
 ---
 
@@ -294,7 +294,7 @@ The output must confirm:
 "NetworkMode": "host"
 ```
 
-[Output](screenshots/Networkmode.png)
+![Output](screenshots/Networkmode.png)
 
 ---
 
@@ -308,7 +308,7 @@ http://16.170.218.128/
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Frontend.png)
+![Output](screenshots/Frontend.png)
 
 ---
 
@@ -321,7 +321,7 @@ docker stop fastapp
 docker rm fastapp
 ```
 
-[Output](screenshots/Remove-fastapp.png)
+![Output](screenshots/Remove-fastapp.png)
 
 ---
 
@@ -361,13 +361,13 @@ Create a LinkedIn post about the Docker networking modes explored, one key lesso
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockernetworking-share-7530960366428700672-UoEJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here.
+![Output](screenshots/LinkedIn-3.png)
 
 ---
 

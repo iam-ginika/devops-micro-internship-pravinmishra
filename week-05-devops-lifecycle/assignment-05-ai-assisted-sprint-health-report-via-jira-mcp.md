@@ -20,8 +20,8 @@ Generate an API token from your Atlassian account that the MCP server will use t
 
 #### Screenshot 1 — Jira API token creation confirmation page showing the token name, with the token value not visible
 
-[Output](screenshots/Api.png)
-[Output](screenshots/token.png)
+![Output](screenshots/Api.png)
+![Output](screenshots/token.png)
 
 ### Notes You Must Write (Very Important):
 
@@ -41,7 +41,7 @@ Create or update `.mcp.json` at your project root with a Jira MCP server block, 
 
 #### Screenshot 2 — `.mcp.json` open in VS Code showing the Jira server configuration
 
-[Output](screenshots//mcp.png)
+![Output](screenshots//mcp.png)
 
 ### Notes You Must Write (Very Important):
 
@@ -69,7 +69,7 @@ Add your Jira site URL, account email, and API token to `.claude/settings.local.
 
 #### Screenshot 3 — `settings.local.json` open in VS Code showing the `env` section, with the actual token value blurred or covered
 
-[Output](screenshots/jira-settings.-local.png)
+![Output](screenshots/jira-settings.-local.png)
 
 ### Notes You Must Write (Very Important):
 
@@ -91,7 +91,7 @@ Restart Claude Code and confirm the Jira MCP server shows as connected.
 
 #### Screenshot 4 — `/mcp` output showing `jira: connected`
 
-[Output](screenshots/Jira-connection.png)
+![Output](screenshots/Jira-connection.png)
 
 ---
 
@@ -105,7 +105,7 @@ Ask Claude to list the issues in your current active sprint through the Jira MCP
 
 #### Screenshot 5 — Claude's response showing the live sprint issue list retrieved via Jira MCP
 
-[Output](screenshots/Issues.png)
+![Output](screenshots/Issues.png)
 
 ### Notes You Must Write (Very Important):
 
@@ -125,11 +125,11 @@ Create a `/sprint-health` skill restricted to read-only Jira tools plus `Read`, 
 
 #### Screenshot 6 — `SKILL.md` frontmatter showing `allowed-tools` limited to read-only Jira tools plus `Read`, with `disable-model-invocation: true`
 
-[Output](screenshots/sprint-health.png)
+![Output](screenshots/sprint-health.png)
 
 #### Screenshot 7 — `/sprint-health` output showing the full triage report against your real sprint
 
-[Output](screenshots/sprint-health-report.png)
+![Output](screenshots/sprint-health-report.png)
 
 ### Notes You Must Write (Very Important):
 
@@ -155,7 +155,7 @@ Manually update one ticket on your board in the browser (for example, move a sto
 
 #### Screenshot 8 — Second `/sprint-health` run showing the report now reflects your manual board change
 
-[Output](screenshots/sprint-health-report2.png)
+![Output](screenshots/sprint-health-report2.png)
 
 ### Notes You Must Write (Very Important):
 
@@ -198,7 +198,7 @@ https://www.linkedin.com/posts/ginikandubuisi_another-hands-on-project-completed
 
 #### Screenshot 9 — Published LinkedIn post showing the caption and sprint-health report image
 
-[Output](screenshots/LinkedIn4.png)
+![Output](screenshots/LinkedIn4.png)
 
 ---
 

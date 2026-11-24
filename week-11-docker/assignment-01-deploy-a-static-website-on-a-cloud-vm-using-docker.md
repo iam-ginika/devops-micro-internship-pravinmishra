@@ -28,7 +28,7 @@ Add a screenshot of the cloud console showing:
 - SSH port 22 enabled from your IP address
 - HTTP port 80 enabled from Anywhere
 
-[Output](screenshots/VM.png)
+![Output](screenshots/VM.png)
 
 ---
 
@@ -50,7 +50,7 @@ cat /var/log/cloud-init-output.log
 
 The visible output must show Docker installation activity.
 
-[Output](screenshots/Output.png)
+![Output](screenshots/Output.png)
 
 ---
 
@@ -76,7 +76,7 @@ and
 docker ps
 ```
 
-[Output](screenshots/Docker.png)
+![Output](screenshots/Docker.png)
 
 ---
 
@@ -92,7 +92,7 @@ Download the static website source code.
 
 Add a screenshot of the terminal showing the contents of the `Azure-Static-Website` project directory after cloning the repository.
 
-[Output](screenshots/Clone.png)
+![Output](screenshots/Clone.png)
 
 ---
 
@@ -114,7 +114,7 @@ cat Dockerfile
 
 The Dockerfile must use `nginx:alpine`, copy the website files to the Nginx web root, and expose port 80.
 
-[Output](screenshots/Dockerfile.png)
+![Output](screenshots/Dockerfile.png)
 
 ---
 
@@ -136,7 +136,7 @@ docker images
 
 The output must include the `static-site` image with the `latest` tag.
 
-[Output](screenshots/Docker-image.png)
+![Output](screenshots/Docker-image.png)
 
 ---
 
@@ -162,7 +162,7 @@ The output must show the running `static-site` container with the port mapping:
 0.0.0.0:80->80/tcp
 ```
 
-[Output](screenshots/Container.png)
+![Output](screenshots/Container.png)
 
 ---
 
@@ -182,7 +182,7 @@ Add a screenshot of the terminal showing the output of:
 curl ifconfig.me
 ```
 
-[Output](screenshots/Deployment-verification.png)
+![Output](screenshots/Deployment-verification.png)
 
 ---
 
@@ -192,7 +192,7 @@ Add a screenshot of the browser showing the deployed static website.
 
 Ensure that the VM public IP address is visible in the browser address bar.
 
-[Output](screenshots/Browser.png)
+![Output](screenshots/Browser.png)
 
 ---
 
@@ -214,7 +214,7 @@ Create a LinkedIn post describing what you deployed, the deployment process, and
 
 #### LinkedIn Post Screenshot
 
-[Output](screenshots/LinkedIn.png)
+![Output](screenshots/LinkedIn.png)
 
 ---
 

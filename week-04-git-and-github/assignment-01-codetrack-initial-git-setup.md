@@ -20,13 +20,13 @@ Create a `CodeTrack` project folder and initialize it as a Git repository.
 
 #### Screenshot 1 — Output of `git init` inside `CodeTrack` showing "Initialized empty Git repository"
 
-![output](screenshots/git-init-Output.png)
+![Output](screenshots/git-init-Output.png)
 
 ---
 
 #### Screenshot 2 — Output of `ls -a` showing the `.git` folder
 
-![output](screenshots/git-folder.png)
+![Output](screenshots/git-folder.png)
 
 ---
 
@@ -53,7 +53,7 @@ Set your Git username and email for the `CodeTrack` repository only, using `git 
 
 #### Screenshot 3 — Output of `git config --local --list` showing your `user.name` and `user.email`
 
-[Output](screenshots/git-config-list.png)
+![Output](screenshots/git-config-list.png)
 
 ---
 
@@ -67,7 +67,7 @@ Set a global Git username and email for this machine using `git config --global`
 
 #### Screenshot 4 — Output of `git config --global --list` showing your `user.name` and `user.email`
 
-[Output](screenshots/global-list.png)
+![Output](screenshots/global-list.png)
 
 ---
 
@@ -81,7 +81,7 @@ Share your Git setup progress on WhatsApp Status, including your generated DMI l
 
 #### Screenshot 5 — Published WhatsApp Status showing your Git setup message and leaderboard progress link
 
-[Output](screenshots/git-setup-whatsapp-status.png)
+![Output](screenshots/git-setup-whatsapp-status.png)
 
 ---
 

@@ -20,7 +20,7 @@ Confirm your Azure CLI is authenticated and can see the VM, network, storage acc
 
 #### Screenshot 1 — `az account show` and `az vm list -d -o table` confirming your subscription and running VM (subscription ID partially blurred)
 
-[Output](screenshots/Subscription-list-table.png)
+![Output](screenshots/Subscription-list-table.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create a `CLAUDE.md` for this workspace that tells Claude what the audit covers 
 
 #### Screenshot 2 — `CLAUDE.md` open in your editor showing the project overview, audit workflow, and safety rules
 
-[Output](screenshots/Claude-md.png)
+![Output](screenshots/Claude-md.png)
 
 ---
 
@@ -48,8 +48,8 @@ Ask Claude Code to read `CLAUDE.md` and propose a read-only, four-check audit pl
 
 #### Screenshot 3 — Claude Code showing the four-check plan, with no files created or modified
 
-[Output](screenshots/Check-1-3.png)
-[Output](screenshots/Check-4.png)
+![Output](screenshots/Check-1-3.png)
+![Output](screenshots/Check-4.png)
 
 ---
 
@@ -63,13 +63,13 @@ Write a Bash script that runs the four checks from Task 3 using read-only `az` c
 
 #### Screenshot 4 — Your script open in your editor, showing the check functions and the `az` commands they call
 
-[Output](screenshots/Script.png)
+![Output](screenshots/Script.png)
 
 ---
 
 #### Screenshot 5 — Output of `bash -n` (no syntax errors) and `ls -l` showing the script is executable
 
-[Output](screenshots/Executable-scripts.png)
+![Output](screenshots/Executable-scripts.png)
 
 ---
 
@@ -83,7 +83,7 @@ Run the script against your live resources and read the report honestly, even if
 
 #### Screenshot 6 — Script output showing your Full Name and all four checks with a PASS, WARN, or FAIL result
 
-[Output](screenshots/Audit.png)
+![Output](screenshots/Audit.png)
 
 ---
 
@@ -97,14 +97,14 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 
 #### Screenshot 7 — Your skill file's frontmatter showing `allowed-tools` without `Write`
 
-[Output](screenshots/Skill.png)
+![Output](screenshots/Skill.png)
 
 ---
 
 #### Screenshot 8 — `/azure-audit` output showing the baseline findings and Claude's explanation
 
-[Output](screenshots/Failed-check.png)
-[Output](screenshots/Failed-check2.png)
+![Output](screenshots/Failed-check.png)
+![Output](screenshots/Failed-check2.png)
 
 ---
 
@@ -118,19 +118,19 @@ Pick one WARN or FAIL finding (or deliberately open an NSG rule to port 22 from 
 
 #### Screenshot 9 — Saved report showing the original finding before the fix
 
-[Output](screenshots/Baseline-report.png)
+![Output](screenshots/Baseline-report.png)
 
 ---
 
 #### Screenshot 10 — Terminal output of the remediation command you ran yourself
 
-[Output](screenshots/Remediation-command.png)
+![Output](screenshots/Remediation-command.png)
 
 ---
 
 #### Screenshot 11 — Second `/azure-audit` run (or report) showing the finding resolved
 
-[Output](screenshots/Azure-audit.png)
+![Output](screenshots/Azure-audit.png)
 
 ---
 

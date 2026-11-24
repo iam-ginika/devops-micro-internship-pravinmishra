@@ -26,7 +26,7 @@ Add a screenshot of Docker Hub showing your newly created public repository:
 my-react-app
 ```
 
-[Output](screenshots/Repo.png)
+![Output](screenshots/Repo.png)
 
 ---
 
@@ -40,7 +40,7 @@ Login Succeeded
 
 Ensure that your full name is visible and that no password, Personal Access Token, or device code is exposed.
 
-[Output](screenshots/Login.png)
+![Output](screenshots/Login.png)
 
 
 ---
@@ -55,7 +55,7 @@ docker image ls <YOUR_DOCKERHUB_USERNAME>/my-react-app
 
 The output must show the `latest` tag.
 
-[Output](screenshots/React-image.png)
+![Output](screenshots/React-image.png)
 
 
 ---
@@ -70,7 +70,7 @@ docker push <YOUR_DOCKERHUB_USERNAME>/my-react-app:latest
 
 The output must include a pushed status or image digest.
 
-[Output](screenshots/Push.png)
+![Output](screenshots/Push.png)
 
 
 ---
@@ -79,7 +79,7 @@ The output must include a pushed status or image digest.
 
 Add a screenshot of your Docker Hub repository showing the uploaded `latest` image tag.
 
-[Output](screenshots/Tag.png)
+![Output](screenshots/Tag.png)
 
 
 ---
@@ -92,7 +92,7 @@ Add a screenshot of the terminal showing:
 - Successful `docker pull` output
 - `docker image ls` showing the pulled image
 
-[Output](screenshots/Pull3.png)
+![Output](screenshots/Pull3.png)
 
 
 ---
@@ -111,7 +111,7 @@ The output must show the running `react-container` with:
 0.0.0.0:80->80/tcp
 ```
 
-[Output](screenshots/Container3.png)
+![Output](screenshots/Container3.png)
 
 
 ---
@@ -126,7 +126,7 @@ http://<YOUR-VM-PUBLIC-IP>
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/React-browser.png)
+![Output](screenshots/React-browser.png)
 
 
 ---
@@ -179,13 +179,13 @@ Include:
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockerhub-share-7530966610900094976-7EP2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here.
+![Output](screenshots/LinkedIn-5.png)
 
 ---
 

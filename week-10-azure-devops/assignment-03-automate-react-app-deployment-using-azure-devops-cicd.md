@@ -37,7 +37,7 @@ Add a screenshot of Azure Repos showing:
 * `main` branch
 * Project files
 
-[Output](screenshots/My-React-App.png)
+![Output](screenshots/My-React-App.png)
 
 ---
 
@@ -81,9 +81,9 @@ Add a screenshot of the Azure Pipeline YAML open in the editor showing:
 * Publish stage
 * Deploy stage
 
-[Output](screenshots/Multi-stage-pipeline.png)
-[Output](screenshots/Multi-stage-pipeline2.png)
-[Output](screenshots/Multi-stage-pipeline3.png)
+![Output](screenshots/Multi-stage-pipeline.png)
+![Output](screenshots/Multi-stage-pipeline2.png)
+![Output](screenshots/Multi-stage-pipeline3.png)
 
 > Do not expose passwords, private keys, tokens, or cloud credentials.
 
@@ -106,8 +106,8 @@ Add a screenshot of one Azure DevOps pipeline run showing all four stages succee
 * Publish
 * Deploy
 
-[Output](screenshots/Pipeline-run.png)
-[Output](screenshots/Verify-deployment.png)
+![Output](screenshots/Pipeline-run.png)
+![Output](screenshots/Verify-deployment.png)
 
 ---
 
@@ -125,7 +125,7 @@ Add a screenshot of the pipeline SSH verification log or VM terminal showing the
 
 `/var/www/html`
 
-[Output](screenshots/SSH-Verifications.png)
+![Output](screenshots/SSH-Verifications.png)
 
 ---
 
@@ -146,7 +146,7 @@ Add a browser screenshot showing:
 * Your Full Name
 * Deployment date
 
-[Output](screenshots/React-App.png)
+![Output](screenshots/React-App.png)
 
 ## Final Application URL
 
@@ -177,7 +177,7 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-[Output](screenshots/LinkedIn-Post-3.png)
+![Output](screenshots/LinkedIn-Post-3.png)
 
 ## LinkedIn Post URL
 

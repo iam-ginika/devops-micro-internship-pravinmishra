@@ -32,7 +32,7 @@ Create and enter a dedicated directory for the readiness-probe lab.
 
 #### Screenshot 1 — Terminal showing that you are working inside `~/k8s-labs/health-probes-readiness`
 
-Add your screenshot here.
+![Output](screenshots/Health-probes-readiness-project.png)
 
 ---
 
@@ -40,11 +40,11 @@ Add your screenshot here.
 
 **1. What is the purpose of a readiness probe?**
 
-Add your answer here.
+The purpose is to tell Kubernetes when a container is actually able to serve requests. Until the probe passes, the Pod is marked NotReady and doesn't count as available.
 
 **2. Why is a Pod being Running not always enough to confirm it can serve traffic?**
 
-Add your answer here.
+Running only means the container process has started. The app inside may still be booting, loading config, warming caches or waiting on a database, so it can't handle requests yet.
 
 ---
 
@@ -58,19 +58,19 @@ Create a baseline NGINX Deployment with two replicas and no readiness probe.
 
 #### Screenshot 2 — Completed `00-nginx-deploy-baseline.yaml` manifest
 
-Add your screenshot here.
+![Output](screenshots/manifest.png)
 
 ---
 
 #### Screenshot 3 — Output showing a successful rollout and two running NGINX Pods
 
-Add your screenshot here.
+![Output](screenshots/Rollout&pods.png)
 
 ---
 
 #### Screenshot 4 — Relevant output from `kubectl describe deployment nginx-deployment`
 
-Add your screenshot here.
+![Output](screenshots/Describe-output.png)
 
 ---
 
@@ -78,16 +78,15 @@ Add your screenshot here.
 
 **1. How many replicas does this Deployment maintain?**
 
-Add your answer here.
+Two (2)
 
 **2. What does `maxUnavailable: 0` mean during a rolling update?**
 
-Add your answer here.
+It means during an update, Kubernetes may never drop below 2 available Pods. It must bring a new Pod up and get it ready before it removes an old one.
 
 **3. Is a readiness probe configured in this baseline Deployment?**
 
-Add your answer here.
-
+No. Without a readiness probe, Kubernetes marks the Pod Ready as soon as the container starts, without checking whether NGINX can serve traffic.
 ---
 
 # Task 3 — Add a Readiness Probe
@@ -100,19 +99,20 @@ Add an HTTP readiness probe so Kubernetes checks whether each NGINX container is
 
 #### Screenshot 5 — Completed `01-nginx-deploy-readiness.yaml` manifest showing the readiness probe
 
-Add your screenshot here.
+![Output](screenshots/Readiness.png)
 
 ---
 
 #### Screenshot 6 — Output of the successful rollout and ready Pods
 
-Add your screenshot here.
+![Output](screenshots/Readiness-pods.png)
 
 ---
 
 #### Screenshot 7 — Pod description showing readiness conditions and readiness probe details
 
-Add your screenshot here.
+![Output](screenshots/Pod-description.png)
+![Output](screenshots/Condition.png)
 
 ---
 
@@ -120,19 +120,19 @@ Add your screenshot here.
 
 **1. What path and port does the readiness probe check?**
 
-Add your answer here.
+The probe sends an HTTP GET request to the root path `/` on port `80`, which is the NGINX root page.
 
 **2. What does `initialDelaySeconds: 2` do?**
 
-Add your answer here.
+It makes Kubernetes wait 2 seconds after the container starts before running the first readiness check, so NGINX has time to start.
 
 **3. What does `periodSeconds: 5` do?**
 
-Add your answer here.
+It makes Kubernetes run the readiness check every 5 seconds.
 
 **4. What must happen before Kubernetes considers this Pod ready?**
 
-Add your answer here.
+The container has to start, and then, after the 2-second initial delay, the readiness probe has to succeed. That means an HTTP GET to `/` on port 80 gets back a success status (200–399) within the 1-second timeout. Kubernetes then marks the Pod `Ready`, and it shows `1/1` in the READY column. Until then, the Pod stays NotReady even though it is Running.
 
 ---
 
@@ -146,25 +146,25 @@ Intentionally fail the readiness probe, observe the NotReady behavior, and then 
 
 #### Screenshot 8 — `02-nginx-readiness-broken.yaml` showing `/does-not-exist`
 
-Add your screenshot here.
+![Output](screenshots/Broken-readiness.png)
 
 ---
 
 #### Screenshot 9 — Output showing the rollout timeout or incomplete rollout
 
-Add your screenshot here.
+![Output](screenshots/Incomplete-rollout.png)
 
 ---
 
 #### Screenshot 10 — Pod details showing `Ready: False` or readiness-probe failure events
 
-Add your screenshot here.
+![Output](screenshots/Ready-false.png)
 
 ---
 
 #### Screenshot 11 — Output showing successful rollout and ready Pods after the fix
 
-Add your screenshot here.
+![Output](screenshots/03-rollout.png)
 
 ---
 
@@ -172,19 +172,19 @@ Add your screenshot here.
 
 **1. Why did the readiness probe fail?**
 
-Add your answer here.
+The probe path was changed to `/does-not-exist`, a page NGINX doesn't have. 
 
 **2. What happened to the Pod readiness status?**
 
-Add your answer here.
+The new Pod kept running but never became Ready. It showed 0/1 in the READY column, its Pod conditions showed Ready: False
 
 **3. Why did the rollout fail to complete?**
 
-Add your answer here.
+With maxUnavailable: 0, Kubernetes can't remove an old Pod until a new Pod is Ready. The new Pod never passed its readiness probe, so the rollout stalled and timed out after 60 seconds. The two old Pods kept running.
 
 **4. How did you restore the Deployment successfully?**
 
-Add your answer here.
+I created 03-nginx-readiness-fixed.yaml by copying the working 01 manifest, which has the probe path set back to /, and applied it. The new Pods passed the readiness probe and became 1/1 Ready, and the rollout completed successfully.
 
 ---
 
@@ -198,37 +198,37 @@ Observe how readiness prevents a bad new Pod from replacing healthy Pods during 
 
 #### Screenshot 12 — Successful update command and rollout status
 
-Add your screenshot here.
+![Output](screenshots/Image-update&rollout.png)
 
 ---
 
 #### Screenshot 13 — ReplicaSets and Pods after the successful rolling update
 
-Add your screenshot here.
+![Output](screenshots/ReplicaSet&pods.png)
 
 ---
 
 #### Screenshot 14 — Completed `04-readiness-broken-patch.yaml`
 
-Add your screenshot here.
+![Output](screenshots/04-manifest.png)
 
 ---
 
 #### Screenshot 15 — Output showing the expected stalled rollout or timeout
 
-Add your screenshot here.
+![Output](screenshots/Timeout-error.png)
 
 ---
 
 #### Screenshot 16 — Deployment or Pod output showing the effect of the broken readiness probe
 
-Add your screenshot here.
+![Output](screenshots/Pod-output.png)
 
 ---
 
 #### Screenshot 17 — Successful rollout status after restoring the fixed configuration
 
-Add your screenshot here.
+![Output](screenshots/Fixed-rollout.png)
 
 ---
 
@@ -236,19 +236,19 @@ Add your screenshot here.
 
 **1. What happened during the successful rolling update?**
 
-Add your answer here.
+When I changed the image from nginx:1.23.1 to nginx:1.24, Kubernetes created one extra Pod (maxSurge: 1) running the new image. It waited for that Pod to pass its readiness probe, then removed one old Pod, and repeated until both Pods were running nginx:1.24. The Deployment never had fewer than 2 available Pods during the update.
 
 **2. Why did Kubernetes create a new ReplicaSet?**
 
-Add your answer here.
+Changing the image changed the Pod template, and each distinct Pod template gets its own ReplicaSet. Kubernetes scaled the new ReplicaSet up to 2 and the old one down to 0. The old ReplicaSet is kept so the Deployment can be rolled back.
 
 **3. Why were the new Pods unable to replace the existing healthy Pods after readiness was broken?**
 
-Add your answer here.
+The patch changed the image to nginx:1.25 and set the probe path to /does-not-exist. The new Pod got error on every check, so it stayed 0/1 and never counted as available. Kubernetes only removes old Pods once new ones are Ready, so the two healthy nginx:1.24 Pods kept running and the rollout stalled.
 
 **4. How does `maxUnavailable: 0` protect availability during this rollout?**
 
-Add your answer here.
+It means no Pod can be taken away until its replacement is Ready, so the Deployment always keeps its 2 desired Pods available. When the new Pod failed readiness, the two healthy old Pods stayed in place. The bad release stalled instead of causing downtime, until I fixed it by applying 03-nginx-readiness-fixed.yaml.
 
 ---
 
@@ -262,7 +262,7 @@ Share what you learned about Kubernetes readiness probes and how they protect ro
 
 #### Screenshot 18 — Published LinkedIn post
 
-Add your screenshot here.
+![Output](screenshots)
 
 #### Linkedin post link
 

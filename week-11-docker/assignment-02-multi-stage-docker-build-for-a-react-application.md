@@ -30,7 +30,7 @@ cat .dockerignore
 
 The file must exclude `node_modules`, `build`, and `.env`.
 
-[Output](screenshots/Dockerignore.png)
+![Output](screenshots/Dockerignore.png)
 
 ---
 
@@ -46,7 +46,7 @@ Create a baseline single-stage Docker image and run the application on port 3000
 
 Add a screenshot showing the completed `Dockerfile.single`.
 
-[Output](screenshots/Dockerfile-S.png)
+![Output](screenshots/Dockerfile-S.png)
 
 ---
 
@@ -60,7 +60,7 @@ http://localhost:3000
 
 Ensure that your full name is visible in the application.
 
-[Output](screenshots/Localhost.png)
+![Output](screenshots/Localhost.png)
 
 ---
 
@@ -76,7 +76,7 @@ Create an optimized multi-stage Docker image with separate builder and Nginx run
 
 Add a screenshot showing the completed multi-stage `Dockerfile`.
 
-[Output](screenshots/Stages.png)
+![Output](screenshots/Stages.png)
 
 ---
 
@@ -90,7 +90,7 @@ http://localhost
 
 Ensure that your full name is visible in the application.
 
-[Output](screenshots/Browser2.png)
+![Output](screenshots/Browser2.png)
 
 ---
 
@@ -117,7 +117,7 @@ react-single:latest
 react-multistage:latest
 ```
 
-[Output](screenshots/Docker-images.png)
+![Output](screenshots/Docker-images.png)
 
 ---
 
@@ -208,7 +208,7 @@ https://www.linkedin.com/posts/ginikandubuisi_devops-docker-react-share-75244328
 
 #### LinkedIn Post Screenshot
 
-[Output](screenshots/LinkedIn2.png)
+![Output](screenshots/LinkedIn2.png)
 
 ---
 

@@ -24,13 +24,13 @@ Confirm your AWS CLI is authenticated and can see the S3 bucket, EC2 instance(s)
 
 #### Screenshot 1 — Output of `aws s3 ls`, the EC2 instance table, and the RDS instance table (blur the Account ID if visible)
 
-[Output](screenshots/s3-list.png)
+![Output](screenshots/s3-list.png)
 
 ---
 
 #### Screenshot 2 — Output of `pwd` and `find . -maxdepth 4 -type d | sort`
 
-[Output](screenshots/sort.png)
+![Output](screenshots/sort.png)
 
 ---
 
@@ -56,7 +56,7 @@ Create a `CLAUDE.md` in your workspace that tells Claude the audit script is rea
 
 #### Screenshot 3 — `CLAUDE.md` open in VS Code showing all four sections
 
-[Output](screenshots/Claude-sections.png)
+![Output](screenshots/Claude-sections.png)
 
 ---
 
@@ -82,7 +82,7 @@ Ask Claude Code to propose a read-only audit plan covering five checks — S3 pu
 
 #### Screenshot 4 — Claude Code showing the five-check plan
 
-[Output](screenshots/Claude-output.png)
+![Output](screenshots/Claude-output.png)
 
 ---
 
@@ -110,19 +110,19 @@ Make it executable and confirm it has no syntax errors.
 
 #### Screenshot 5 — Top section of `aws-audit.sh` showing the variables and the checks array
 
-[Output](screenshots/Audit.png)
+![Output](screenshots/Audit.png)
 
 ---
 
 #### Screenshot 6 — One check function (for example `check_ssh_open_to_world`) showing the AWS CLI call and conditional
 
-[Output](screenshots/Check.png)
+![Output](screenshots/Check.png)
 
 ---
 
 #### Screenshot 7 — Output of `bash -n scripts/aws-audit.sh` and `ls -l scripts/aws-audit.sh`
 
-[Output](screenshots/Script.png)
+![Output](screenshots/Script.png)
 
 ---
 
@@ -164,13 +164,13 @@ Run the script against your live AWS account and capture the current state befor
 
 #### Screenshot 8 — Output of `./scripts/aws-audit.sh` showing your Full Name and all five checks
 
-[Output](screenshots/Script-output.png)
+![Output](screenshots/Script-output.png)
 
 ---
 
 #### Screenshot 9 — Output showing the captured exit code and final summary
 
-[Output](screenshots/exit-code.png)
+![Output](screenshots/exit-code.png)
 
 ---
 
@@ -206,14 +206,14 @@ Turn the script into a Claude Code skill named `/aws-audit` that runs the script
 
 #### Screenshot 10 — `SKILL.md` showing the frontmatter, tool restrictions, and safety rules
 
-[Output](screenshots/Skill.png)
+![Output](screenshots/Skill.png)
 
 ---
 
 #### Screenshot 11 — `/aws-audit` output showing findings, cost/risk impact, and a recommended remediation command (or a clean report if your baseline passed everything)
 
-[Output](screenshots/report1.png)
-[Output](screenshots/report2.png)
+![Output](screenshots/report1.png)
+![Output](screenshots/report2.png)
 
 ---
 
@@ -246,14 +246,14 @@ Pick one real finding from your baseline report (or deliberately open a security
 
 #### Screenshot 12 — Output of the `revoke-security-group-ingress` and `authorize-security-group-ingress` commands you ran yourself
 
-[Output](screenshots/revoke.png)
-[Output](screenshots/Authorize.png)
+![Output](screenshots/revoke.png)
+![Output](screenshots/Authorize.png)
 
 ---
 
 #### Screenshot 13 — Rerun of `./scripts/aws-audit.sh` showing the finding is now PASS
 
-[Output](screenshots/Rerun.png)
+![Output](screenshots/Rerun.png)
 
 ---
 
@@ -306,7 +306,7 @@ https://www.linkedin.com/posts/ginikandubuisi_dmibypravinmishra-aws-claudecode-u
 
 #### Screenshot of Published LinkedIn Post
 
-[Output](screenshots/Linkedin6.png)
+![Output](screenshots/Linkedin6.png)
 
 ---
 

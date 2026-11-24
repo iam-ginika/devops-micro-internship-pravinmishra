@@ -20,7 +20,7 @@ Create or access your Jira Cloud account and reach the Jira Software workspace s
 
 #### Screenshot 1 — Jira welcome page, dashboard, or main workspace after successful login, with your name or avatar visible
 
-[Output](screenshots/Dashboard.png)
+![Output](screenshots/Dashboard.png)
 
 ---
 
@@ -58,7 +58,7 @@ Update your Jira profile with your full name, a job title or role (e.g. "Aspirin
 
 #### Screenshot 3 — Updated profile page showing your full name, role/title, and bio
 
-[Output](screenshots/Profile-page.png)
+![Output](screenshots/Profile-page.png)
 
 ---
 
@@ -72,13 +72,13 @@ Locate the project list and open a project's Board or Backlog, and view Project 
 
 #### Screenshot 4 — "View all projects" page showing at least one project
 
-[Output](screenshots/Projects.png)
+![Output](screenshots/Projects.png)
 
 ---
 
 #### Screenshot 5 — Opened project showing either the Board or Backlog screen
 
-[Output](screenshots/Backlog.png)
+![Output](screenshots/Backlog.png)
 
 ---
 
@@ -92,7 +92,7 @@ Share your Jira setup progress on WhatsApp Status, including your generated DMI 
 
 #### Screenshot 6 — Published WhatsApp Status showing your Jira setup message and generated DMI leaderboard progress link
 
-[Output](screenshots/WhatsApp.png)
+![Output](screenshots/WhatsApp.png)
 
 ---
 

@@ -22,7 +22,7 @@ Create separate directories and files for the Terraform infrastructure and Ansib
 
 #### Screenshot 1 — Terminal or VS Code showing the complete `mini-finance` project structure
 
-[Output](screenshots/Project-structure.png)
+![Output](screenshots/Project-structure.png)
 
 ---
 
@@ -42,13 +42,13 @@ Use Terraform to provision an Ubuntu Virtual Machine with the required Azure net
 
 #### Screenshot 2 — Terraform code showing the `Allow-SSH` rule for port `22` and the `Allow-HTTP` rule for port `80`
 
-[Output](screenshots/Rules.png)
+![Output](screenshots/Rules.png)
 
 ---
 
 #### Screenshot 3 — Terraform code showing the association between `nsg-mini-finance` and `nic-mini-finance`
 
-[Output](screenshots/Association.png)
+![Output](screenshots/Association.png)
 
 ---
 
@@ -68,13 +68,13 @@ Format and validate the Terraform configuration, review the execution plan, and 
 
 #### Screenshot 4 — End of the `terraform apply` output showing `Apply complete!` with no errors
 
-[Output](screenshots/Apply-complete.png)
+![Output](screenshots/Apply-complete.png)
 
 ---
 
 #### Screenshot 5 — Output of `terraform output public_ip` showing the VM’s public IP address
 
-[Output](screenshots/Vm-IP-Output.png)
+![Output](screenshots/Vm-IP-Output.png)
 
 ---
 
@@ -94,7 +94,7 @@ Confirm that the Ansible controller can connect to the Terraform-provisioned Azu
 
 #### Screenshot 6 — Passwordless SSH command and the returned `mini-finance` hostname
 
-[Output](screenshots/Passwordless-SSH.png)
+![Output](screenshots/Passwordless-SSH.png)
 
 ---
 
@@ -114,7 +114,7 @@ Add the Terraform-provisioned Azure VM to the Ansible inventory and confirm that
 
 #### Screenshot 7 — Ansible ping output showing `SUCCESS` and `pong` from the Azure VM
 
-[Output](screenshots/Ping-success.png)
+![Output](screenshots/Ping-success.png)
 
 ---
 
@@ -150,7 +150,7 @@ Screenshot must show:
 - Nginx service configured as started and enabled
 - Beginning of Play 2 with the Git repository URL and synchronization task
 
-[Output](screenshots/Play1&2.png)
+![Output](screenshots/Play1&2.png)
 
 ---
 
@@ -164,7 +164,7 @@ Screenshot must show:
 - Play 3 targeting `localhost`
 - The `uri` verification and `assert` condition
 
-[Output](screenshots/Destination.png)
+![Output](screenshots/Destination.png)
 
 ---
 
@@ -267,19 +267,19 @@ Validate the syntax of the multi-play Ansible playbook and run it to install Ngi
 
 #### Screenshot 10 — Successful playbook syntax check showing `playbook: site.yml`
 
-[Output](screenshots/Playbok-syntax.png)
+![Output](screenshots/Playbok-syntax.png)
 
 ---
 
 #### Screenshot 11 — Play 3 output showing the successful HTTP verification and assertion
 
-[Output](screenshots/Playbook3.png)
+![Output](screenshots/Playbook3.png)
 
 ---
 
 #### Screenshot 12 — Final `PLAY RECAP` showing `failed=0` and `unreachable=0`
 
-[Output](screenshots/Playbook-Recap.png)
+![Output](screenshots/Playbook-Recap.png)
 
 ---
 
@@ -299,7 +299,7 @@ Confirm that the Mini Finance website is publicly accessible through the Azure V
 
 #### Screenshot 13 — Mini Finance website successfully loading in the browser, with the Azure VM’s public IP address visible in the address bar
 
-[Output](screenshots/Mini-finance-App.png)
+![Output](screenshots/Mini-finance-App.png)
 
 ---
 
@@ -323,7 +323,7 @@ Create a `README.md` file to document the Mini Finance infrastructure and deploy
 
 #### Screenshot 14 — Completed `README.md` displayed in the VS Code Markdown preview or terminal
 
-[Output](screenshots/Ass4-ReadME.png)
+![Output](screenshots/Ass4-ReadME.png)
 
 ---
 
@@ -417,7 +417,7 @@ Lesson: when an Ansible task hangs rather than fails, it's usually waiting for i
 
 #### Screenshot 15 — Published LinkedIn post showing the text and at least one deployment screenshot
 
-[Output](screenshots/LinkedIn-post.png)
+![Output](screenshots/LinkedIn-post.png)
 
 ---
 

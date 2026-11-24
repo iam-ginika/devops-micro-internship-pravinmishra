@@ -20,7 +20,7 @@ Start from a clean default branch (`main` or `master`) and confirm the repositor
 
 #### Screenshot 1 — Output of `git status` and `git branch` showing a clean status and the default branch checked out
 
-[Output](screenshots/Repo-status.png)
+![Output](screenshots/Repo-status.png)
 
 ---
 
@@ -34,7 +34,7 @@ Create a branch named exactly `feature/contact-page` and switch to it.
 
 #### Screenshot 2 — Output of `git checkout -b feature/contact-page` and `git branch` showing `* feature/contact-page`
 
-[Output](screenshots/Feature-branch.png)
+![Output](screenshots/Feature-branch.png)
 
 ---
 
@@ -48,19 +48,19 @@ Create `contact.html` with the provided content and commit it alone using the me
 
 #### Screenshot 3 — Output of `ls` showing `contact.html`
 
-[Output](screenshots/list.png)
+![Output](screenshots/list.png)
 
 ---
 
 #### Screenshot 4 — Output of `git commit`
 
-[Output](screenshots/Contact-commit.png)
+![Output](screenshots/Contact-commit.png)
 
 ---
 
 #### Screenshot 5 — Output of `git log --oneline -3` showing the new commit
 
-[Output](screenshots/git-log3.png)
+![Output](screenshots/git-log3.png)
 
 ---
 
@@ -74,19 +74,19 @@ Add the provided Contact Page link to `index.html` and commit it separately usin
 
 #### Screenshot 6 — Output of `git status` showing `index.html` as modified before staging
 
-[Output](screenshots/Modified-index.png)
+![Output](screenshots/Modified-index.png)
 
 ---
 
 #### Screenshot 7 — Output of `git commit`
 
-[Output](screenshots/Index-commit.png)
+![Output](screenshots/Index-commit.png)
 
 ---
 
 #### Screenshot 8 — Browser showing the Contact Page link on the homepage while on `feature/contact-page`
 
-[Output](screenshots/Contact-page.png)
+![Output](screenshots/Contact-page.png)
 
 ---
 
@@ -100,13 +100,13 @@ Switch back to the default branch and confirm that `contact.html` and the Contac
 
 #### Screenshot 9 — Terminal showing the checkout and `ls` output, proving `contact.html` is absent
 
-[Output](screenshots/Branch-switch.png)
+![Output](screenshots/Branch-switch.png)
 
 ---
 
 #### Screenshot 10 — Browser showing the homepage on the default branch with no Contact Page link
 
-[Output](screenshots/No-contact-page.png)
+![Output](screenshots/No-contact-page.png)
 ---
 
 # Task 6 — Merge the Feature Branch into the Default Branch
@@ -119,19 +119,19 @@ Merge `feature/contact-page` into your default branch and confirm the Contact pa
 
 #### Screenshot 11 — Output of `git merge feature/contact-page`
 
-[Output](screenshots/Merge.png)
+![Output](screenshots/Merge.png)
 
 ---
 
 #### Screenshot 12 — Output of `ls` showing `contact.html` after the merge
 
-[Output](screenshots/Contact-html.png)
+![Output](screenshots/Contact-html.png)
 
 ---
 
 #### Screenshot 13 — Browser showing the Contact page opened from the homepage link on the default branch
 
-[Output](screenshots/ContactPage.png)
+![Output](screenshots/ContactPage.png)
 
 ---
 
@@ -145,7 +145,7 @@ Display the repository history as a graph and locate both feature commits.
 
 #### Screenshot 14 — Full output of `git log --oneline --graph --decorate --all`
 
-[Output](screenshots/graph.png)
+![Output](screenshots/graph.png)
 
 ---
 
@@ -159,7 +159,7 @@ Delete the merged `feature/contact-page` branch to keep your branch list clean.
 
 #### Screenshot 15 — Output showing `feature/contact-page` deleted and no longer listed
 
-[Output](screenshots/Git-branch.png)
+![Output](screenshots/Git-branch.png)
 
 ---
 
@@ -175,7 +175,7 @@ https://lnkd.in/p/dw36Ri9E
 
 #### Screenshot 16 — LinkedIn post published with the Git branching workflow summary
 
-[Output](screenshots/Linkedin-assignment3.png)
+![Output](screenshots/Linkedin-assignment3.png)
 
 ---
 

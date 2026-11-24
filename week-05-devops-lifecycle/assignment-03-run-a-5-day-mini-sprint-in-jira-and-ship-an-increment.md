@@ -20,13 +20,13 @@ Create the footer Story (`Add footer with version and deploy date`, 1 point, `fr
 
 #### Screenshot 1 — Sprint 1 created with the Story inside it
 
-[Output](screenshots/PM-Story.png)
+![Output](screenshots/PM-Story.png)
 
 ---
 
 #### Screenshot 2 — Active Sprint board showing the Sprint Goal
 
-[Output](screenshots/Goal.png.png)
+![Output](screenshots/Goal.png.png)
 
 ---
 
@@ -40,24 +40,24 @@ Add the required footer text (`Pravin Mishra Portfolio v1.0 — Deployed on <DD 
 
 #### Screenshot 3 — Jira board showing the Day 1 Sub-task in Done
 
-[Output](screenshots/Subtask-done.png)
+![Output](screenshots/Subtask-done.png)
 
 ---
 
 #### Screenshot 4 — Successful Git commit output
 
-[Output](screenshots/Commit.png)
+![Output](screenshots/Commit.png)
 ---
 
 #### Screenshot 5 — EC2 browser view showing the complete footer text, with the URL visible
 
-[Output](screenshots/Website.png)
+![Output](screenshots/Website.png)
 
 ---
 
 #### Screenshot 6 — Jira Story comment showing the Day 1 Daily Scrum update
 
-[Output](screenshots/Comment.png)
+![Output](screenshots/Comment.png)
 
 ---
 
@@ -71,25 +71,25 @@ Update the footer so the deployment date is generated automatically (or updated 
 
 #### Screenshot 7 — Code editor showing the footer and date logic or deployment-time template snippet
 
-[Output](screenshots/Javascript.png)
+![Output](screenshots/Javascript.png)
 
 ---
 
 #### Screenshot 8 — EC2 browser view showing the updated footer with the current date
 
-[Output](screenshots/Footer-update.png)
+![Output](screenshots/Footer-update.png)
 
 ---
 
 #### Screenshot 9 — README snippet documenting the footer and date behavior
 
-[Output](screenshots/Readme-update.png)
+![Output](screenshots/Readme-update.png)
 
 ---
 
 #### Screenshot 10 — Jira Story comment showing the Day 2 Daily Scrum update
 
-[Output](screenshots/Day2-comment.png)
+![Output](screenshots/Day2-comment.png)
 
 ---
 
@@ -103,19 +103,19 @@ Improve the footer's spacing, contrast, and readability, then validate it at bot
 
 #### Screenshot 11 — Desktop EC2 view showing the polished footer
 
-[Output](screenshots/Desktop-view.png)
+![Output](screenshots/Desktop-view.png)
 
 ---
 
 #### Screenshot 12 — Mobile responsive view showing the footer remains readable
 
-[Output](screenshots/Mobile.png)
+![Output](screenshots/Mobile.png)
 
 ---
 
 #### Screenshot 13 — Jira Story comment showing the Day 3 Daily Scrum update
 
-[Output](screenshots/Day3-comment.png)
+![Output](screenshots/Day3-comment.png)
 
 ---
 
@@ -129,7 +129,7 @@ Replace the existing homepage tagline with the required DMI Website call-to-acti
 
 #### Screenshot 14 — EC2 browser view showing "Start your DevOps Journey here" and the clickable "Visit the DMI Website" link
 
-[Output](screenshots/Browser.png)
+![Output](screenshots/Browser.png)
 
 ---
 
@@ -143,19 +143,19 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 #### Screenshot 15 — Burndown Chart for Sprint 1
 
-[Output](screenshots/Burndown-chart2.png)
+![Output](screenshots/Burndown-chart2.png)
 
 ---
 
 #### Screenshot 16 — Jira retrospective comment
 
-[Output](screenshots/Jira-retrospective-comment.png)
+![Output](screenshots/Jira-retrospective-comment.png)
 
 ---
 
 #### Screenshot 17 — Final EC2 browser view showing the complete footer requirement
 
-[Output](screenshots/Final-footer.png)
+![Output](screenshots/Final-footer.png)
 
 ---
 
@@ -185,7 +185,7 @@ https://lnkd.in/p/d4ZHXjwX
 
 #### LinkedIn Screenshot 1 — Published LinkedIn post showing the post content and at least one required link or proof image
 
-[Output](screenshots/LinkedIn2.png)
+![Output](screenshots/LinkedIn2.png)
 
 ---
 

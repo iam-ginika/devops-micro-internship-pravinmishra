@@ -30,7 +30,7 @@ backend/
 docker-compose.yml
 ```
 
-[Output](screenshots/Project-tree.png)
+![Output](screenshots/Project-tree.png)
 
 
 ---
@@ -48,7 +48,7 @@ backend/.dockerignore
 
 Ensure that no real passwords, tokens, or secrets are visible.
 
-[Output](screenshots/Contents.png)
+![Output](screenshots/Contents.png)
 
 
 ---
@@ -65,7 +65,7 @@ Prepare Dockerfiles for the frontend and backend services and build both service
 
 Add a screenshot showing the completed `frontend/Dockerfile`.
 
-[Output](screenshots/FDF.png)
+![Output](screenshots/FDF.png)
 
 
 ---
@@ -74,7 +74,7 @@ Add a screenshot showing the completed `frontend/Dockerfile`.
 
 Add a screenshot showing the completed `backend/Dockerfile`.
 
-[Output](screenshots/BDF.png)
+![Output](screenshots/BDF.png)
 
 
 ---
@@ -87,8 +87,8 @@ Add a screenshot of the terminal showing successful completion of:
 docker compose build
 ```
 
-[Output](screenshots/Compose-Build1.png)
-[Output](screenshots/Compose-Build2.png)
+![Output](screenshots/Compose-Build1.png)
+![Output](screenshots/Compose-Build2.png)
 
 
 ---
@@ -111,7 +111,7 @@ Add a screenshot showing the MySQL service in `docker-compose.yml`, including:
 - `mysql_data` volume mount
 - No published MySQL port
 
-[Output](screenshots/My-sql.png)
+![Output](screenshots/My-sql.png)
 
 
 ---
@@ -125,7 +125,7 @@ Add a screenshot showing the backend service configuration, including:
 - Browser frontend origin configured for CORS
 - Published backend port
 
-[Output](screenshots/backend-service.png)
+![Output](screenshots/backend-service.png)
 
 
 ---
@@ -138,7 +138,7 @@ Add a screenshot showing the frontend service configuration, including:
 - `depends_on` for the backend service
 - Browser-facing `NEXT_PUBLIC_API_URL`
 
-[Output](screenshots/Frontend-service.png)
+![Output](screenshots/Frontend-service.png)
 
 
 ---
@@ -147,7 +147,7 @@ Add a screenshot showing the frontend service configuration, including:
 
 Add a screenshot showing the `mysql_data` volume definition in `docker-compose.yml`.
 
-[Output](screenshots/Volume2.png)
+![Output](screenshots/Volume2.png)
 
 
 ---
@@ -170,7 +170,7 @@ docker compose ps
 
 The output must show the MySQL, backend, and frontend services running. MySQL must show as healthy.
 
-[Output](screenshots/Compose-ps.png)
+![Output](screenshots/Compose-ps.png)
 
 
 ---
@@ -185,7 +185,7 @@ docker compose logs mysql backend --tail=50
 
 The logs must show MySQL readiness and successful backend database connection.
 
-[Output](screenshots/Compose-logs.png)
+![Output](screenshots/Compose-logs.png)
 
 
 ---
@@ -204,7 +204,7 @@ Add a browser screenshot showing successful user registration or login.
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Registration.png)
+![Output](screenshots/Registration.png)
 
 
 ---
@@ -215,7 +215,7 @@ Add a browser screenshot showing a created book review visible in the applicatio
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Book-review.png)
+![Output](screenshots/Book-review.png)
 
 
 ---
@@ -227,7 +227,7 @@ Add a browser developer-tools screenshot with:
 - The Network tab showing a successful API request
 - The Console drawer showing no CORS error after the API interaction
 
-[Output](screenshots/devtool.png)
+![Output](screenshots/devtool.png)
 
 
 ---
@@ -246,7 +246,7 @@ Add a browser screenshot showing the registered user or created review before th
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Data-before.png)
+![Output](screenshots/Data-before.png)
 
 
 ---
@@ -263,7 +263,7 @@ docker compose ps
 
 Do not use `docker compose down -v`.
 
-[Output](screenshots/Down-up.png)
+![Output](screenshots/Down-up.png)
 
 
 ---
@@ -274,7 +274,7 @@ Add a browser screenshot showing the same registered user or review after the st
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/After.png)
+![Output](screenshots/After.png)
 
 
 ---
@@ -340,11 +340,11 @@ Create a LinkedIn post about the Book Review App deployment and what you learned
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockercompose-share-7530979530006757376-DHzI/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of your published LinkedIn post here.
+![Output](screenshots/LinkedIn-6.png)
 
 ---
 

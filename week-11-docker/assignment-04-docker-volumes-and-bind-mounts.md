@@ -26,7 +26,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker pull nginx:alpine
 ```
 
-[Output](screenshots/Pull2.png)
+![Output](screenshots/Pull2.png)
 
 ---
 
@@ -38,7 +38,7 @@ Add a screenshot of the terminal showing the created host directory:
 $HOME/nginx-logs
 ```
 
-[Output](screenshots/Directory.png)
+![Output](screenshots/Directory.png)
 
 ---
 
@@ -56,7 +56,7 @@ The output must show the `myweb` container with:
 0.0.0.0:80->80/tcp
 ```
 
-[Output](screenshots/Myweb2.png)
+![Output](screenshots/Myweb2.png)
 
 ---
 
@@ -70,7 +70,7 @@ http://<YOUR-VM-PUBLIC-IP>
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Welcome-page2.png)
+![Output](screenshots/Welcome-page2.png)
 
 ---
 
@@ -84,7 +84,7 @@ $HOME/nginx-logs
 
 The output must show `access.log`, `error.log`, and an access-log entry created when you opened the Nginx page.
 
-[Output](screenshots/logs.png)
+![Output](screenshots/logs.png)
 
 ---
 
@@ -97,7 +97,7 @@ docker stop myweb
 docker rm myweb
 ```
 
-[Output](screenshots/Stop-rm-success.png)
+![Output](screenshots/Stop-rm-success.png)
 
 ---
 
@@ -111,7 +111,7 @@ $HOME/nginx-logs
 
 The access log must retain its content after the container has been removed.
 
-[Output](screenshots/Logs2.png)
+![Output](screenshots/Logs2.png)
 
 ---
 
@@ -127,7 +127,7 @@ Deploy backend and frontend containers that share data through a named Docker Vo
 
 Add a screenshot of the terminal showing the `two-tier-app` project structure, including separate `backend` and `frontend` directories with a `Dockerfile` and `index.js` file in each.
 
-[Output](screenshots/File-structure.png)
+![Output](screenshots/File-structure.png)
 
 ---
 
@@ -139,7 +139,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 docker network ls
 ```
 
-[Output](screenshots/Network2.png)
+![Output](screenshots/Network2.png)
 
 ---
 
@@ -151,7 +151,7 @@ Add a screenshot of the terminal showing `shared-data` in:
 docker volume ls
 ```
 
-[Output](screenshots/Volume.png)
+![Output](screenshots/Volume.png)
 
 ---
 
@@ -159,7 +159,7 @@ docker volume ls
 
 Add a screenshot of the terminal showing the completed backend `Dockerfile`.
 
-[Output](screenshots/Backend-DF.png)
+![Output](screenshots/Backend-DF.png)
 
 ---
 
@@ -167,8 +167,8 @@ Add a screenshot of the terminal showing the completed backend `Dockerfile`.
 
 Add a screenshot of the terminal showing successful completion of the `backend-app:latest` image build.
 
-[Output](screenshots/Build1.png)
-[Output](screenshots/Build2.png)
+![Output](screenshots/Build1.png)
+![Output](screenshots/Build2.png)
 
 ---
 
@@ -182,7 +182,7 @@ docker ps
 
 The output must show the running `backend` container.
 
-[Output](screenshots/Container2.png)
+![Output](screenshots/Container2.png)
 
 ---
 
@@ -190,7 +190,7 @@ The output must show the running `backend` container.
 
 Add a screenshot of the terminal showing the completed frontend `Dockerfile`.
 
-[Output](screenshots/Frontend-DF.png)
+![Output](screenshots/Frontend-DF.png)
 
 ---
 
@@ -198,7 +198,7 @@ Add a screenshot of the terminal showing the completed frontend `Dockerfile`.
 
 Add a screenshot of the terminal showing successful completion of the `frontend-app:latest` image build.
 
-[Output](screenshots/Frontend-build.png)
+![Output](screenshots/Frontend-build.png)
 
 ---
 
@@ -216,7 +216,7 @@ The output must show both `backend` and `frontend` containers running. Only `fro
 0.0.0.0:80->80/tcp
 ```
 
-[Output](screenshots/Both-containers.png)
+![Output](screenshots/Both-containers.png)
 
 ---
 
@@ -230,7 +230,7 @@ The output must include:
 Data written: Hello from Backend!
 ```
 
-[Output](screenshots/Backend-hello.png)
+![Output](screenshots/Backend-hello.png)
 
 ---
 
@@ -244,7 +244,7 @@ Hello from Backend!
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Browser-hello.png)
+![Output](screenshots/Browser-hello.png)
 
 ---
 
@@ -258,7 +258,7 @@ Test Data 1
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Test1.png)
+![Output](screenshots/Test1.png)
 
 ---
 
@@ -272,7 +272,7 @@ Test Data 2 - New Update
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Test2.png)
+![Output](screenshots/Test2.png)
 
 ---
 
@@ -280,7 +280,7 @@ Add your full name as a clear caption directly below the screenshot.
 
 Add a screenshot of the terminal showing the `frontend` and `backend` containers removed and recreated using the same `shared-data` Docker Volume.
 
-[Output](screenshots/Shared-data.png)
+![Output](screenshots/Shared-data.png)
 
 ---
 
@@ -296,7 +296,7 @@ This proves that the `shared-data` Docker Volume outlived both application conta
 
 Add your full name as a clear caption directly below the screenshot.
 
-[Output](screenshots/Browser-sd.png)
+![Output](screenshots/Browser-sd.png)
 
 ---
 
@@ -329,7 +329,7 @@ Docker Volumes are managed by Docker, so applications do not depend on a specifi
 
 # Public Application URL
 
-**Application URL:** `Add your VM public IP URL here`
+**Application URL:** http://16.170.218.128/
 
 ---
 
@@ -345,7 +345,7 @@ Create a LinkedIn post about Docker Volumes and Bind Mounts, including one diffe
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockervolumes-share-7530962507406950400-xMch/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
@@ -353,6 +353,7 @@ Paste your LinkedIn post URL here:
 
 Add a screenshot of the published LinkedIn post here. Include a screenshot of the application displaying shared data.
 
+![Output](screenshots/LinkedIn-4.png)
 ---
 
 # Submission Instructions

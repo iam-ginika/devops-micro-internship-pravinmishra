@@ -70,7 +70,7 @@ Add a screenshot of the Infrastructure Pipeline run showing:
 * `backend_private_ip`
 * `mysql_fqdn`
 
-[Output](screenshots/Terraform-apply.png)
+![Output](screenshots/Terraform-apply.png)
 
 > Do not expose the MySQL password, Client Secret, Terraform state, SSH private key, or another sensitive value.
 
@@ -86,9 +86,9 @@ Add a screenshot of the Azure Portal Resource Group overview showing:
 * Azure Database for MySQL Flexible Server
 * Related EpicBook resources
 
-[Output](screenshots/Instances.png)
-[Output](screenshots/VPC.png)
-[Output](screenshots/Database.png)
+![Output](screenshots/Instances.png)
+![Output](screenshots/VPC.png)
+![Output](screenshots/Database.png)
 
 > Hide sensitive IDs, credentials, and database details.
 
@@ -126,7 +126,7 @@ Run the Application Pipeline to configure the VMs, deploy EpicBook, and verify t
 
 Add a screenshot of the Application Pipeline run summary showing all required stages or jobs succeeded.
 
-[Output](screenshots/App-pipeline.png)
+![Output](screenshots/App-pipeline.png)
 
 ---
 
@@ -139,8 +139,8 @@ Add a screenshot of the Application Pipeline log showing:
 * Zero failed hosts
 * Zero unreachable hosts
 
-[Output](screenshots/Play-recap.png)
-[Output](screenshots/Play-recap2.png)
+![Output](screenshots/Play-recap.png)
+![Output](screenshots/Play-recap2.png)
 
 > Do not expose the SSH private key, MySQL password, Client Secret, or complete database connection string.
 
@@ -165,7 +165,7 @@ Add a browser screenshot showing:
 
 The screenshot may show a product, cart, or successful order view.
 
-[Output](screenshots/Epicbook.png)
+![Output](screenshots/Epicbook.png)
 
 > Do not expose credentials or sensitive information.
 
@@ -219,7 +219,7 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-[Output](screenshots/LinkedIn-Post-4.png)
+![Output](screenshots/LinkedIn-Post-4.png)
 
 ## LinkedIn Post URL
 

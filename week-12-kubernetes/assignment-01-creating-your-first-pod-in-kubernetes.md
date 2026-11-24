@@ -20,7 +20,7 @@ Create a clean working directory for all Pod-related files used in this lab.
 
 #### Screenshot 01 — Output of `pwd` showing the current directory ending in `/k8s-labs/pods`
 
-Add your screenshot here.
+![Output](screenshots/pwd.png)
 
 ---
 
@@ -34,13 +34,13 @@ Create an NGINX Pod directly from the command line, verify that it is running, a
 
 #### Screenshot 02 — Output of `kubectl run nginx-pod --image=nginx` showing the creation message, and `kubectl get pods` showing `nginx-pod` with `1/1` under `READY` and `Running` under `STATUS`, before deletion
 
-Add your screenshot here.
+![Output](screenshots/nginx-pod.png)
 
 ---
 
 #### Screenshot 03 — Output of `kubectl delete pod nginx-pod` showing the successful deletion message
 
-Add your screenshot here.
+![Output](screenshots/nginx-pod-deletion.png)
 
 ---
 
@@ -54,19 +54,19 @@ Define the NGINX Pod in a YAML file, apply the manifest, and verify the resultin
 
 #### Screenshot 04 — The filename `nginx-pod.yaml` and the complete YAML manifest with clear, readable indentation
 
-Add your screenshot here.
+![Output](screenshots/Pod-yaml.png)
 
 ---
 
 #### Screenshot 05 — Output of `kubectl apply -f nginx-pod.yaml` showing the successful creation message
 
-Add your screenshot here.
+![Output](screenshots/Apply.png)
 
 ---
 
 #### Screenshot 06 — Output of `kubectl get pods` showing the declarative `nginx-pod` with `1/1` under `READY` and `Running` under `STATUS`
 
-Add your screenshot here.
+![Output](screenshots/Declarative-pod.png)
 
 ---
 
@@ -74,7 +74,11 @@ Add your screenshot here.
 
 **1. What is the difference between imperative and declarative Pod creation?**
 
-Add your answer here.
+Imperative: Runs commands that tell Kubernetes directly what to create, with no saved file.
+Example: `kubectl run nginx-pod --image=nginx`
+
+Declarative: Uses a YAML file that describes the desired state, which Kubernetes then applies.
+Example: `kubectl apply -f pod.yaml`
 
 ---
 
@@ -88,13 +92,13 @@ Inspect the running Pod, view its logs, and open a shell inside the NGINX contai
 
 #### Screenshot 07 — Output of `kubectl describe pod nginx-pod` showing the Pod name, `app=nginx` label, `Running` status, container name, and NGINX image
 
-Add your screenshot here.
+![Output](screenshots/Describe-pod.png)
 
 ---
 
 #### Screenshot 08 — Output of `kFilename: `08-pod-logs.png`
 
-Add your screenshot here.
+![Output](screenshots/Logs.png)
 
 If no logs appear, add a caption stating that the command completed without output.
 
@@ -102,7 +106,7 @@ If no logs appear, add a caption stating that the command completed without outp
 
 #### Screenshot 09 — Container shell opened using `kubectl exec -it nginx-pod -- /bin/bash`, showing `cd /usr/share/nginx/html`, `pwd`, and `ls -la`, with the directory path and default NGINX files visible before exiting
 
-Add your screenshot here.
+![Output](screenshots/Container-shell.png)
 
 ---
 
