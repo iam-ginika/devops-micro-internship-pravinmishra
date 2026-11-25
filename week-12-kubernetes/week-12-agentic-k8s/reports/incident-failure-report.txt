@@ -1,0 +1,43 @@
+========================================
+Kubernetes Incident Triage Report
+========================================
+Full Name: GINIKA NDUBUISI
+Timestamp: 2026-11-25T12:57:24Z
+Namespace: book-review
+App Label: app=backend
+Service: backend
+
+[PASS] Cluster access, namespace, and matching pod selection verified (2 pod(s))
+
+Pod status (kubectl get pods -o wide):
+  NAME                       READY   STATUS             RESTARTS   AGE     IP             NODE                                NOMINATED NODE   READINESS GATES
+  backend-6769b4b9bd-4m58f   0/1     ImagePullBackOff   0          4m47s   10.244.0.56    aks-nodepool1-42247397-vmss000000   <none>           <none>
+  backend-79d9d484c8-h6vkd   1/1     Running            0          14h     10.244.0.167   aks-nodepool1-42247397-vmss000000   <none>           <none>
+[FAIL] One or more pods are in a bad state: backend-6769b4b9bd-4m58f ImagePullBackOff
+[FAIL] Pod(s) not passing readiness: backend-6769b4b9bd-4m58f (READY 0/1)
+[PASS] No pod has 5 or more restarts
+
+Recent namespace events (last 5, sorted by time):
+  103s    Normal    Pulling             pod/backend-6769b4b9bd-4m58f    Pulling image "iamginika/book-review-backend:does-not-exist"
+  103s    Warning   Failed              pod/backend-6769b4b9bd-4m58f    Failed to pull image "iamginika/book-review-backend:does-not-exist": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/iamginika/book-review-backend:does-not-exist": failed to resolve image: docker.io/iamginika/book-review-backend:does-not-exist: not found
+  103s    Warning   Failed              pod/backend-6769b4b9bd-4m58f    Error: ErrImagePull
+  37s     Warning   Failed              pod/backend-6769b4b9bd-4m58f    Error: ImagePullBackOff
+  7s      Normal    BackOff             pod/backend-6769b4b9bd-4m58f    Back-off pulling image "iamginika/book-review-backend:does-not-exist"
+[WARN] Warning events are present (including historical events); confirm age and workload before attributing a cause.
+Service EndpointSlice evidence:
+Slice: backend-s8c5x Ports: 3001 
+backend-79d9d484c8-h6vkd ready=true addresses=["10.244.0.167"]
+backend-6769b4b9bd-4m58f ready=false addresses=["10.244.0.56"]
+[PASS] Service 'backend' has ready backend(s): 10.244.0.167
+
+Previous-container logs for the first non-running pod (last 10 lines):
+  Defaulted container "backend" out of: backend, wait-for-mysql (init)
+  Error from server (BadRequest): previous terminated container "backend" in pod "backend-6769b4b9bd-4m58f" not found
+
+Summary:
+PASS: 3
+WARN: 1
+FAIL: 2
+Overall Status: FAIL
+Script Exit Code: 2
+Report File: /home/ginny/week-12-agentic-k8s/reports/k8s-health-report.txt

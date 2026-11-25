@@ -20,7 +20,7 @@ Create a small AKS cluster for this lab, or connect to an existing approved AKS 
 
 #### Screenshot 1 — Output of `kubectl get nodes` showing ready AKS node(s)
 
-![Output](screenshots)
+![Output](screenshots/AKS-Nodes.png)
 
 ### Notes
 
@@ -48,7 +48,7 @@ Create and enter a dedicated directory for the LoadBalancer Service manifests.
 
 #### Screenshot 2 — Terminal showing the output of `pwd` confirming that you are working inside `~/k8s-labs/services/loadbalancer`
 
-![Output](screenshots)
+![Output](screenshots/Loadbalancer.png)
 
 ### Notes
 
@@ -72,13 +72,14 @@ Create a healthy NGINX Deployment with readiness and liveness probes.
 
 #### Screenshot 3 — Completed `00-nginx-deploy.yaml` manifest
 
-![Output](screenshots)
+![Output](screenshots/00-nginx-manifest.png)
+![Output](screenshots/00-nginx-manifest2.png)
 
 ---
 
 #### Screenshot 4 — Output showing successful rollout and two ready NGINX Pods
 
-![Output](screenshots)
+![Output](screenshots/Rollout-status.png)
 
 ### Notes
 
@@ -92,7 +93,7 @@ The readiness probe checks whether each NGINX Pod can accept traffic. Until the 
 
 **3. What is the role of the liveness probe in this Deployment?**
 
-he liveness probe checks whether the NGINX container is still healthy. If it fails several times in a row, Kubernetes restarts the container automatically. It does not decide whether the Pod receives traffic; that is the readiness probe's job.
+The liveness probe checks whether the NGINX container is still healthy. If it fails several times in a row, Kubernetes restarts the container automatically. It does not decide whether the Pod receives traffic; that is the readiness probe's job.
 
 ---
 
@@ -106,19 +107,19 @@ Create a public LoadBalancer Service and verify that the NGINX application is re
 
 #### Screenshot 5 — Completed `01-nginx-svc-loadbalancer.yaml` manifest
 
-![Output](screenshots)
+![Output](screenshots/01-nginx-svc-loadbalancer.png)
 
 ---
 
 #### Screenshot 6 — Output showing the Service with an assigned EXTERNAL-IP
 
-![Output](screenshots)
+![Output](screenshots/External-IP.png)
 
 ---
 
 #### Screenshot 7 — Successful curl output from the public IP
 
-![Output](screenshots)
+![Output](screenshots/Curl-output.png)
 
 ### Notes
 
@@ -128,7 +129,7 @@ Create a public LoadBalancer Service and verify that the NGINX application is re
 
 **2. What public IP was assigned to your Service?**
 
-Add your answer here.
+Azure assigned the public IP **135.116.180.169** to the `nginx-svc-lb` Service. It appeared in the EXTERNAL-IP column of `kubectl get svc nginx-svc-lb` after it changed from `<pending>`. I saved it with `kubectl get svc nginx-svc-lb -o jsonpath='{.status.loadBalancer.ingress[0].ip}'` and used it to test public access with `curl`, which returned `HTTP/1.1 200 OK` and the NGINX welcome page.
 
 **3. How does the public request eventually reach the NGINX Pods?**
 
@@ -150,43 +151,46 @@ Intentionally break readiness and observe how Kubernetes excludes unready Pods f
 
 #### Screenshot 8 — Completed `02-readiness-broken.yaml` patch file
 
-![Output](screenshots)
+![Output](screenshots/02-readiness-broken.png)
 
 ---
 
 #### Screenshot 9 — Output showing the expected incomplete rollout or readiness failure
 
-![Output](screenshots)
+![Output](screenshots/Stall-rollout.png)
 
 ---
 
 #### Screenshot 10 — EndpointSlice output showing ready healthy backends and the effect of the readiness failure
 
-![Output](screenshots)
+![Output](screenshots/Ready-healthy-backends.png)
+![Output](screenshots/Unready.png)
 
 ---
 
 #### Screenshot 11 — Successful public curl response after recovery
 
-![Output](screenshots)
+![Output](screenshots/Curl-response.png)
 
 ### Notes
 
 **1. Why did the rollout not complete?**
 
-Add your answer here.
+The rollout didn't complete because the new Pod's readiness probe checked `/does-not-exist`, which returns 404, so the Pod never became ready. With `maxUnavailable: 0`, Kubernetes could not remove the old Pods until a new one was ready, so the rollout stalled and timed out.
 
 **2. Why can the public endpoint still work while new Pods fail readiness?**
 
-Add your answer here.
+The public endpoint still worked because the two original Pods stayed running and ready (`ready: true`), and the Service only sends traffic to ready Pods. The broken Pod was marked `ready: false` and got no traffic.
+
 
 **3. What would happen if Kubernetes routed traffic to Pods before they were ready?**
 
-Add your answer here.
+Users would get errors or timeouts, because their requests would reach Pods that are not ready to serve.
+
 
 **4. How did you restore the Deployment successfully?**
 
-Add your answer here.
+I restored it by running `kubectl apply -f 00-nginx-deploy.yaml`, which set the readiness probe back to `/`. The new Pods became ready, the broken Pod was removed, and `curl` to the public IP returned `200 OK`.
 
 ---
 
@@ -200,27 +204,27 @@ Scale the NGINX Deployment and confirm that more ready Pods become available beh
 
 #### Screenshot 12 — Two ready NGINX Pods verified initially; four ready Pods verified after scaling
 
-![Output](screenshots)
+![Output](screenshots/Scaled-pods.png)
 
 ---
 
 #### Screenshot 13 — Successful public curl response after scaling
 
-![Output](screenshots)
+![Output](screenshots/Curl-output2.png)
 
 ### Notes
 
 **1. What changed after scaling the Deployment from two to four replicas?**
 
-Add your answer here.
+After scaling, Kubernetes created two more NGINX Pods, so there were four Pods at `1/1 Running`. The new Pods passed readiness and were added to the EndpointSlice with `ready: true`, so the Service now spreads traffic across four Pods instead of two.
 
 **2. Did the public IP change after scaling? Explain why or why not.**
 
-Add your answer here.
+No, the public IP stayed 135.116.180.169. The IP belongs to the Service and the Azure Load Balancer, not to the Pods. Scaling only added Pods behind the Service.
 
 **3. Why does scaling behind a LoadBalancer Service not require users to change the URL or IP they use?**
 
-Add your answer here.
+Users don't need a new URL or IP because they connect to the Service's public IP, not to individual Pods. The Service selector (`app: nginx`) picks up new Pods automatically and routes traffic to them, so the address users connect to stays the same.
 
 ---
 

@@ -597,7 +597,6 @@ Write a short operations runbook covering:
 - What to check when the application returns an error
 - Results of backend and database reliability tests
 
-Write your note here.
 # Operations Runbook – The EpicBook Application
 
 ## 1. Safe Restart Procedure
@@ -697,11 +696,12 @@ Your post must include:
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockercompose-share-7530991220752531456-jEPH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 #### LinkedIn Post Screenshot
 
 Add a screenshot of the published LinkedIn post showing the text body and deployment verification image.
+![Output](screenshots/LinkedIn-7.png)
 
 ---
 

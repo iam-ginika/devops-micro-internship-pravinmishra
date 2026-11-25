@@ -1,0 +1,40 @@
+========================================
+Kubernetes Incident Triage Report
+========================================
+Full Name: GINIKA NDUBUISI
+Timestamp: 2026-11-25T13:26:16Z
+Namespace: book-review
+App Label: app=backend
+Service: backend
+
+[PASS] Cluster access, namespace, and matching pod selection verified (1 pod(s))
+
+Pod status (kubectl get pods -o wide):
+  NAME                       READY   STATUS    RESTARTS   AGE   IP             NODE                                NOMINATED NODE   READINESS GATES
+  backend-79d9d484c8-h6vkd   1/1     Running   0          15h   10.244.0.167   aks-nodepool1-42247397-vmss000000   <none>           <none>
+[PASS] No pods reporting CrashLoopBackOff, ImagePullBackOff, ErrImagePull, Pending, ContainerCreating, Error, or Unknown
+[PASS] All matching pods report READY containers equal to desired containers
+[PASS] No pod has 5 or more restarts
+
+Recent namespace events (last 5, sorted by time):
+  30m     Normal    Pulling             pod/backend-6769b4b9bd-4m58f    Pulling image "iamginika/book-review-backend:does-not-exist"
+  8m43s   Normal    BackOff             pod/backend-6769b4b9bd-4m58f    Back-off pulling image "iamginika/book-review-backend:does-not-exist"
+  8m31s   Warning   Failed              pod/backend-6769b4b9bd-4m58f    Error: ImagePullBackOff
+  8m5s    Normal    SuccessfulDelete    replicaset/backend-6769b4b9bd   Deleted pod: backend-6769b4b9bd-4m58f
+  8m5s    Normal    ScalingReplicaSet   deployment/backend              Scaled down replica set backend-6769b4b9bd from 1 to 0
+[WARN] Warning events are present (including historical events); confirm age and workload before attributing a cause.
+Service EndpointSlice evidence:
+Slice: backend-s8c5x Ports: 3001 
+backend-79d9d484c8-h6vkd ready=true addresses=["10.244.0.167"]
+[PASS] Service 'backend' has ready backend(s): 10.244.0.167
+
+Previous-container logs for the first non-running pod (last 10 lines):
+  All matching pods are Running — no previous-container logs to capture.
+
+Summary:
+PASS: 5
+WARN: 1
+FAIL: 0
+Overall Status: WARN
+Script Exit Code: 1
+Report File: /home/ginny/week-12-agentic-k8s/reports/k8s-health-report.txt

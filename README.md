@@ -140,8 +140,8 @@ Week 04 → Git & GitHub
 | 07 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_my-azure-security-audit-came-back-clean-share-7528357640540901376-DHpz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/from-zero-to-a-three-tier-azure-app-then-auditing-it-with-ai-184e15fefc2d |
 | 08 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_i-built-an-ai-assisted-terraform-drift-and-share-7522912533444243456-H7Ds/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/six-assignments-two-clouds-one-tool-my-terraform-journey-in-dmi-cohort-3-793733e30c62 |
 | 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_the-mini-finance-website-was-deployed-to-share-7528732805426540544-0aIc/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo| https://medium.com/@ginika_n/six-ansible-projects-one-lesson-automate-the-work-0854cb6dc5f1 |
-| 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | — | — |
-| 11 | Docker | ✅ Completed | ✅ Solved | — | — |
+| 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_devops-terraform-ansible-share-7529688270356541440-UQki/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | — |
+| 11 | Docker | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockercompose-share-7530991220752531456-jEPH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | — |
 | 12 | Kubernetes | ✅ Completed | ✅ Solved | — | — |
 | 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
