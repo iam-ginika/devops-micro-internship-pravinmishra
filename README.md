@@ -143,7 +143,7 @@ Week 04 → Git & GitHub
 | 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_devops-terraform-ansible-share-7529688270356541440-UQki/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/i-built-five-azure-devops-pipelines-in-one-week-then-i-broke-one-on-purpose-1cff09ce8291 |
 | 11 | Docker | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockercompose-share-7530991220752531456-jEPH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/one-web-page-to-a-production-stack-what-8-docker-assignments-taught-me-0095eb2bb2b9 |
 | 12 | Kubernetes | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_i-set-up-an-ai-assisted-incident-triage-workflow-share-7531705400359059457-h02n/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
- | — |
+ |  |
 | 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
 **Status:** ⬜ Not Started &nbsp;|&nbsp; 🔄 In Progress &nbsp;|&nbsp; ✅ Completed<br>
