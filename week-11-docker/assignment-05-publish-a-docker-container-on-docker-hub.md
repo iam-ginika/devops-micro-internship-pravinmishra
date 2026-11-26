@@ -145,7 +145,6 @@ Write a short explanation covering:
 - Why a container registry is useful in DevOps workflows
 - Why production deployments should use versioned image tags instead of relying only on `latest`
 
-Write your explanation here.
 Why image tagging is required before pushing to Docker Hub
 
 Docker uses an image’s name to decide where to push it. My local image was named react-multistage:latest, which doesn’t say which Docker Hub account or repository it belongs to. Tagging it as iamginika/my-react-app:latest gave it the full destination: my username, the repository name and the version tag. The tag only adds a new name to the same image and doesn’t change its contents.

@@ -357,11 +357,11 @@ Share the incident-triage workflow you completed and explain the role of human c
 
 #### Screenshot 20 — Published LinkedIn post about your Kubernetes incident-triage workflow
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-11.png)
 
 ### LinkedIn Post URL
 
-Add your published LinkedIn post URL here.
+https://www.linkedin.com/posts/ginikandubuisi_i-set-up-an-ai-assisted-incident-triage-workflow-share-7531705400359059457-h02n/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
@@ -395,25 +395,25 @@ Your `incident-summary.md` must contain:
 
 Summarize the evidence and the supported cause of the incident.
 
-Add your summary here.
+After I set the backend image to iamginika/book-review-backend:does-not-exist, the triage report returned FAIL (exit code 2). The new Pod backend-6769b4b9bd-4m58f was in ImagePullBackOff at READY 0/1, and the namespace events showed "failed to resolve image … does-not-exist: not found". The EndpointSlice listed the new Pod as ready=false, while the original Pod backend-79d9d484c8-h6vkd stayed ready=true and kept serving. There were no previous-container logs, because the new container never started. The supported cause was an image tag that does not exist in Docker Hub.
 
 ## Manual Recovery
 
 Describe the command or configuration change you performed.
 
-Add your summary here.
+In a separate terminal, I ran kubectl set image deployment/backend backend=iamginika/book-review-backend:v1 -n book-review to restore the original image recorded in lab-config.md, and waited for the rollout to complete.
 
 ## Verification
 
 Explain how the recovery report and Kubernetes outputs confirmed recovery.
 
-Add your summary here.
+After recovery, the backend Pod was 1/1 Running with 0 restarts, and the EndpointSlice showed 10.244.0.167 as ready=true. I ran /k8s-triage again and saved the result as reports/recovery-report.txt. It showed 0 FAIL, and the only WARN was the leftover incident events, which Claude also identified as historical and not requiring action.
 
 ## Safety Decision
 
 Explain how you kept Claude’s role limited to evidence gathering and analysis.
 
-Add your summary here.
+CLAUDE.md and SKILL.md limited Claude to running the read-only triage script and analysing its report. Claude suggested the recovery command as text only. I ran both the incident and the recovery myself in a separate terminal, and I checked Claude's tool activity after each run to confirm it made no cluster changes. Each /k8s-triage response ended with "I didn't run any commands that change the cluster."
 
 ---
 

@@ -14,15 +14,15 @@ Deploy the Book Review App as a production-style three-tier application using Ku
 
 **Full Name:** GINIKA NDUBUISI
 
-**Kubernetes Platform:** Add your platform here.
+**Kubernetes Platform:** Azure Kubernetes Service (AKS)
 
 **Namespace:** book-review
 
-**Frontend URL or IP:** Add the working endpoint here.
+**Frontend URL or IP:** http://172.130.89.145
 
-**Access Method:** Public LoadBalancer, Ingress, or documented local access.
+**Access Method:** Public LoadBalancer (frontend Service type LoadBalancer on port 80)
 
-**GitHub Manifests or Helm Chart URL:** Add your repository link here.
+**GitHub Manifests or Helm Chart URL:** https://github.com/iam-ginika
 
 **Architecture Diagram:** Add your diagram or link here.
 
@@ -60,7 +60,7 @@ Document the workloads, networking, configuration, storage, and permitted commun
 
 #### Screenshot 3 — Completed Kubernetes architecture diagram
 
-![Output](screenshots)
+![Output](screenshots/Architecture)
 
 ---
 
@@ -230,11 +230,11 @@ Explain your three-tier architecture, demonstrate the working application, and s
 
 #### Screenshot 20 — Published LinkedIn post about your Book Review App deployment on Kubernetes
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-10.png)
 
 ### LinkedIn Post URL
 
-Add your published LinkedIn post URL here.
+https://www.linkedin.com/posts/ginikandubuisi_what-does-it-take-to-run-a-real-three-tier-share-7531703697781850112-TvrZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
@@ -244,31 +244,34 @@ Add your published LinkedIn post URL here.
 
 Describe the application components and user flows you successfully deployed and tested.
 
-Add your summary here.
+I deployed the Book Review App on AKS in the book-review namespace: a Next.js and Nginx frontend behind a public LoadBalancer, an internal Express backend on port 3001, and MySQL as a StatefulSet with a persistent Azure Disk. Registering, logging in and posting a review all worked, and the data survived a backend restart.
 
 ## Issues and Fixes
 
 Describe the main issues encountered, their causes, and how you resolved them.
 
-Add your summary here.
+- The frontend build failed with "next: not found". Rebuilding with npm install and --no-cache fixed it.
+- The MySQL storage class was set for AWS. I changed it to managed-csi and added subPath: mysql.
+- The homepage called /api/api/books. An Nginx rewrite fixed the path.
+- NetworkPolicies were not enforced. I enabled Calico on the cluster.
 
 ## Tools and Sources Used
 
 List the documentation and tools that helped you complete the assignment.
 
-Add your tools and sources here.
+Azure CLI, kubectl, Docker Hub, WSL, Azure Portal, Kubernetes and AKS documentation, the Book Review App repository, and Claude.
 
 ## Optional Improvements
 
 Describe any optional improvements implemented, or write “Not attempted.”
 
-Add your summary here.
+I added readiness and liveness probes, and HPAs for the frontend and backend.
 
 ## Cleanup or Reuse Plan
 
 State which resources were removed or why the environment is being retained.
 
-Add your cleanup status or reuse plan here.
+The cluster was kept for Assignment 11. After that, I will delete the resource group rg-aks-lb-lab-ginika.
 
 ---
 

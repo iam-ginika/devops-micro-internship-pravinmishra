@@ -200,15 +200,15 @@ Break the Service selector, observe that usable endpoints disappear, and then re
 
 **1. Why did the Service endpoints become empty?**
 
-Add your answer here.
+Because the broken selector no longer matched the Pods' app=nginx label, so the Service found no Pods.
 
 **2. What caused the request from the client Pod to fail?**
 
-Add your answer here.
+The Service had no endpoints, so there was no Pod to forward the request to.
 
 **3. How did you restore connectivity to the NGINX Pods?**
 
-Add your answer here.
+I re-applied 01-nginx-svc-clusterip.yaml with the correct selector app=nginx. Both Pods came back as endpoints, and the request succeeded.
 
 ---
 
@@ -276,11 +276,11 @@ Share what you learned about ClusterIP Services, Kubernetes DNS, selectors, and 
 
 #### Screenshot 18 — Published LinkedIn post
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-7.png)
 
 #### Linkedin post link
 
-Paste your link here
+https://www.linkedin.com/posts/ginikandubuisi_assignment-07-of-the-kubernetes-module-is-share-7531697337245745152-_-Ii/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 

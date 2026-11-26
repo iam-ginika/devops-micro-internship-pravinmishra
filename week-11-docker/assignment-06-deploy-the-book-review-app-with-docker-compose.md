@@ -295,7 +295,6 @@ Write a short explanation of 5–8 lines covering:
 - When a full reset is useful
 - Why a full reset must not be used before persistence evidence is captured
 
-Write your explanation here.
 What docker compose down removes and preserves
 
 Running docker compose down stops and removes the stack’s containers and its default network, but it keeps named volumes such as mysql_data.

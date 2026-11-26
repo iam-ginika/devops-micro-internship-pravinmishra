@@ -234,11 +234,11 @@ Share what you learned about Kubernetes liveness probes, container restarts, and
 
 #### Screenshot 12 — Published LinkedIn post
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-6.png)
 
 #### Linkedin post URL
 
-Add URl here
+https://www.linkedin.com/posts/ginikandubuisi_a-container-can-be-running-and-still-be-broken-share-7531695574576721921-MGyG/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 

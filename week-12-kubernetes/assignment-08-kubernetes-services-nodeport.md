@@ -235,11 +235,11 @@ Share what you learned about NodePort Services, backend Pods, and network access
 
 #### Screenshot 14 — Published LinkedIn post about your NodePort Service lab
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-8.png)
 
 #### Linkedin post link
 
-Add your Linkdin post link.
+https://www.linkedin.com/posts/ginikandubuisi_kubernetes-devops-nodeport-share-7531698973578031104-T8jQ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 

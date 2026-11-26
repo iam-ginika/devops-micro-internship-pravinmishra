@@ -309,7 +309,6 @@ Write a short explanation covering:
 - How Task 2 proved Docker Volume persistence
 - Why Docker Volumes are commonly used for application data
 
-Write your explanation here.
 Difference between a Bind Mount and a Docker Volume
 
 A Bind Mount connects a specific directory on the host to a directory inside a container, and I choose the host path. In Task 1, I mounted $HOME/nginx-logs to /var/log/nginx. A Docker Volume is created and managed by Docker, so I refer to it by name instead of a host path. In Task 2, I created shared-data and mounted it at /data. In both cases, the data is stored outside the container’s writable layer.

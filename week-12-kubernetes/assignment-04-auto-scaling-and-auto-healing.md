@@ -281,11 +281,11 @@ It removes Pods that are no longer needed, which saves cluster resources and cos
 
 #### Screenshot 13 — Published LinkedIn post showing your name, the required explanation, and the attached Kubernetes screenshot
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-4.png)
 
 #### Linkedin Post Link
 
-Add your link here
+https://www.linkedin.com/posts/ginikandubuisi_assignment-04-of-the-kubernetes-module-is-share-7531692726950625280-WijL/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 

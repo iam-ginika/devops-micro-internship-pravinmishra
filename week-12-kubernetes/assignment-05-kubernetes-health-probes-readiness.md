@@ -262,11 +262,11 @@ Share what you learned about Kubernetes readiness probes and how they protect ro
 
 #### Screenshot 18 — Published LinkedIn post
 
-![Output](screenshots)
+![Output](screenshots/LinkedIn-5.png)
 
 #### Linkedin post link
 
-Add your post link here
+https://www.linkedin.com/posts/ginikandubuisi_assignment-05-of-the-kubernetes-module-is-share-7531694335080177664-O_8J/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
 
 ---
 
