@@ -57,7 +57,7 @@ https://dmi.pravinmishra.com/s/iam-ginika.html
 
 *Earn a badge each week. To unlock: remove the `<!--` and `-->` from the badge line below.*
 
-*Share your stack:* `https://github.com/YOUR-USERNAME/devops-micro-internship-pravinmishra#my-devops-stack`
+*Share your stack:* `https://github.com/iam-ginika/devops-micro-internship-pravinmishra#my-devops-stack`
 
 **Preview — what your full stack looks like:**
 
@@ -82,32 +82,32 @@ Week 03 → Linux & Bash for DevOps
 Week 04 → Git & GitHub 
 [![Week 04 – Git](./badges/week-04.svg)](./week-04-git-and-github/) 
 
-<!-- Week 05 → DevOps Lifecycle & Agile -->
-<!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
+Week 05 → DevOps Lifecycle & Agile 
+ [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) 
 
-<!-- Week 06 → AWS Cloud -->
-<!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
+ Week 06 → AWS Cloud
+ [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) 
 
-<!-- Week 07 → Azure Cloud -->
-<!-- [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/) -->
+ Week 07 → Azure Cloud
+ [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/) 
 
-<!-- Week 08 → Terraform -->
-<!-- [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) -->
+ Week 08 → Terraform 
+ [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) 
 
-<!-- Week 09 → Ansible -->
-<!-- [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) -->
+ Week 09 → Ansible
+ [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) 
 
-<!-- Week 10 → Azure DevOps CI/CD -->
-<!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
+ Week 10 → Azure DevOps CI/CD
+ [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) 
 
-<!-- Week 11 → Docker -->
-<!-- [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) -->
+ Week 11 → Docker 
+ [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) 
 
-<!-- Week 12 → Kubernetes -->
-<!-- [![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/) -->
+ Week 12 → Kubernetes 
+ [![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/) 
 
-<!-- Week 13 → Final Project / Capstone -->
-<!-- [![Week 13 – Capstone](./badges/week-13.svg)](./week-13-final-project/) -->
+ Week 13 → Final Project / Capstone 
+ [![Week 13 – Capstone](./badges/week-13.svg)](./week-13-final-project/) 
 
 
 
@@ -142,8 +142,8 @@ Week 04 → Git & GitHub
 | 09 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_the-mini-finance-website-was-deployed-to-share-7528732805426540544-0aIc/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo| https://medium.com/@ginika_n/six-ansible-projects-one-lesson-automate-the-work-0854cb6dc5f1 |
 | 10 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_devops-terraform-ansible-share-7529688270356541440-UQki/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/i-built-five-azure-devops-pipelines-in-one-week-then-i-broke-one-on-purpose-1cff09ce8291 |
 | 11 | Docker | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_devops-docker-dockercompose-share-7530991220752531456-jEPH/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/one-web-page-to-a-production-stack-what-8-docker-assignments-taught-me-0095eb2bb2b9 |
-| 12 | Kubernetes | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_i-set-up-an-ai-assisted-incident-triage-workflow-share-7531705400359059457-h02n/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo
- |  |
+| 12 | Kubernetes | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/ginikandubuisi_what-does-it-take-to-run-a-real-three-tier-share-7531703697781850112-TvrZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6T0TgBum59kWGrvQdH9mZyCcgf18-giQo | https://medium.com/@ginika_n/i-broke-kubernetes-on-purpose-and-it-refused-to-go-down-deb0096804f9 |
+
 | 13 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
 **Status:** ⬜ Not Started &nbsp;|&nbsp; 🔄 In Progress &nbsp;|&nbsp; ✅ Completed<br>
@@ -164,12 +164,6 @@ Week 04 → Git & GitHub
 If you found this repo useful or want to follow my DevOps journey:
 
 - ⭐ Star this repo
-<<<<<<< HEAD
-- 🔗 Connect with me on [LinkedIn](https://www.linkedin.com/in/ginikandubuisi/)
-- 🌐 Learn more about the program: https://dmi.pravinmishra.com
-- 💬 Join the community: https://discord.pravinmishra.com
-=======
 - 🔗 Connect with me on [LinkedIn](#)
 - 🌐 Learn more about the program: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
 - 💬 Join the community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
->>>>>>> upstream/main
