@@ -163,7 +163,7 @@ I also scaled my Deployment from two Pods to five and back to two!
 
 #### Screenshot 12 — Published WhatsApp Status showing your Kubernetes Deployment message and generated DMI leaderboard progress link
 
-Add your screenshot here.
+![Output](screenshots/Whatsapp-status.png)
 
 A draft or editing screen is not sufficient.
 

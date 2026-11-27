@@ -144,6 +144,8 @@ I also checked its status, inspected its details, viewed its logs, and accessed 
 
 - **Screenshot 10 — `10-whatsapp-status.png`:** Published WhatsApp Status showing your Kubernetes Pod message and generated DMI leaderboard progress link.
 
+![Output](screenshots/Whatsapp.png)
+
 ---
 
 # Submission Instructions
